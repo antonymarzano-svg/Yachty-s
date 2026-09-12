@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import type { Flashcard as FlashcardData } from "../data/types";
 import { CATEGORY_MAP } from "../data/categories";
 import { AudioPlayer } from "./AudioPlayer";
+import { VideoPlayer } from "./VideoPlayer";
 import { MasteredButton } from "./MasteredButton";
 import { DoubleTapBurst } from "./DoubleTapBurst";
 import { CategoryWatermark } from "./CategoryWatermark";
@@ -119,7 +120,7 @@ export function Flashcard({
               }
             />
             {card.media?.frontImage ? (
-              <div className="flex flex-1 flex-col gap-5 overflow-hidden">
+              <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-hidden">
                 <div
                   className="max-h-[46vh] w-full shrink-0 overflow-hidden rounded-2xl border"
                   style={{ borderColor: `${from}55` }}
@@ -167,7 +168,7 @@ export function Flashcard({
                   : undefined
               }
             />
-            <div className="flex flex-1 flex-col justify-center gap-4 overflow-y-auto no-scrollbar">
+            <div className="flex min-h-0 flex-1 flex-col justify-center gap-4 overflow-y-auto no-scrollbar">
               <p className="text-[17px] leading-relaxed text-white/90">
                 {card.answer}
               </p>
@@ -177,6 +178,14 @@ export function Flashcard({
                   alt={card.media.imageAlt ?? ""}
                   className="max-h-[34vh] w-full shrink-0 rounded-xl border border-white/10 object-contain"
                   draggable={false}
+                />
+              )}
+              {card.media?.video && (
+                <VideoPlayer
+                  src={card.media.video}
+                  poster={card.media.videoPoster}
+                  label={card.media.videoLabel}
+                  active={active}
                 />
               )}
               {card.media?.audio && (

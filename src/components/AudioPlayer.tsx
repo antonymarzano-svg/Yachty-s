@@ -57,7 +57,7 @@ export function AudioPlayer({ src, label, active }: AudioPlayerProps) {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className="flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md"
+      className="flex w-full shrink-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md"
     >
       <audio ref={audioRef} src={src} preload="none" />
       <button

@@ -17,13 +17,16 @@ Instagram Reels / TikTok rather than a traditional quiz app.
   Nav & Radar, lighthouse amber/orange for AEC) plus a large low-opacity
   nautical icon watermarked behind every plain-text card, so the feed feels
   illustrated even before any custom artwork is added
-- Category pills for **OOW 3000**, **GSK**, **Nav & Radar**, **AEC**, each
-  showing live "mastered" progress
-- "Unmastered only" filter per category
+- Category pills for **OOW 3000**, **GSK**, **Nav & Radar**, **AEC**, plus a
+  **Mixed** feed that shuffles every category into one, each showing live
+  "mastered" progress
+- "Unmastered only" filter per tab
 - Cards can carry a scene-setting illustration on the front (e.g. two boats
   shown crossing for a Rule 15 question), a diagram/photo revealed with the
-  answer on the back, and/or an inline audio clip (e.g. COLREGS sound
-  signals) with a custom-styled play button
+  answer on the back, an inline audio clip (e.g. COLREGS sound signals) with
+  a custom-styled play button, and/or a video with custom play/pause/±10s
+  controls (nothing downloads until tapped — safe for long clips hosted
+  externally)
 - All progress is stored on-device (`localStorage`) — no login/backend for
   v1
 - Structured for [Capacitor](https://capacitorjs.com) so it can be wrapped
@@ -73,13 +76,16 @@ To add a card, append an object to the relevant JSON file:
     "image": "/images/my-diagram.svg",
     "imageAlt": "Description for accessibility",
     "audio": "/audio/my-clip.mp3",
-    "audioLabel": "Label shown next to the play button"
+    "audioLabel": "Label shown next to the play button",
+    "video": "https://your-cdn-or-youtube-link/clip.mp4",
+    "videoPoster": "/images/my-thumbnail.jpg",
+    "videoLabel": "Full walkthrough: radar plotting"
   }
 }
 ```
 
-- `media` is optional; include any combination of `frontImage`, `image` and
-  `audio`, or none at all.
+- `media` is optional; include any combination of `frontImage`, `image`,
+  `audio` and `video`, or none at all.
 - `frontImage` shows on the question side — use it for a scene-setting
   picture that helps the learner visualize the situation without giving the
   answer away (e.g. two boats on crossing courses for a Rule 15 question).
@@ -88,6 +94,15 @@ To add a card, append an object to the relevant JSON file:
   give-way/stand-on). Cards without media fall back to a large, low-opacity
   nautical icon behind the question text so the card still feels part of an
   illustrated feed.
+- `video` shows on the answer side via a custom player (tap to play, ±10s
+  skip, seek bar, mute, fullscreen) — nothing downloads until the learner
+  taps play. **Use a full external URL for anything longer than a few
+  seconds** (YouTube/Vimeo unlisted, Cloudflare Stream/R2, Bunny, Mux,
+  S3+CloudFront, etc.) rather than a local file under `public/videos/`.
+  A 15-minute clip is typically 150–400MB: GitHub rejects any single file
+  over 100MB, and bundling videos into the app instead of streaming them
+  would balloon the download size for every user. A local path under
+  `public/videos/` still works fine for short (few-second) clips.
 - Put image/audio files under `public/images/` and `public/audio/` and
   reference them with a leading `/` (e.g. `/images/foo.svg`).
 - A handful of real (synthesized) COLREGS sound-signal `.wav` clips and
@@ -107,10 +122,12 @@ src/
     SwipeFeed.tsx        # vertical snap-scroll feed + active-card tracking
     Flashcard.tsx         # single card: 3D flip, tap/double-tap handling
     AudioPlayer.tsx        # custom inline audio player (not <audio controls>)
+    VideoPlayer.tsx         # custom video player (play/pause, ±10s, seek, mute, fullscreen)
     MasteredButton.tsx      # heart icon toggle
     DoubleTapBurst.tsx       # big center heart pop on double-tap
     Heart.tsx                 # shared heart svg
-    CategoryTabs.tsx           # top pill selector + unmastered-only toggle
+    CategoryTabs.tsx           # top pill selector incl. "Mixed", + unmastered-only toggle
+    CategoryWatermark.tsx       # per-category background icon
   hooks/
     useMasteredStore.ts   # localStorage-backed "mastered" progress
     useHaptics.ts          # Capacitor Haptics wrapper

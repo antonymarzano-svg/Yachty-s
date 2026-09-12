@@ -38,6 +38,17 @@ export interface FlashcardMedia {
   audio?: string;
   /** Human label shown next to the play button, e.g. "Two prolonged blasts" */
   audioLabel?: string;
+  /**
+   * URL to a video — a full external URL (recommended for anything longer
+   * than a few seconds: YouTube/Vimeo unlisted, a CDN/bucket link, etc.) or
+   * a path under /public for short local clips. Shown on the answer side.
+   * Nothing is downloaded until the learner taps play.
+   */
+  video?: string;
+  /** Poster/thumbnail shown before play; falls back to a plain placeholder if omitted */
+  videoPoster?: string;
+  /** Label shown above the player, e.g. "Full walkthrough: radar plotting" */
+  videoLabel?: string;
 }
 
 export interface Flashcard {
