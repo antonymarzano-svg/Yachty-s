@@ -66,13 +66,27 @@ export function CategoryWatermark({
         </svg>
       );
     case "aec":
-      // anchor
+      // gear / cog — auxiliary equipment & construction (engineering)
       return (
         <svg {...common} strokeWidth={2.5}>
-          <circle cx="50" cy="24" r="8" />
-          <line x1="50" y1="32" x2="50" y2="80" />
-          <line x1="34" y1="42" x2="66" y2="42" />
-          <path d="M25 55 A 25 25 0 0 0 50 80 A 25 25 0 0 0 75 55" />
+          {Array.from({ length: 8 }).map((_, i) => {
+            const angle = (i * Math.PI) / 4;
+            const cx = 50 + Math.cos(angle) * 34;
+            const cy = 50 + Math.sin(angle) * 34;
+            const deg = (angle * 180) / Math.PI;
+            return (
+              <rect
+                key={i}
+                x={cx - 5}
+                y={cy - 4}
+                width="10"
+                height="8"
+                transform={`rotate(${deg} ${cx} ${cy})`}
+              />
+            );
+          })}
+          <circle cx="50" cy="50" r="26" />
+          <circle cx="50" cy="50" r="11" />
         </svg>
       );
     default:

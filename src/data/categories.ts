@@ -26,10 +26,10 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "aec",
-    name: "Anchoring, Emergencies & Comms",
+    name: "Auxiliary Equipment & Construction",
     shortName: "AEC",
-    description: "Anchor work, emergency response, GMDSS & signals",
-    // warm lighthouse-beacon / flare tones
+    description: "Auxiliary machinery, equipment & ship construction",
+    // warm engine-room amber/brass tones
     gradient: ["#fbbf24", "#fb923c"],
   },
 ];

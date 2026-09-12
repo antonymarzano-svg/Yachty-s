@@ -44,12 +44,14 @@ passage planning, Admiralty publications, chart correction, tides, LORAN/
 eLoran, radar theory, radar plotting, and ARPA). 47 + 69 + 68 = 184 cards
 across those three categories, written to track the source text closely.
 
-**AEC** (Anchoring, Emergencies & Comms) has no source document yet — it
-still holds the 20 original placeholder cards from the first build, and
-"AEC" isn't a universally standard OOW syllabus acronym, so that
-interpretation is also just a placeholder. Send over notes for it (or say
-what it should stand for) and it'll get the same treatment; adjust the name
-in `src/data/categories.ts` in the meantime if you know what it should be.
+**AEC** is actually **Auxiliary Equipment & Construction** — an engineering
+module (auxiliary machinery, equipment, ship construction) — and the tab
+name/description/watermark icon (now a gear) have been corrected to match.
+It still has no source document, though, so it's showing the 20 original
+placeholder cards from the very first build (anchoring, emergency
+procedures, GMDSS, mooring, etc.) — those topics don't actually belong to
+an engineering module and will be fully replaced once the real course
+notes are shared, the same way OOW 3000/GSK/Nav & Radar were.
 
 ## Adding / editing content
 
