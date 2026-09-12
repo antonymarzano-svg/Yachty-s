@@ -26,7 +26,7 @@ export default function App() {
   const catProgress = progress[category];
 
   return (
-    <div className="relative h-[100dvh] w-full overflow-hidden bg-slate-950">
+    <div className="relative h-[100dvh] w-full overflow-hidden bg-[#071224]">
       <SwipeFeed
         cards={cards}
         gradient={activeCategory.gradient}

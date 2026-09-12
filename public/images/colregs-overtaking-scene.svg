@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="seaO" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c2740"/>
+      <stop offset="100%" stop-color="#071a2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" rx="20" fill="url(#seaO)"/>
+  <path d="M0 220 Q 50 210 100 220 T 200 220 T 300 220 T 400 220" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3" fill="none"/>
+
+  <!-- 22.5 deg abaft the beam sector, shown as a shaded wedge behind the leading vessel -->
+  <path d="M200,150 L340,90 A 160 160 0 0 1 340,210 Z" fill="#e5e7eb" opacity="0.08"/>
+  <line x1="200" y1="150" x2="340" y2="90" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.5"/>
+  <line x1="200" y1="150" x2="340" y2="210" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.5"/>
+
+  <!-- leading vessel -->
+  <g transform="translate(200,150) rotate(90)">
+    <path d="M0,-16 L10,12 L0,6 L-10,12 Z" fill="#e5e7eb"/>
+  </g>
+  <!-- overtaking vessel, coming up from astern -->
+  <g transform="translate(90,150) rotate(90)">
+    <path d="M0,-16 L10,12 L0,6 L-10,12 Z" fill="#e5e7eb"/>
+  </g>
+  <line x1="115" y1="150" x2="170" y2="150" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="7 7" opacity="0.6"/>
+
+  <text x="200" y="30" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="15" font-weight="600">
+    Coming up from astern
+  </text>
+</svg>

@@ -20,9 +20,17 @@ export interface Category {
 }
 
 export interface FlashcardMedia {
-  /** Path (relative to /public) or URL to a diagram / photo */
+  /** Path (relative to /public) or URL to a diagram / photo, revealed with the answer (back of the card) */
   image?: string;
   imageAlt?: string;
+  /**
+   * Path (relative to /public) or URL to a scene-setting illustration shown
+   * on the FRONT of the card, alongside the question — e.g. a picture of two
+   * boats crossing for a "what should happen in this situation" question.
+   * Keep it non-spoiling: it should set the scene, not give away the answer.
+   */
+  frontImage?: string;
+  frontImageAlt?: string;
   /** Path (relative to /public) or URL to an audio clip, e.g. a COLREGS sound signal */
   audio?: string;
   /** Human label shown next to the play button, e.g. "Two prolonged blasts" */

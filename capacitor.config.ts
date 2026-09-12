@@ -4,7 +4,7 @@ const config: CapacitorConfig = {
   appId: "com.yachtys.app",
   appName: "Yachty'S",
   webDir: "dist",
-  backgroundColor: "#05060a",
+  backgroundColor: "#071224",
   ios: {
     contentInset: "always",
   },

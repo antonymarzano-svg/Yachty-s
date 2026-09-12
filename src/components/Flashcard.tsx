@@ -4,6 +4,7 @@ import type { Flashcard as FlashcardData } from "../data/types";
 import { AudioPlayer } from "./AudioPlayer";
 import { MasteredButton } from "./MasteredButton";
 import { DoubleTapBurst } from "./DoubleTapBurst";
+import { CategoryWatermark } from "./CategoryWatermark";
 import { useHaptics } from "../hooks/useHaptics";
 
 interface FlashcardProps {
@@ -81,14 +82,15 @@ export function Flashcard({
 
   return (
     <div className="relative h-full w-full snap-start shrink-0">
-      {/* Ambient gradient backdrop per-category */}
+      {/* Ambient gradient backdrop per-category — kept vivid & warm, not murky */}
       <div
-        className="absolute inset-0 opacity-25"
+        className="absolute inset-0"
         style={{
-          background: `radial-gradient(120% 90% at 50% 0%, ${from}, transparent 60%), radial-gradient(120% 90% at 50% 100%, ${to}, transparent 60%)`,
+          background: `radial-gradient(130% 100% at 15% 0%, ${from}, transparent 55%), radial-gradient(130% 100% at 85% 100%, ${to}, transparent 55%)`,
+          opacity: 0.5,
         }}
       />
-      <div className="absolute inset-0 bg-slate-950/40" />
+      <div className="absolute inset-0 bg-[#071224]/35" />
 
       <div
         className="relative flex h-full w-full flex-col px-4 pb-28 pt-[calc(env(safe-area-inset-top)+72px)]"
@@ -108,11 +110,37 @@ export function Flashcard({
               tag={card.tags?.[0]}
               hint="Tap to flip"
             />
-            <div className="flex flex-1 items-center justify-center">
-              <p className="text-center text-[26px] font-semibold leading-snug text-white sm:text-3xl">
-                {card.question}
-              </p>
-            </div>
+            {card.media?.frontImage ? (
+              <div className="flex flex-1 flex-col gap-5 overflow-hidden">
+                <div
+                  className="max-h-[46vh] w-full shrink-0 overflow-hidden rounded-2xl border"
+                  style={{ borderColor: `${from}55` }}
+                >
+                  <img
+                    src={card.media.frontImage}
+                    alt={card.media.frontImageAlt ?? ""}
+                    className="w-full object-contain"
+                    draggable={false}
+                  />
+                </div>
+                <div className="flex flex-1 items-center justify-center">
+                  <p className="text-center text-2xl font-semibold leading-snug text-white sm:text-[28px]">
+                    {card.question}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="relative flex flex-1 items-center justify-center">
+                <CategoryWatermark
+                  category={card.category}
+                  className="pointer-events-none absolute h-64 w-64 -rotate-6 opacity-[0.08] sm:h-80 sm:w-80"
+                  style={{ color: from }}
+                />
+                <p className="relative text-center text-[26px] font-semibold leading-snug text-white sm:text-3xl">
+                  {card.question}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* BACK — answer */}
@@ -134,7 +162,7 @@ export function Flashcard({
                 <img
                   src={card.media.image}
                   alt={card.media.imageAlt ?? ""}
-                  className="w-full rounded-xl border border-white/10"
+                  className="max-h-[34vh] w-full shrink-0 rounded-xl border border-white/10 object-contain"
                   draggable={false}
                 />
               )}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+  <defs>
+    <linearGradient id="seaC2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c2740"/>
+      <stop offset="100%" stop-color="#071a2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" rx="20" fill="url(#seaC2)"/>
+  <path d="M0 240 Q 50 230 100 240 T 200 240 T 300 240 T 400 240" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3" fill="none"/>
+
+  <!-- stand-on vessel track: straight, green, kept course -->
+  <line x1="300" y1="70" x2="110" y2="255" stroke="#34d399" stroke-width="3" stroke-dasharray="8 6"/>
+  <!-- give-way vessel track: bends to starboard (her right), passing astern -->
+  <path d="M55,215 C 110,190 150,205 175,215 C 210,228 250,232 300,235" stroke="#fbbf24" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- stand-on vessel (green) -->
+  <g transform="translate(300,70) rotate(225)">
+    <path d="M0,-16 L10,12 L0,6 L-10,12 Z" fill="#34d399"/>
+  </g>
+  <!-- give-way vessel (amber), rotated to show new heading swinging right -->
+  <g transform="translate(55,215) rotate(70)">
+    <path d="M0,-16 L10,12 L0,6 L-10,12 Z" fill="#fbbf24"/>
+  </g>
+  <!-- curved arrowhead showing the turn -->
+  <path d="M170,213 l10,-3 l-2,10 z" fill="#fbbf24"/>
+
+  <g font-family="sans-serif" font-weight="700" font-size="13">
+    <rect x="16" y="14" width="92" height="24" rx="12" fill="#fbbf24"/>
+    <text x="62" y="30.5" text-anchor="middle" fill="#052e16">GIVE-WAY</text>
+
+    <rect x="292" y="14" width="92" height="24" rx="12" fill="#34d399"/>
+    <text x="338" y="30.5" text-anchor="middle" fill="#052e16">STAND-ON</text>
+  </g>
+</svg>

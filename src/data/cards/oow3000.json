@@ -46,28 +46,52 @@
     "category": "oow3000",
     "question": "Rule 13 — When is a vessel 'overtaking' and what must she do?",
     "answer": "A vessel is overtaking when coming up on another from a direction more than 22.5° abaft that vessel's beam (i.e. in the sternlight sector only, at night). The overtaking vessel must keep clear of the vessel being overtaken until finally past and clear, regardless of any subsequent change in the bearing between the two vessels.",
-    "tags": ["Rule 13", "Overtaking"]
+    "tags": ["Rule 13", "Overtaking"],
+    "media": {
+      "frontImage": "/images/colregs-overtaking-scene.svg",
+      "frontImageAlt": "One vessel coming up from astern of another",
+      "image": "/images/colregs-overtaking-answer.svg",
+      "imageAlt": "Overtaking vessel keeps clear while the vessel ahead holds her course"
+    }
   },
   {
     "id": "oow-008",
     "category": "oow3000",
     "question": "Rule 14 — What action is required in a head-on situation?",
-    "answer": "When two power-driven vessels are meeting on reciprocal or nearly reciprocal courses so as to involve risk of collision, each shall alter course to starboard so that each passes on the port side of the other. A head-on situation exists when a vessel sees the other ahead or nearly ahead and by night sees the masthead lights in a line/nearly in a line and/or both sidelights, or by day observes the corresponding aspect.",
-    "tags": ["Rule 14", "Head-on"]
+    "answer": "Each vessel shall alter course to starboard so that both pass on the port side of the other. A head-on situation exists when a vessel sees the other ahead or nearly ahead — by night, her masthead lights in a line and/or both sidelights; by day, the corresponding aspect.",
+    "tags": ["Rule 14", "Head-on"],
+    "media": {
+      "frontImage": "/images/colregs-headon-scene.svg",
+      "frontImageAlt": "Two vessels approaching each other bow to bow",
+      "image": "/images/colregs-headon-answer.svg",
+      "imageAlt": "Both vessels alter course to starboard and pass port side to port side"
+    }
   },
   {
     "id": "oow-009",
     "category": "oow3000",
     "question": "Rule 15 — What is the give-way vessel's action in a crossing situation?",
-    "answer": "When two power-driven vessels are crossing so as to involve risk of collision, the vessel which has the other on her own starboard side shall keep out of the way and, if circumstances allow, avoid crossing ahead of the other vessel.",
-    "tags": ["Rule 15", "Crossing"]
+    "answer": "When two power-driven vessels are crossing so as to involve risk of collision, the vessel which has the other on her own starboard side shall keep out of the way and, if circumstances allow, avoid crossing ahead of the other vessel — normally by turning to starboard to pass astern.",
+    "tags": ["Rule 15", "Crossing"],
+    "media": {
+      "frontImage": "/images/colregs-crossing-scene.svg",
+      "frontImageAlt": "Two vessels approaching a crossing point at roughly a right angle",
+      "image": "/images/colregs-crossing-answer.svg",
+      "imageAlt": "Give-way vessel turns to starboard to pass astern while the stand-on vessel holds her course"
+    }
   },
   {
     "id": "oow-010",
     "category": "oow3000",
     "question": "Rule 17 — What are the stand-on vessel's obligations?",
     "answer": "The stand-on vessel shall keep her course and speed, but may take action to avoid collision as soon as it becomes apparent the give-way vessel is not taking appropriate action. If in extremis, she may take whatever action best aids to avoid collision, and shall not alter course to port for a vessel on her own port side in a crossing situation.",
-    "tags": ["Rule 17", "Stand-on"]
+    "tags": ["Rule 17", "Stand-on"],
+    "media": {
+      "frontImage": "/images/colregs-crossing-scene.svg",
+      "frontImageAlt": "Two vessels approaching a crossing point at roughly a right angle",
+      "image": "/images/colregs-crossing-answer.svg",
+      "imageAlt": "Stand-on vessel holds her course and speed while the give-way vessel turns to starboard"
+    }
   },
   {
     "id": "oow-011",
