@@ -398,7 +398,7 @@
     "answer": "CPA (Closest Point of Approach): the closest distance the target will pass from own ship if both maintain course/speed — measured perpendicular from the origin to the extended relative-motion line (OA extended). A CPA of zero means a collision will occur ('CPA: COLLISION'). TCPA (Time to CPA) = (distance from A to the CPA point ÷ length of OA) × total plot time.",
     "tags": ["Radar plotting", "CPA", "TCPA"],
     "media": {
-      "image": "/images/radar-relative-motion.svg",
+      "image": "images/radar-relative-motion.svg",
       "imageAlt": "Relative motion line from a target through the CPA point on a radar plot"
     }
   },

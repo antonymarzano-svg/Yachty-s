@@ -104,9 +104,9 @@
     "answer": "A vessel is deemed to be overtaking when coming up on another from a direction more than 22.5° abaft her beam — i.e. a position from which, at night, she would see only the other's sternlight, not her sidelights. Any vessel overtaking any other shall keep out of the way of the vessel being overtaken, regardless of any subsequent change in bearing between the two vessels, until she is finally past and clear. If in doubt whether she is overtaking, a vessel shall assume that she is and act accordingly.",
     "tags": ["Rule 13", "Overtaking"],
     "media": {
-      "frontImage": "/images/colregs-overtaking-scene.svg",
+      "frontImage": "images/colregs-overtaking-scene.svg",
       "frontImageAlt": "One vessel coming up from astern of another",
-      "image": "/images/colregs-overtaking-answer.svg",
+      "image": "images/colregs-overtaking-answer.svg",
       "imageAlt": "Overtaking vessel keeps clear while the vessel ahead holds her course"
     }
   },
@@ -117,9 +117,9 @@
     "answer": "Each vessel shall alter course to starboard so that each passes on the port side of the other. Such a situation exists when a vessel sees the other ahead or nearly ahead, and by night sees her masthead lights in a line or nearly in a line and/or both sidelights, or by day observes the corresponding aspect. If in doubt, a vessel shall assume the situation exists and act accordingly.",
     "tags": ["Rule 14", "Head-on"],
     "media": {
-      "frontImage": "/images/colregs-headon-scene.svg",
+      "frontImage": "images/colregs-headon-scene.svg",
       "frontImageAlt": "Two vessels approaching each other bow to bow",
-      "image": "/images/colregs-headon-answer.svg",
+      "image": "images/colregs-headon-answer.svg",
       "imageAlt": "Both vessels alter course to starboard and pass port side to port side"
     }
   },
@@ -130,9 +130,9 @@
     "answer": "When two power-driven vessels are crossing so as to involve risk of collision, the vessel which has the other on her own starboard side shall keep out of the way and, if circumstances admit, avoid crossing ahead of the other vessel — normally by turning to starboard to pass astern.",
     "tags": ["Rule 15", "Crossing"],
     "media": {
-      "frontImage": "/images/colregs-crossing-scene.svg",
+      "frontImage": "images/colregs-crossing-scene.svg",
       "frontImageAlt": "Two vessels approaching a crossing point at roughly a right angle",
-      "image": "/images/colregs-crossing-answer.svg",
+      "image": "images/colregs-crossing-answer.svg",
       "imageAlt": "Give-way vessel turns to starboard to pass astern while the stand-on vessel holds her course"
     }
   },
@@ -150,9 +150,9 @@
     "answer": "Where one vessel is to keep out of the way, the other shall keep her course and speed, but may take action to avoid collision by her manoeuvre alone as soon as it becomes apparent the give-way vessel is not taking appropriate action. If collision cannot be avoided by the give-way vessel's action alone, the stand-on vessel shall take whatever action best aids to avoid collision. A power-driven stand-on vessel acting under this rule in a crossing situation shall not, if circumstances admit, alter course to port for a vessel on her own port side. This rule does not relieve the give-way vessel of her obligation to keep clear.",
     "tags": ["Rule 17", "Stand-on"],
     "media": {
-      "frontImage": "/images/colregs-crossing-scene.svg",
+      "frontImage": "images/colregs-crossing-scene.svg",
       "frontImageAlt": "Two vessels approaching a crossing point at roughly a right angle",
-      "image": "/images/colregs-crossing-answer.svg",
+      "image": "images/colregs-crossing-answer.svg",
       "imageAlt": "Stand-on vessel holds her course and speed while the give-way vessel turns to starboard"
     }
   },
@@ -282,7 +282,7 @@
     "answer": "One short blast = 'I am altering my course to starboard'. Two short blasts = 'I am altering my course to port'. Three short blasts = 'I am operating astern propulsion'. A short blast is about 1 second; a prolonged blast is 4–6 seconds. These may be supplemented by light signals of corresponding flashes.",
     "tags": ["Rule 34", "Sound signals"],
     "media": {
-      "audio": "/audio/one-short-blast.wav",
+      "audio": "audio/one-short-blast.wav",
       "audioLabel": "One short blast — altering course to starboard"
     }
   },
@@ -307,7 +307,7 @@
     "answer": "Making way: one prolonged blast at intervals of not more than 2 minutes. Stopped, making no way: two prolonged blasts in succession (about 2 seconds apart) at intervals of not more than 2 minutes.",
     "tags": ["Rule 35", "Fog signals"],
     "media": {
-      "audio": "/audio/one-prolonged-blast.wav",
+      "audio": "audio/one-prolonged-blast.wav",
       "audioLabel": "One prolonged blast — underway, making way"
     }
   },
@@ -318,7 +318,7 @@
     "answer": "One prolonged followed by two short blasts, at intervals of not more than 2 minutes.",
     "tags": ["Rule 35", "Fog signals", "NUC"],
     "media": {
-      "audio": "/audio/vessel-not-under-command.wav",
+      "audio": "audio/vessel-not-under-command.wav",
       "audioLabel": "One prolonged + two short — NUC/RAM/CBD/sailing/fishing/towing"
     }
   },
@@ -329,7 +329,7 @@
     "answer": "At anchor: rapid ringing of the bell for about 5 seconds in the fore part at intervals of not more than 1 minute (vessels ≥100m also sound the gong aft immediately after); she may additionally sound one short, one prolonged, one short blast as a warning. Aground: the bell (and gong) signal, PLUS three separate, distinct strokes on the bell immediately before and after the rapid ringing; she may also sound an appropriate whistle signal.",
     "tags": ["Rule 35", "At anchor", "Aground"],
     "media": {
-      "audio": "/audio/vessel-at-anchor-bell.wav",
+      "audio": "audio/vessel-at-anchor-bell.wav",
       "audioLabel": "Rapid bell ringing — vessel at anchor"
     }
   },
