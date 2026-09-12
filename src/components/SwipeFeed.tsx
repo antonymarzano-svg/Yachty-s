@@ -5,11 +5,12 @@ import { useHaptics } from "../hooks/useHaptics";
 
 interface SwipeFeedProps {
   cards: FlashcardData[];
-  gradient: [string, string];
   isMastered: (id: string) => boolean;
   onToggleMastered: (id: string) => void;
   /** Remount key — pass something that changes when the card list identity changes (e.g. filter/category) to reset scroll position. */
   resetKey: string;
+  /** Show each card's origin category (used for the "Mixed" feed). */
+  showCategoryBadge?: boolean;
 }
 
 /**
@@ -20,10 +21,10 @@ interface SwipeFeedProps {
  */
 export function SwipeFeed({
   cards,
-  gradient,
   isMastered,
   onToggleMastered,
   resetKey,
+  showCategoryBadge,
 }: SwipeFeedProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -70,8 +71,8 @@ export function SwipeFeed({
       <div className="flex h-full w-full flex-col items-center justify-center gap-2 px-8 text-center text-white/60">
         <p className="text-lg font-semibold text-white">All caught up 🎉</p>
         <p className="text-sm">
-          No unmastered cards left in this category. Toggle "unmastered only"
-          off to review everything again.
+          No unmastered cards left here. Toggle "unmastered only" off to
+          review everything again.
         </p>
       </div>
     );
@@ -89,10 +90,10 @@ export function SwipeFeed({
           card={card}
           index={i}
           total={cards.length}
-          gradient={gradient}
           active={i === activeIndex}
           mastered={isMastered(card.id)}
           onToggleMastered={() => onToggleMastered(card.id)}
+          showCategoryBadge={showCategoryBadge}
         />
       ))}
     </div>

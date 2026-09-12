@@ -8,6 +8,9 @@
 
 export type CategoryId = "oow3000" | "gsk" | "nav-radar" | "aec";
 
+/** A feed selection: a real category, or the special "mixed" feed of every category shuffled together. */
+export type TabId = CategoryId | "mixed";
+
 export interface Category {
   id: CategoryId;
   /** Full display name */

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import type { CategoryId } from "../data/types";
+import type { TabId } from "../data/types";
 import { ALL_CARDS } from "../data/cards";
 
 const STORAGE_KEY = "yachtys.mastered.v1";
@@ -61,11 +61,11 @@ export function useMasteredStore() {
   }, []);
 
   const countInCategory = useCallback(
-    (category: CategoryId) => {
+    (tab: TabId) => {
       let total = 0;
       let done = 0;
       for (const card of ALL_CARDS) {
-        if (card.category !== category) continue;
+        if (tab !== "mixed" && card.category !== tab) continue;
         total += 1;
         if (mastered.has(card.id)) done += 1;
       }

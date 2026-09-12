@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import type { Flashcard as FlashcardData } from "../data/types";
+import { CATEGORY_MAP } from "../data/categories";
 import { AudioPlayer } from "./AudioPlayer";
 import { MasteredButton } from "./MasteredButton";
 import { DoubleTapBurst } from "./DoubleTapBurst";
@@ -9,25 +10,26 @@ import { useHaptics } from "../hooks/useHaptics";
 
 interface FlashcardProps {
   card: FlashcardData;
-  gradient: [string, string];
   mastered: boolean;
   onToggleMastered: () => void;
   /** Is this the card currently centred in the feed? */
   active: boolean;
   index: number;
   total: number;
+  /** Show which category this card belongs to (used in the "Mixed" feed, where cards come from every category). */
+  showCategoryBadge?: boolean;
 }
 
 const DOUBLE_TAP_MS = 260;
 
 export function Flashcard({
   card,
-  gradient,
   mastered,
   onToggleMastered,
   active,
   index,
   total,
+  showCategoryBadge,
 }: FlashcardProps) {
   const [flipped, setFlipped] = useState(false);
   const [burst, setBurst] = useState(0);
@@ -78,7 +80,8 @@ export function Flashcard({
     [],
   );
 
-  const [from, to] = gradient;
+  const category = CATEGORY_MAP[card.category];
+  const [from, to] = category.gradient;
 
   return (
     <div className="relative h-full w-full snap-start shrink-0">
@@ -109,6 +112,11 @@ export function Flashcard({
               total={total}
               tag={card.tags?.[0]}
               hint="Tap to flip"
+              categoryBadge={
+                showCategoryBadge
+                  ? { label: category.shortName, color: from }
+                  : undefined
+              }
             />
             {card.media?.frontImage ? (
               <div className="flex flex-1 flex-col gap-5 overflow-hidden">
@@ -153,6 +161,11 @@ export function Flashcard({
               total={total}
               tag={card.tags?.[0]}
               hint="Tap to flip back"
+              categoryBadge={
+                showCategoryBadge
+                  ? { label: category.shortName, color: from }
+                  : undefined
+              }
             />
             <div className="flex flex-1 flex-col justify-center gap-4 overflow-y-auto no-scrollbar">
               <p className="text-[17px] leading-relaxed text-white/90">
@@ -193,11 +206,13 @@ function CardChrome({
   total,
   tag,
   hint,
+  categoryBadge,
 }: {
   index: number;
   total: number;
   tag?: string;
   hint: string;
+  categoryBadge?: { label: string; color: string };
 }) {
   return (
     <div className="mb-4 flex items-center justify-between text-xs font-medium text-white/50">
@@ -205,6 +220,18 @@ function CardChrome({
         {index + 1} / {total}
       </span>
       <div className="flex items-center gap-2">
+        {categoryBadge && (
+          <span
+            className="rounded-full px-2.5 py-1 font-semibold"
+            style={{
+              color: categoryBadge.color,
+              backgroundColor: `${categoryBadge.color}22`,
+              border: `1px solid ${categoryBadge.color}55`,
+            }}
+          >
+            {categoryBadge.label}
+          </span>
+        )}
         {tag && (
           <span className="rounded-full bg-white/10 px-2.5 py-1 text-white/70">
             {tag}

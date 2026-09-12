@@ -1,4 +1,4 @@
-import type { Category } from "./types";
+import type { Category, TabId } from "./types";
 
 export const CATEGORIES: Category[] = [
   {
@@ -37,3 +37,20 @@ export const CATEGORIES: Category[] = [
 export const CATEGORY_MAP: Record<string, Category> = Object.fromEntries(
   CATEGORIES.map((c) => [c.id, c]),
 );
+
+/**
+ * The special "everything shuffled together" feed — not a real content
+ * category (cards keep their own category/gradient/watermark), just a tab.
+ */
+export const MIXED_TAB = {
+  id: "mixed" as TabId,
+  name: "All Categories · Mixed",
+  shortName: "Mixed",
+  description: "Every course shuffled into one feed",
+};
+
+/** Tabs shown in the top pill selector, "Mixed" first. */
+export const TABS: Array<{ id: TabId; shortName: string }> = [
+  MIXED_TAB,
+  ...CATEGORIES,
+];

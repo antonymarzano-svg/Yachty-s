@@ -1,17 +1,17 @@
 import clsx from "clsx";
-import { CATEGORIES } from "../data/categories";
-import type { CategoryId } from "../data/types";
+import { TABS } from "../data/categories";
+import type { TabId } from "../data/types";
 import { useHaptics } from "../hooks/useHaptics";
 
 interface CategoryTabsProps {
-  active: CategoryId;
-  onChange: (id: CategoryId) => void;
-  progress: Record<CategoryId, { done: number; total: number }>;
+  active: TabId;
+  onChange: (id: TabId) => void;
+  progress: Record<TabId, { done: number; total: number }>;
   unmasteredOnly: boolean;
   onToggleUnmasteredOnly: () => void;
 }
 
-/** Horizontal pill selector fixed to the top, IG-story-tab style. */
+/** Horizontal pill selector fixed to the top, IG-story-tab style. "Mixed" shuffles every category into one feed. */
 export function CategoryTabs({
   active,
   onChange,
@@ -24,29 +24,33 @@ export function CategoryTabs({
   return (
     <div className="pointer-events-auto absolute inset-x-0 top-0 z-20 safe-top">
       <div className="flex items-center gap-2 overflow-x-auto no-scrollbar px-3 pb-2 pt-3">
-        {CATEGORIES.map((cat) => {
-          const p = progress[cat.id];
-          const isActive = cat.id === active;
+        {TABS.map((tab) => {
+          const p = progress[tab.id];
+          const isActive = tab.id === active;
+          const isMixed = tab.id === "mixed";
           return (
             <button
-              key={cat.id}
+              key={tab.id}
               type="button"
               onClick={() => {
-                if (cat.id !== active) haptics.selectionChanged();
-                onChange(cat.id);
+                if (tab.id !== active) haptics.selectionChanged();
+                onChange(tab.id);
               }}
               className={clsx(
-                "shrink-0 rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors",
+                "flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors",
                 isActive
                   ? "border-white/80 bg-white text-slate-900"
-                  : "border-white/20 bg-black/30 text-white/80 backdrop-blur-md",
+                  : isMixed
+                    ? "border-fuchsia-300/40 bg-fuchsia-500/10 text-fuchsia-200"
+                    : "border-white/20 bg-black/30 text-white/80 backdrop-blur-md",
               )}
             >
-              {cat.shortName}
+              {isMixed && <ShuffleIcon isActive={isActive} />}
+              {tab.shortName}
               {p && (
                 <span
                   className={clsx(
-                    "ml-1.5 text-[11px] font-medium",
+                    "text-[11px] font-medium",
                     isActive ? "text-slate-500" : "text-white/50",
                   )}
                 >
@@ -82,5 +86,22 @@ export function CategoryTabs({
         </button>
       </div>
     </div>
+  );
+}
+
+function ShuffleIcon({ isActive }: { isActive: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={clsx("h-3.5 w-3.5", isActive ? "text-slate-500" : "text-fuchsia-300")}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 6h3.5c2 0 3.2 1.2 4.5 3M3 18h3.5c2 0 3.2-1.2 4.5-3M15 6h6M15 18h6" />
+      <path d="M18 3l3 3-3 3M18 15l3 3-3 3" />
+    </svg>
   );
 }
