@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <rect width="400" height="260" fill="#0a0c14"/>
+  <text x="200" y="30" fill="#9ca3af" font-family="sans-serif" font-size="14" text-anchor="middle">IALA Region A — proceeding from seaward</text>
+  <!-- Port hand mark (red, can, even numbers) -->
+  <g transform="translate(110,60)">
+    <rect x="-10" y="90" width="20" height="60" fill="#4b5563"/>
+    <path d="M-22 90 L22 90 L0 40 Z" fill="#ef4444"/>
+    <circle cx="0" cy="25" r="10" fill="#ef4444"/>
+    <text x="0" y="170" fill="#ef4444" font-family="sans-serif" font-size="13" text-anchor="middle">Port hand</text>
+    <text x="0" y="188" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">red · can · even no.</text>
+  </g>
+  <!-- Starboard hand mark (green, conical, odd numbers) -->
+  <g transform="translate(290,60)">
+    <rect x="-10" y="90" width="20" height="60" fill="#4b5563"/>
+    <path d="M-22 90 L22 90 L0 30 Z" fill="#22c55e"/>
+    <path d="M-8 30 L8 30 L0 12 Z" fill="#22c55e"/>
+    <text x="0" y="170" fill="#22c55e" font-family="sans-serif" font-size="13" text-anchor="middle">Starboard hand</text>
+    <text x="0" y="188" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">green · conical · odd no.</text>
+  </g>
+</svg>

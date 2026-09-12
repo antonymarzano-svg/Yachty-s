@@ -1,0 +1,142 @@
+[
+  {
+    "id": "aec-001",
+    "category": "aec",
+    "question": "Name the main components of a ship's anchor ground tackle.",
+    "answer": "Anchor, anchor cable (chain) made up of shackles/lengths joined by joining shackles, swivel piece, cable lockers, spurling pipe, windlass (with cable lifter/gypsy, brake and warping drum), bitter end (secured inside the chain locker, releasable in an emergency), and hawse pipe.",
+    "tags": ["Anchoring"]
+  },
+  {
+    "id": "aec-002",
+    "category": "aec",
+    "question": "Outline the key steps/considerations before letting go an anchor.",
+    "answer": "Select a suitable anchorage (holding ground, depth, swinging room, shelter, traffic/pipelines/cables), calculate the amount of cable required for the depth of water (rule of thumb: roughly 3–4x depth in moderate conditions, more in bad weather/strong tide), check UKC throughout the tidal range, brief the crew, test the windlass and brake, ensure clear communication (bridge to fo'c'sle), and approach slowly, ideally head to wind/tide, stopping way before letting go.",
+    "tags": ["Anchoring"]
+  },
+  {
+    "id": "aec-003",
+    "category": "aec",
+    "question": "What signs indicate a vessel may be dragging her anchor?",
+    "answer": "Anchor bearings/ranges on fixed objects changing progressively, GPS anchor-watch alarm activating, unusual vibration/snubbing felt through the cable, cable leading in an unusual direction or becoming taut then slack repeatedly, radar showing the vessel's position moving relative to the anchor position on the display, and (in poor visibility) changing depth soundings inconsistent with the charted anchorage depth.",
+    "tags": ["Anchoring"]
+  },
+  {
+    "id": "aec-004",
+    "category": "aec",
+    "question": "What immediate actions should the OOW take on detecting a fire on board?",
+    "answer": "Raise the alarm and inform the bridge/master, identify the exact location and type of fire, muster the fire party, close doors/openings/ventilation to the space to restrict spread and oxygen supply, stop ventilation fans serving the space, attempt to isolate fuel/electrical supply if safe, attack the fire with the appropriate portable extinguisher/hose if safe and within capability, and prepare to use fixed fire-fighting systems while ensuring the space is confirmed evacuated before flooding with CO2.",
+    "tags": ["Emergency", "Fire"]
+  },
+  {
+    "id": "aec-005",
+    "category": "aec",
+    "question": "What immediate bridge actions follow a report of flooding?",
+    "answer": "Sound the general alarm and inform the master, identify the compartment(s) affected and close all watertight doors/openings, activate bilge alarms/pumping to the affected space if accessible and safe, assess the extent (soundings, list/trim change), consider stopping/reducing speed and altering course to reduce stress on the hull, prepare for possible counter-flooding/list correction, and consider requesting assistance/broadcasting a distress or urgency message if the situation is worsening.",
+    "tags": ["Emergency", "Flooding"]
+  },
+  {
+    "id": "aec-006",
+    "category": "aec",
+    "question": "Outline the OOW's immediate actions following a collision.",
+    "answer": "Sound the general alarm, stop engines and assess own vessel's damage/flooding/fire risk, exchange information with the other vessel (name, IMO number, port of registry, master's details), render assistance if in a position to do so (obligation under COLREGS Rule 8/SOLAS and international law) unless it would seriously endanger own ship, inform company/coastguard/relevant authority, preserve evidence (VDR data, log entries, photographs), and do not admit liability.",
+    "tags": ["Emergency", "Collision"]
+  },
+  {
+    "id": "aec-007",
+    "category": "aec",
+    "question": "What actions should be taken immediately on running aground?",
+    "answer": "Stop engines immediately, sound the general alarm, check for hull damage/ingress of water/pollution and sound all tanks/bilges, take soundings around the vessel and note the state of tide (rising/falling — do not attempt to refloat on a falling tide without full assessment, as this can cause the vessel to bump further and worsen damage), fix the position, inform company/relevant authorities (and Coastguard/VTS), and do not attempt to manoeuvre off until damage has been assessed, unless remaining aground poses greater danger.",
+    "tags": ["Emergency", "Grounding"]
+  },
+  {
+    "id": "aec-008",
+    "category": "aec",
+    "question": "What are the standard actions for the OOW on 'Man Overboard'?",
+    "answer": "Immediately release the nearest lifebuoy with self-igniting light/smoke on the MOB side, sound the alarm/inform the master, keep the person in sight and post a dedicated lookout pointing continuously at them, execute a recovery manoeuvre (e.g. Williamson turn, Anderson turn, or single turn depending on vessel/conditions), note position (mark GPS MOB button) and time, sound appropriate signal (O-O-O on whistle/three prolonged blasts), muster the recovery team and prepare recovery equipment, and inform Coastguard if recovery is delayed/unsuccessful.",
+    "tags": ["Emergency", "Man overboard"]
+  },
+  {
+    "id": "aec-009",
+    "category": "aec",
+    "question": "What are the GMDSS sea areas A1 to A4, and what do they determine?",
+    "answer": "A1: within range of shore-based VHF coast station with continuous DSC alerting coverage. A2: beyond A1 but within range of MF coast station DSC coverage. A3: beyond A2 but within coverage of a geostationary satellite (e.g. Inmarsat), roughly 70°N to 70°S. A4: all other areas outside A1–A3 (polar regions), requiring HF (and satellite systems suited to high latitudes). The areas determine the minimum radio equipment a vessel must carry for distress and safety communications.",
+    "tags": ["GMDSS"]
+  },
+  {
+    "id": "aec-010",
+    "category": "aec",
+    "question": "What is a DSC distress alert and what information does it automatically transmit?",
+    "answer": "A Digital Selective Calling (DSC) distress alert is a short digital burst transmitted (VHF Ch 70, MF/HF) at the push of the dedicated distress button, automatically including the vessel's MMSI, position and time (if interfaced with GPS), and nature of distress if selected, alerting all DSC-equipped stations/vessels within range and prompting them to switch to the distress traffic channel.",
+    "tags": ["GMDSS"]
+  },
+  {
+    "id": "aec-011",
+    "category": "aec",
+    "question": "Distinguish between MAYDAY, PAN-PAN and SÉCURITÉ radiotelephony calls.",
+    "answer": "MAYDAY: grave and imminent danger to a ship/person requiring immediate assistance (highest priority, distress). PAN-PAN: urgent message concerning the safety of a ship or person, but not requiring immediate assistance (urgency, second priority). SÉCURITÉ: a safety message containing important navigational or meteorological warnings (safety, third priority).",
+    "tags": ["Communications", "GMDSS"]
+  },
+  {
+    "id": "aec-012",
+    "category": "aec",
+    "question": "What actions/checks form part of an abandon ship procedure?",
+    "answer": "Sound the abandon ship signal (more than 6 short blasts followed by 1 long blast, on whistle and general alarm), muster at assigned stations in lifejackets/immersion suits per the muster list, take EPIRB, SART, portable VHF and grab bag, don appropriate protection, board survival craft in an orderly manner per roles assigned, launch and clear the ship, activate EPIRB/SART if not automatically activated, and keep craft together if possible while awaiting rescue.",
+    "tags": ["Emergency", "Abandon ship"]
+  },
+  {
+    "id": "aec-013",
+    "category": "aec",
+    "question": "Name the main SAR search patterns and when each is used.",
+    "answer": "Expanding Square: for a well-defined datum with a single surface unit and good position accuracy. Sector Search: for a small, accurately known datum, useful when multiple units search concentrically around a point. Parallel Sweep (Creeping Line/Parallel Track): for larger areas or when position of the search object is less certain, usually used by multiple units or aircraft. Track Line: search along the intended track of the missing vessel/aircraft, often the first search conducted.",
+    "tags": ["SAR"]
+  },
+  {
+    "id": "aec-014",
+    "category": "aec",
+    "question": "What is a mooring 'spring line' used for, and name the four/six standard mooring lines by name.",
+    "answer": "Spring lines run diagonally fore-and-aft between ship and quay to prevent the vessel moving ahead or astern along the berth (fore spring prevents moving astern, back spring prevents moving ahead). Standard lines: head line, fore spring, breast line (forward), breast line (aft), back spring, stern line — a full mooring arrangement often uses head and stern lines, fore and aft springs, and forward/aft breast lines.",
+    "tags": ["Mooring"]
+  },
+  {
+    "id": "aec-015",
+    "category": "aec",
+    "question": "What precautions should be taken to ensure safe mooring operations and reduce snap-back risk?",
+    "answer": "Brief the mooring team, ensure correct PPE, keep personnel out of the bight/snap-back zones of lines under tension, use adequate fendering and correct number of turns on bitts/winch drums, communicate clearly (bridge–deck–tug), never exceed the safe working load of lines/equipment, maintain a proper lookout for the line's full length, and be alert to sudden slackening (a sign a line may be about to part or run out).",
+    "tags": ["Mooring"]
+  },
+  {
+    "id": "aec-016",
+    "category": "aec",
+    "question": "What is the purpose of a Master/Pilot Exchange (MPX) before pilotage?",
+    "answer": "To exchange essential passage information between the pilot and bridge team before/at the start of pilotage: vessel's manoeuvring characteristics, draught/trim/UKC, intended route/berth, tug and mooring arrangements, any defects affecting manoeuvring (engine, steering, thrusters), and to agree the pilotage plan, communication procedures and contingency actions, ensuring shared situational awareness (a completed pilot card/exchange checklist is normally used).",
+    "tags": ["Pilotage"]
+  },
+  {
+    "id": "aec-017",
+    "category": "aec",
+    "question": "What is contained in a ship's muster list and where must it be displayed?",
+    "answer": "The muster list assigns specific duties to each crew member in an emergency (fire, abandon ship, man overboard, etc.), including their muster station, duties (e.g. lifeboat crew, fire party, engine room, medical party) and the signals for each emergency. It must be displayed in conspicuous places throughout the ship, including the bridge, engine room and crew accommodation spaces.",
+    "tags": ["Emergency preparedness"]
+  },
+  {
+    "id": "aec-018",
+    "category": "aec",
+    "question": "How often must abandon ship and fire drills be conducted under SOLAS, and what must each drill include?",
+    "answer": "SOLAS requires abandon ship and fire drills at least monthly for each crew member (with participation within 24 hours of leaving port if more than 25% of crew did not participate in drills the previous month), and every passenger ship must muster passengers within 24 hours of embarkation. Drills should include summoning by alarm, reporting to stations, donning lifejackets, lowering at least one lifeboat (as required periodically), starting/operating emergency equipment, and briefing on procedures.",
+    "tags": ["Emergency preparedness", "SOLAS"]
+  },
+  {
+    "id": "aec-019",
+    "category": "aec",
+    "question": "What is the purpose of an Emergency Towing Booklet / bridge fire & safety plan?",
+    "answer": "The Emergency Towing Booklet (ETB) provides pre-planned procedures, arrangements and equipment locations for emergency towing operations if the vessel loses propulsion/steerage, intended to speed up connection of a tow in an emergency. The bridge fire & safety plan/control plan shows the location of fire-fighting appliances, fire zones, escape routes and damage control equipment, allowing quick reference during an emergency.",
+    "tags": ["Emergency preparedness"]
+  },
+  {
+    "id": "aec-020",
+    "category": "aec",
+    "question": "What does the term 'restricted in her ability to manoeuvre' (RAM) mean under COLREGS, and give three examples of such a vessel.",
+    "answer": "A RAM vessel is one which, from the nature of her work, is restricted in her ability to manoeuvre as required by the Rules and is therefore unable to keep out of the way of another vessel. Examples include a vessel: laying/servicing a navigation mark or submarine cable, engaged in dredging/underwater operations, engaged in launching/recovering aircraft, engaged in mine clearance, or engaged in a towing operation which severely restricts the towing vessel and her tow from deviating from their course.",
+    "tags": ["RAM", "COLREGS"]
+  }
+]

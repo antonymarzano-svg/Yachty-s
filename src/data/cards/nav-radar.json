@@ -1,0 +1,150 @@
+[
+  {
+    "id": "nav-001",
+    "category": "nav-radar",
+    "question": "What is a 'cocked hat' when taking a three-point visual fix, and what should you do about it?",
+    "answer": "A cocked hat is the small triangle formed when three position lines (compass bearings) don't intersect at a single point, usually due to small bearing/plotting errors. The vessel's position is normally taken at the centre of the triangle, or the corner nearest danger if navigating close to hazards, and the cause of the error should be investigated (compass error, plotting mistake, or one bearing being less reliable).",
+    "tags": ["Chartwork", "Fixing"]
+  },
+  {
+    "id": "nav-002",
+    "category": "nav-radar",
+    "question": "How is a 'running fix' obtained and what is its main limitation?",
+    "answer": "A single object is observed and its bearing/range noted; the vessel runs on for a period (course and distance run, corrected for tide/current, are used to transfer the first position line to a new position), then a second bearing of the same (or another) object is taken, and the transferred line is crossed with the new one to give a fix. Its main limitation is that it assumes the run (course/speed/set) between observations was accurately known — any error in the run directly affects fix accuracy, so it is less reliable than a simultaneous fix.",
+    "tags": ["Chartwork", "Fixing"]
+  },
+  {
+    "id": "nav-003",
+    "category": "nav-radar",
+    "question": "What is an Estimated Position (EP) and how does it differ from a Dead Reckoning (DR) position?",
+    "answer": "A DR position is derived only from course steered and distance run through the water (no allowance for wind/current). An EP additionally allows for the estimated effects of leeway, tidal stream/current and steering error, giving a more realistic best estimate of position when no fix is available.",
+    "tags": ["Chartwork"]
+  },
+  {
+    "id": "nav-004",
+    "category": "nav-radar",
+    "question": "Define 'chart datum' and explain its relationship to tidal predictions.",
+    "answer": "Chart datum is the reference level (usually close to Lowest Astronomical Tide, LAT) from which charted depths and drying heights are measured, and to which predicted tidal heights in tide tables are added, so that a charted depth plus the predicted tidal height gives the actual depth of water at that time.",
+    "tags": ["Tides"]
+  },
+  {
+    "id": "nav-005",
+    "category": "nav-radar",
+    "question": "What is the difference between spring and neap tides?",
+    "answer": "Spring tides occur near new and full moon when the sun and moon's gravitational pull align, producing the greatest tidal range (highest highs, lowest lows). Neap tides occur near the moon's first/last quarter when the sun and moon pull at right angles, producing the smallest tidal range.",
+    "tags": ["Tides"]
+  },
+  {
+    "id": "nav-006",
+    "category": "nav-radar",
+    "question": "On radar, what is the difference between True Motion and Relative Motion display modes?",
+    "answer": "In Relative Motion, own ship stays fixed (usually at the centre) and all other targets, including fixed objects like land, move relative to own ship's movement through the water/ground. In True Motion, own ship and all moving targets move across the display in their true (actual) directions and speeds, while fixed targets (land) remain stationary — useful for a more intuitive picture of actual movement, especially in coastal/traffic areas.",
+    "tags": ["Radar"]
+  },
+  {
+    "id": "nav-007",
+    "category": "nav-radar",
+    "question": "Define CPA and TCPA and explain their use in collision avoidance.",
+    "answer": "CPA (Closest Point of Approach) is the minimum distance at which a target is predicted to pass own ship if both vessels maintain their current course and speed. TCPA (Time to CPA) is the time remaining until that closest approach occurs. Both are derived from radar/ARPA plotting and are used to assess risk of collision and the urgency/timing of any avoiding action.",
+    "tags": ["Radar", "ARPA"],
+    "media": {
+      "image": "/images/radar-relative-motion.svg",
+      "imageAlt": "Diagram of a relative motion line and CPA on a radar plot"
+    }
+  },
+  {
+    "id": "nav-008",
+    "category": "nav-radar",
+    "question": "What is 'parallel indexing' and why is it used?",
+    "answer": "Parallel indexing is a radar technique where a parallel line is set on the display at a chosen offset from own ship, aligned to a fixed radar-conspicuous object (e.g. a headland or buoy). By ensuring the object's echo tracks along that line, the OOW can monitor that the vessel maintains a required clearance/track relative to that object, providing a continuous check on position independent of GPS, useful in coastal/pilotage waters.",
+    "tags": ["Radar"]
+  },
+  {
+    "id": "nav-009",
+    "category": "nav-radar",
+    "question": "What is the difference between an ENC and an RNC, and what does 'RCDS mode' mean on ECDIS?",
+    "answer": "An ENC (Electronic Navigational Chart) is a vector chart produced to IHO S-57/S-101 standard by (or on behalf of) a national hydrographic office, with layered, queryable data enabling full ECDIS functions (e.g. automatic grounding alarms). An RNC (Raster Navigational Chart) is simply a scanned image of a paper chart with no underlying intelligent data. When an ECDIS is used with RNCs (no adequate ENC coverage), it operates in Raster Chart Display System (RCDS) mode, which has reduced functionality, and paper charts (or an appropriate backup) must be carried/available as required by the flag state.",
+    "tags": ["ECDIS"]
+  },
+  {
+    "id": "nav-010",
+    "category": "nav-radar",
+    "question": "Name the main alarm/indication types an ECDIS must provide.",
+    "answer": "Typically includes: anti-grounding (look-ahead) alarm when the vessel's safety contour or a charted danger will be crossed within a set time/distance, off-track alarm, approach to a critical point on the route, positioning system failure/degradation, chart datum mismatch, and different-chart-scale-in-use alerts, among other IMO performance-standard alarms.",
+    "tags": ["ECDIS"]
+  },
+  {
+    "id": "nav-011",
+    "category": "nav-radar",
+    "question": "Define variation and deviation and explain how they combine into 'compass error'.",
+    "answer": "Variation is the angular difference between True North and Magnetic North at a given place, caused by the Earth's magnetic field, and changes with location/time (charted with annual change). Deviation is the angular difference between Magnetic North and Compass North, caused by the ship's own magnetism, and varies with the ship's heading. Compass error = variation + deviation (applied algebraically, both named East or West), and is applied to convert compass course/bearing to true, or vice versa.",
+    "tags": ["Compass"]
+  },
+  {
+    "id": "nav-012",
+    "category": "nav-radar",
+    "question": "Give the mnemonic and method for converting compass to true bearings (and vice versa).",
+    "answer": "'CADET' — Compass to True: Add East (when converting Compass → True, add Easterly errors, subtract Westerly). Going the other way (True → Compass) the sign is reversed: subtract East, add West. Compass error (variation + deviation, applied algebraically) is applied to the compass reading to obtain true, and the reverse to convert true back to compass for steering.",
+    "tags": ["Compass"]
+  },
+  {
+    "id": "nav-013",
+    "category": "nav-radar",
+    "question": "List the four stages of passage planning as required by SOLAS/the IMO Guidelines.",
+    "answer": "Appraisal (gathering all relevant information — charts, publications, weather, UKC, company/ port requirements), Planning (drawing the intended track, marking hazards, no-go areas, contingencies, parallel indexes, abort points), Execution (carrying out the plan, taking into account prevailing conditions), and Monitoring (continuously checking progress against the plan and the vessel's position, and cross-checking by independent means).",
+    "tags": ["Passage planning"]
+  },
+  {
+    "id": "nav-014",
+    "category": "nav-radar",
+    "question": "What is meant by 'Under Keel Clearance' (UKC) and what factors must be allowed for when calculating it?",
+    "answer": "UKC is the vertical distance between the deepest point of the ship's hull (keel) and the seabed. Calculating a safe passage/berth UKC must allow for: charted depth and tidal height, ship's static draught (and any list/trim), squat at the planned speed, sea/swell-induced heave/pitch/roll allowance, and chart/survey data accuracy, arriving at a minimum UKC policy figure (often a percentage of draught or a fixed minimum, per company/port requirements).",
+    "tags": ["Passage planning"]
+  },
+  {
+    "id": "nav-015",
+    "category": "nav-radar",
+    "question": "In IALA Region A, what colour, shape and topmark does a port-hand and a starboard-hand lateral mark carry when proceeding in the 'conventional direction of buoyage' (from seaward)?",
+    "answer": "Port-hand: red, can (cylindrical) shape, red can topmark if fitted, even numbering. Starboard-hand: green, conical shape, green conical topmark if fitted, odd numbering. (IALA Region B, e.g. Americas, reverses the colours: red = starboard, green = port.)",
+    "tags": ["Buoyage"],
+    "media": {
+      "image": "/images/iala-region-a-lateral.svg",
+      "imageAlt": "Port hand red can buoy and starboard hand green conical buoy, IALA Region A"
+    }
+  },
+  {
+    "id": "nav-016",
+    "category": "nav-radar",
+    "question": "How are IALA cardinal marks used, and how do you identify a North cardinal mark by its topmark and light?",
+    "answer": "Cardinal marks indicate the location of a danger relative to the mark by their compass name (N/E/S/W) — pass on the named side of the mark. A North cardinal mark has two black cones, both pointing up, as a topmark (yellow bands over black, black over yellow colouring depending on scheme), and shows a continuous quick or very quick flashing white light.",
+    "tags": ["Buoyage"]
+  },
+  {
+    "id": "nav-017",
+    "category": "nav-radar",
+    "question": "What information can be obtained by taking a 'vertical sextant angle' of a lighthouse or object of known height?",
+    "answer": "A vertical sextant angle, combined with the charted height of the object (corrected for tide if needed) and standard tables/formula (Range = height / tan(angle), adjusted for eye height and dip/refraction), gives the distance (range) off that object, which can be used alone or combined with a simultaneous bearing to obtain a fix (bearing and distance fix).",
+    "tags": ["Chartwork", "Sextant"]
+  },
+  {
+    "id": "nav-018",
+    "category": "nav-radar",
+    "question": "What is 'set and drift' and how are they determined from a fix?",
+    "answer": "Set is the direction towards which a current/tidal stream flows; drift is its rate (speed), usually in knots. They can be determined by comparing the DR position (from course/speed through the water only) with an actual fix at the same time: the direction from the DR to the fix is the set, and the distance between them divided by the time elapsed gives the drift.",
+    "tags": ["Tides", "Chartwork"]
+  },
+  {
+    "id": "nav-019",
+    "category": "nav-radar",
+    "question": "What checks should be made to verify a GPS/GNSS position is reliable?",
+    "answer": "Cross-check against an independent source (visual/radar fix, another GNSS receiver, DR/EP), monitor HDOP and number of satellites in use, check for a RAIM/integrity alarm, verify the datum in use matches the chart's datum (e.g. WGS84), and be alert to sudden unexplained jumps in position which may indicate signal loss, multipath error, or jamming/spoofing.",
+    "tags": ["GNSS"]
+  },
+  {
+    "id": "nav-020",
+    "category": "nav-radar",
+    "question": "What navigational lights indicate a vessel constrained by her draught (CBD)?",
+    "answer": "By night: three all-round red lights in a vertical line, or a cylinder as a day shape, in addition to the lights for a power-driven vessel underway. This signals to other vessels that she has very limited ability to deviate from her course due to draught in relation to available depth of water.",
+    "tags": ["Lights", "CBD"]
+  }
+]

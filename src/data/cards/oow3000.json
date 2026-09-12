@@ -1,0 +1,158 @@
+[
+  {
+    "id": "oow-001",
+    "category": "oow3000",
+    "question": "Rule 5 — What constitutes a proper look-out?",
+    "answer": "Every vessel shall at all times maintain a proper look-out by sight AND hearing, as well as by all available means appropriate to the prevailing circumstances, so as to make a full appraisal of the situation and of the risk of collision.",
+    "tags": ["Rule 5", "Lookout"]
+  },
+  {
+    "id": "oow-002",
+    "category": "oow3000",
+    "question": "Rule 6 — What factors determine a safe speed?",
+    "answer": "For all vessels: visibility, traffic density, stopping distance/turning ability, night background glare, wind/sea/current and proximity to navigational hazards. For vessels with operational radar, add: radar range scale, sea clutter/rain effects, detection limitations of small targets, number/position of targets, and more exact assessment of visibility that radar range may permit.",
+    "tags": ["Rule 6", "Safe speed"]
+  },
+  {
+    "id": "oow-003",
+    "category": "oow3000",
+    "question": "Rule 7 — How should risk of collision be determined?",
+    "answer": "Use all available means including radar plotting/systematic observation of compass bearing of an approaching vessel. Risk shall be deemed to exist if the compass bearing does not appreciably change, and also can exist even with an appreciable bearing change (e.g. approaching a very large vessel, a tow, or at close range). Assumptions shall not be made on scanty information, especially scanty radar information.",
+    "tags": ["Rule 7", "Risk of collision"]
+  },
+  {
+    "id": "oow-004",
+    "category": "oow3000",
+    "question": "Rule 8 — What are the requirements for action to avoid collision?",
+    "answer": "Action shall be positive, made in ample time, and with due regard to good seamanship. Alterations of course and/or speed should be large enough to be readily apparent to another vessel observing visually or by radar, and a succession of small alterations should be avoided. Action shall result in passing at a safe distance, checked until the other vessel is finally past and clear; slackening speed, stopping or reversing propulsion is included.",
+    "tags": ["Rule 8", "Action to avoid collision"]
+  },
+  {
+    "id": "oow-005",
+    "category": "oow3000",
+    "question": "Rule 9 — What are the rules for narrow channels?",
+    "answer": "A vessel shall keep as near the outer limit of the channel as is safe and practicable on her starboard side. Vessels <20m and sailing vessels shall not impede vessels that can only navigate safely within the channel. No vessel shall cross a narrow channel if it impedes a vessel that can only navigate within it. Overtaking in a narrow channel requires the sound signal of Rule 34(c) and agreement of the vessel being overtaken. Vessels shall not anchor in a narrow channel if avoidable.",
+    "tags": ["Rule 9", "Narrow channels"]
+  },
+  {
+    "id": "oow-006",
+    "category": "oow3000",
+    "question": "Rule 10 — Key requirements in a Traffic Separation Scheme (TSS)?",
+    "answer": "Proceed in the appropriate lane in the general direction of traffic flow; keep clear of the separation line/zone; join/leave at the termination, or at as small an angle as practicable when joining/leaving from the side. Avoid crossing lanes, but if unavoidable, cross as nearly as practicable at right angles. Vessels <20m, sailing vessels and fishing vessels shall not impede power-driven vessels following a lane. Avoid anchoring in a TSS or near its terminations.",
+    "tags": ["Rule 10", "TSS"]
+  },
+  {
+    "id": "oow-007",
+    "category": "oow3000",
+    "question": "Rule 13 — When is a vessel 'overtaking' and what must she do?",
+    "answer": "A vessel is overtaking when coming up on another from a direction more than 22.5° abaft that vessel's beam (i.e. in the sternlight sector only, at night). The overtaking vessel must keep clear of the vessel being overtaken until finally past and clear, regardless of any subsequent change in the bearing between the two vessels.",
+    "tags": ["Rule 13", "Overtaking"]
+  },
+  {
+    "id": "oow-008",
+    "category": "oow3000",
+    "question": "Rule 14 — What action is required in a head-on situation?",
+    "answer": "When two power-driven vessels are meeting on reciprocal or nearly reciprocal courses so as to involve risk of collision, each shall alter course to starboard so that each passes on the port side of the other. A head-on situation exists when a vessel sees the other ahead or nearly ahead and by night sees the masthead lights in a line/nearly in a line and/or both sidelights, or by day observes the corresponding aspect.",
+    "tags": ["Rule 14", "Head-on"]
+  },
+  {
+    "id": "oow-009",
+    "category": "oow3000",
+    "question": "Rule 15 — What is the give-way vessel's action in a crossing situation?",
+    "answer": "When two power-driven vessels are crossing so as to involve risk of collision, the vessel which has the other on her own starboard side shall keep out of the way and, if circumstances allow, avoid crossing ahead of the other vessel.",
+    "tags": ["Rule 15", "Crossing"]
+  },
+  {
+    "id": "oow-010",
+    "category": "oow3000",
+    "question": "Rule 17 — What are the stand-on vessel's obligations?",
+    "answer": "The stand-on vessel shall keep her course and speed, but may take action to avoid collision as soon as it becomes apparent the give-way vessel is not taking appropriate action. If in extremis, she may take whatever action best aids to avoid collision, and shall not alter course to port for a vessel on her own port side in a crossing situation.",
+    "tags": ["Rule 17", "Stand-on"]
+  },
+  {
+    "id": "oow-011",
+    "category": "oow3000",
+    "question": "Rule 18 — State the responsibilities between vessels (basic pecking order).",
+    "answer": "Except where Rules 9, 10 & 13 require otherwise, from most to least give-way priority a power-driven vessel underway shall keep out of the way of: (1) a vessel not under command, (2) a vessel restricted in her ability to manoeuvre, (3) a vessel engaged in fishing, (4) a sailing vessel. A sailing vessel shall likewise keep clear of NUC and RAM vessels and vessels fishing.",
+    "tags": ["Rule 18", "Responsibilities"]
+  },
+  {
+    "id": "oow-012",
+    "category": "oow3000",
+    "question": "Rule 19 — Action in restricted visibility for a vessel detected by radar alone.",
+    "answer": "A vessel shall avoid: an alteration of course towards a vessel forward of the beam (other than for overtaking), and an alteration of course towards a vessel abeam or abaft the beam. Every vessel shall proceed at a safe speed adapted to the circumstances, and a power-driven vessel shall have engines ready for immediate manoeuvre. Excessive alterations of course/speed should be avoided if a close-quarters situation is developing.",
+    "tags": ["Rule 19", "Restricted visibility"]
+  },
+  {
+    "id": "oow-013",
+    "category": "oow3000",
+    "question": "What sound signal(s) does Rule 34 require for altering course to starboard, to port, and for astern propulsion in sight of one another?",
+    "answer": "One short blast = altering course to starboard. Two short blasts = altering course to port. Three short blasts = operating astern propulsion. A short blast is a blast of about 1 second duration.",
+    "tags": ["Rule 34", "Sound signals"],
+    "media": {
+      "audio": "/audio/one-short-blast.wav",
+      "audioLabel": "One short blast — altering course to starboard"
+    }
+  },
+  {
+    "id": "oow-014",
+    "category": "oow3000",
+    "question": "What is the fog signal for a power-driven vessel underway and making way, in restricted visibility (Rule 35(a))?",
+    "answer": "One prolonged blast at intervals of not more than 2 minutes. A prolonged blast is of 4 to 6 seconds duration.",
+    "tags": ["Rule 35", "Fog signals"],
+    "media": {
+      "audio": "/audio/one-prolonged-blast.wav",
+      "audioLabel": "One prolonged blast — underway, making way"
+    }
+  },
+  {
+    "id": "oow-015",
+    "category": "oow3000",
+    "question": "What fog signal does a vessel not under command, restricted in ability to manoeuvre, constrained by draught, sailing, fishing, or towing/pushing sound in restricted visibility (Rule 35(c))?",
+    "answer": "Two prolonged blasts followed by two short blasts, at intervals of not more than 2 minutes.",
+    "tags": ["Rule 35", "Fog signals", "NUC"],
+    "media": {
+      "audio": "/audio/vessel-not-under-command.wav",
+      "audioLabel": "Two prolonged + two short — NUC/RAM/CBD/sailing/fishing/towing"
+    }
+  },
+  {
+    "id": "oow-016",
+    "category": "oow3000",
+    "question": "How does a vessel at anchor signal her position in restricted visibility (Rule 35(g))?",
+    "answer": "Rapid ringing of the bell for about 5 seconds in the fore part of the vessel at intervals of not more than 1 minute (and if ≥100m, the bell forward followed by the gong sounded rapidly for about 5 seconds aft). She may additionally sound one short, one prolonged and one short blast to warn an approaching vessel of her position and possibility of collision.",
+    "tags": ["Rule 35", "At anchor"],
+    "media": {
+      "audio": "/audio/vessel-at-anchor-bell.wav",
+      "audioLabel": "Rapid bell ringing — vessel at anchor"
+    }
+  },
+  {
+    "id": "oow-017",
+    "category": "oow3000",
+    "question": "What day shapes does a vessel restricted in her ability to manoeuvre (RAM) exhibit (Rule 27)?",
+    "answer": "Three shapes in a vertical line: a ball, a diamond, a ball (top to bottom). At night: three all-round lights in a vertical line — red, white, red.",
+    "tags": ["Rule 27", "Shapes", "RAM"]
+  },
+  {
+    "id": "oow-018",
+    "category": "oow3000",
+    "question": "What day shape indicates a vessel at anchor, and what does a vessel aground show in addition (Rule 30)?",
+    "answer": "At anchor: one ball where it can best be seen, forward. Aground: the anchor ball, plus three balls in a vertical line, and at night the anchor lights/all-round white lights plus two red all-round lights in a vertical line.",
+    "tags": ["Rule 30", "Shapes", "At anchor"]
+  },
+  {
+    "id": "oow-019",
+    "category": "oow3000",
+    "question": "List the visual distress signals recognised under Annex IV of COLREGS.",
+    "answer": "Includes: a gun or explosive signal fired at 1-minute intervals; continuous sounding of fog signalling apparatus; rockets/shells throwing red stars; SOS by radiotelegraphy/other signalling; spoken word 'MAYDAY' by radiotelephony; the code flags N over C; a square flag with a ball above/below it; flames on the vessel (e.g. burning tar barrel); a rocket parachute flare or hand flare showing red light; orange smoke signal; slowly/repeatedly raising and lowering outstretched arms; the radiotelegraph alarm signal; a DSC/EPIRB distress alert; and an approved supplementary signal (e.g. high-intensity white light flashing 50–70 times/min).",
+    "tags": ["Annex IV", "Distress signals"]
+  },
+  {
+    "id": "oow-020",
+    "category": "oow3000",
+    "question": "Rule 2 — What does the 'general prudential rule' (Rule 2) cover?",
+    "answer": "Rule 2(a) Responsibility: nothing exonerates a vessel, owner, master or crew from the consequences of neglecting precautions required by ordinary practice of seamen or by the special circumstances of the case. Rule 2(b) In construing/complying with the Rules, due regard shall be had to all dangers of navigation/collision and any special circumstances (including limitations of the vessels involved) which may make a departure from the Rules necessary to avoid immediate danger.",
+    "tags": ["Rule 2", "General prudential rule"]
+  }
+]

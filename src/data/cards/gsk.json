@@ -1,0 +1,142 @@
+[
+  {
+    "id": "gsk-001",
+    "category": "gsk",
+    "question": "Define metacentric height (GM) and its significance.",
+    "answer": "GM is the vertical distance between the ship's centre of gravity (G) and her metacentre (M). A positive GM gives initial stability (righting lever) when heeled; too small a GM makes the ship 'tender' (slow, uncomfortable rolling), while too large a GM makes her 'stiff' (fast, violent rolling, high stresses on structure/cargo).",
+    "tags": ["Stability"]
+  },
+  {
+    "id": "gsk-002",
+    "category": "gsk",
+    "question": "What is the difference between 'list' and 'trim'?",
+    "answer": "List is an angle of inclination to port or starboard (athwartships), usually caused by unequal transverse distribution of weight. Trim is the difference between forward and aft draughts (fore-and-aft inclination), caused by the longitudinal distribution of weight relative to the centre of flotation.",
+    "tags": ["Stability"]
+  },
+  {
+    "id": "gsk-003",
+    "category": "gsk",
+    "question": "What is the Free Surface Effect (FSE) and how is it reduced?",
+    "answer": "FSE is the virtual rise of G caused by liquid in a slack (partially filled) tank shifting as the ship heels, reducing effective GM and stability. It is reduced by pressing tanks full or keeping them empty, using longitudinal/transverse subdivisions (baffle plates), and minimising the number of slack tanks at once.",
+    "tags": ["Stability"]
+  },
+  {
+    "id": "gsk-004",
+    "category": "gsk",
+    "question": "What is the difference between a bulkhead deck and a freeboard deck?",
+    "answer": "The bulkhead deck is the uppermost deck to which the transverse watertight bulkheads are carried, and up to which watertight integrity of the hull is maintained. The freeboard deck is normally the uppermost complete deck exposed to weather and sea, used as the reference for calculating freeboard/load lines; on many ships they coincide.",
+    "tags": ["Construction"]
+  },
+  {
+    "id": "gsk-005",
+    "category": "gsk",
+    "question": "What is a double bottom and what is its purpose?",
+    "answer": "A double bottom is the watertight space formed between the outer (shell) plating and an inner bottom (tank top), subdivided into tanks by longitudinal/transverse framing. It protects against bottom damage/grounding, provides ballast/fuel/fresh water capacity, and contributes to longitudinal strength.",
+    "tags": ["Construction"]
+  },
+  {
+    "id": "gsk-006",
+    "category": "gsk",
+    "question": "Name the classes of fire and give an example fuel/source for each.",
+    "answer": "Class A: solid combustible materials (wood, paper, textiles). Class B: flammable liquids (oil, petrol, paint). Class C: flammable gases (propane, methane). Class D: combustible metals (magnesium, sodium). Class E (electrical, used in some classifications): fires involving live electrical equipment. Class F: cooking oils/fats.",
+    "tags": ["Fire fighting"]
+  },
+  {
+    "id": "gsk-007",
+    "category": "gsk",
+    "question": "Explain the 'fire triangle' and how each fixed system attacks it.",
+    "answer": "The fire triangle is heat, fuel and oxygen (a fourth element, the chemical chain reaction, gives the 'fire tetrahedron'). Water cools (removes heat); foam smothers and cools (excludes oxygen, some cooling); CO2 and inert gas systems smother by displacing oxygen; dry powder interrupts the chemical chain reaction.",
+    "tags": ["Fire fighting"]
+  },
+  {
+    "id": "gsk-008",
+    "category": "gsk",
+    "question": "What precautions and procedures apply before releasing a fixed CO2 flooding system into a machinery space?",
+    "answer": "Confirm the space is evacuated and a muster/headcount taken, stop ventilation fans and close all openings/dampers/skylights, stop machinery that draws air from the space if possible, sound the warning alarm and allow the pre-discharge delay, then operate the release from the CO2 room per the operating instructions, and post a guard to prevent re-entry until the space is ventilated and gas-freed.",
+    "tags": ["Fire fighting", "CO2 system"]
+  },
+  {
+    "id": "gsk-009",
+    "category": "gsk",
+    "question": "What is the SOLAS requirement for lifeboat capacity markings, and what does an EPIRB do?",
+    "answer": "Each lifeboat must be marked with its maximum permitted number of persons, the ship's name/port of registry, and IMO number, dimensions etc. An EPIRB (Emergency Position Indicating Radio Beacon) is a GMDSS distress alerting device that, when activated (manually or automatically by hydrostatic release + flotation), transmits a distress signal with position via satellite (COSPAS-SARSAT) to alert SAR authorities.",
+    "tags": ["LSA", "GMDSS"]
+  },
+  {
+    "id": "gsk-010",
+    "category": "gsk",
+    "question": "What is a SART and how does it assist search and rescue?",
+    "answer": "A Search and Rescue Transponder (SART) responds to X-band radar interrogation from a searching vessel/aircraft by transmitting a series of responses that appear as a line of dots on the searcher's radar display, indicating range and bearing to the survivor craft, with detection range typically several miles depending on searcher's antenna height.",
+    "tags": ["LSA", "SAR"]
+  },
+  {
+    "id": "gsk-011",
+    "category": "gsk",
+    "question": "What is required for immersion suits and thermal protective aids (TPAs) under SOLAS?",
+    "answer": "SOLAS generally requires an immersion suit of appropriate size for every person on board on certain ship types/voyages (or the vessel carries sufficient TPAs where full provision of immersion suits isn't required), designed to reduce the body's rate of heat loss in cold water; TPAs are bags/covering made of waterproof, low-conductivity material for survival craft occupants.",
+    "tags": ["LSA"]
+  },
+  {
+    "id": "gsk-012",
+    "category": "gsk",
+    "question": "What is the purpose of the ISM Code?",
+    "answer": "The International Safety Management (ISM) Code provides an international standard for the safe management and operation of ships and for pollution prevention, requiring companies to establish a Safety Management System (SMS) covering safety/environmental policy, procedures, designated person ashore (DPA), reporting of non-conformities, emergency preparedness, and internal audits.",
+    "tags": ["ISM"]
+  },
+  {
+    "id": "gsk-013",
+    "category": "gsk",
+    "question": "What is the purpose of the ISPS Code and what are the three security levels?",
+    "answer": "The International Ship and Port Facility Security (ISPS) Code provides a framework for assessing and managing security risk to ships and port facilities. Security Level 1: normal, minimum protective measures maintained at all times. Level 2: heightened risk, additional protective measures for a period. Level 3: exceptional, further specific protective measures for a limited period when an incident is probable or imminent.",
+    "tags": ["ISPS"]
+  },
+  {
+    "id": "gsk-014",
+    "category": "gsk",
+    "question": "What are the main annexes of MARPOL and what does each cover?",
+    "answer": "Annex I: Oil. Annex II: Noxious Liquid Substances (NLS) in bulk. Annex III: Harmful Substances carried in packaged form. Annex IV: Sewage. Annex V: Garbage. Annex VI: Air Pollution (SOx, NOx, ODS, and now GHG/carbon intensity measures).",
+    "tags": ["MARPOL"]
+  },
+  {
+    "id": "gsk-015",
+    "category": "gsk",
+    "question": "What entries must be made in the Oil Record Book and Garbage Record Book, and who is responsible?",
+    "answer": "The Oil Record Book Part I (machinery space operations) logs bunkering, transfers, bilge water discharges/disposal ashore, and ODMCS/oily water separator use, signed by the officer in charge and countersigned by the master; Part II covers cargo/ballast operations on oil tankers. The Garbage Record Book logs discharge/incineration/landing of each garbage category with date, position and quantity. Both are legal documents that can be inspected by Port State Control.",
+    "tags": ["MARPOL", "Recordkeeping"]
+  },
+  {
+    "id": "gsk-016",
+    "category": "gsk",
+    "question": "What is squat, and what factors increase it?",
+    "answer": "Squat is the combined effect of a ship's bodily sinkage and change of trim caused by the flow of water around the hull as it moves through the water, increasing effective draught. It increases with higher speed (roughly proportional to speed squared), shallow/restricted water (high block coefficient, narrow/shallow channels), and is greater by the bow for full-form vessels typically.",
+    "tags": ["Ship handling"]
+  },
+  {
+    "id": "gsk-017",
+    "category": "gsk",
+    "question": "Explain 'bank effect' and 'interaction' when navigating close to a bank or passing another vessel.",
+    "answer": "Bank effect (canal/squat effect): when a vessel's stern moves closer to a nearby bank, the stern is pushed away and the bow pulled towards the bank due to pressure/suction differences, tending to sheer the vessel off course. Interaction: when two vessels pass close (overtaking or meeting), the pressure fields between the hulls can cause bodily attraction, sheering, and a reduction in steering effectiveness, requiring reduced speed and increased passing distance in confined/shallow water.",
+    "tags": ["Ship handling"]
+  },
+  {
+    "id": "gsk-018",
+    "category": "gsk",
+    "question": "What items are typically found in a ship's medical chest categories under an MLC-compliant guide (e.g. medical stores by category)?",
+    "answer": "Categories generally include: medicaments (analgesics, antibiotics, antihistamines, cardiovascular, GI, respiratory drugs, IV fluids), medical equipment/instruments (resuscitation kit, splints, sutures), dressings/bandages, and antidotes, scaled to the ship's trading area, complement and whether a doctor is carried, per the flag state's medical guide (e.g. MFAG/ship captain's medical guide).",
+    "tags": ["Medical"]
+  },
+  {
+    "id": "gsk-019",
+    "category": "gsk",
+    "question": "What is the difference between a 'load line' and 'draught marks', and name the main load line zones/marks.",
+    "answer": "Draught marks show how deep the vessel is sitting in the water at that moment (forward/aft/midships). The load line (Plimsoll mark) is a fixed marking amidships showing the maximum permissible draught (freeboard) for different water densities/seasons/zones: TF (Tropical Fresh), F (Fresh), T (Tropical), S (Summer), W (Winter), WNA (Winter North Atlantic).",
+    "tags": ["Load lines"]
+  },
+  {
+    "id": "gsk-020",
+    "category": "gsk",
+    "question": "What is the purpose of watertight and weathertight subdivision, and give the difference between the two terms.",
+    "answer": "Subdivision by watertight bulkheads/decks limits flooding to one or a limited number of compartments after damage, preserving reserve buoyancy and stability (SOLAS damage stability requirements). Watertight means no water can pass under a designed head of water; weathertight means that under normal sea conditions, water will not penetrate the closure (e.g. some doors/hatches above the freeboard deck), which is a lower standard than watertight.",
+    "tags": ["Construction", "Stability"]
+  }
+]
