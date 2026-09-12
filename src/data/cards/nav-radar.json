@@ -2,149 +2,481 @@
   {
     "id": "nav-001",
     "category": "nav-radar",
-    "question": "What is a 'cocked hat' when taking a three-point visual fix, and what should you do about it?",
-    "answer": "A cocked hat is the small triangle formed when three position lines (compass bearings) don't intersect at a single point, usually due to small bearing/plotting errors. The vessel's position is normally taken at the centre of the triangle, or the corner nearest danger if navigating close to hazards, and the cause of the error should be investigated (compass error, plotting mistake, or one bearing being less reliable).",
-    "tags": ["Chartwork", "Fixing"]
+    "question": "Define Geographical Range and Luminous Range of a navigation light.",
+    "answer": "Geographical Range assumes unlimited visibility — it is the range at which a light can first be seen, accounting for height of eye of the observer and elevation of the light above sea level (a tidal correction must be applied to the charted height). Luminous Range depends only on the light's intensity and the meteorological visibility, taking no account of height of eye or curvature of the earth.",
+    "tags": ["Lights", "ALL"]
   },
   {
     "id": "nav-002",
     "category": "nav-radar",
-    "question": "How is a 'running fix' obtained and what is its main limitation?",
-    "answer": "A single object is observed and its bearing/range noted; the vessel runs on for a period (course and distance run, corrected for tide/current, are used to transfer the first position line to a new position), then a second bearing of the same (or another) object is taken, and the transferred line is crossed with the new one to give a fix. Its main limitation is that it assumes the run (course/speed/set) between observations was accurately known — any error in the run directly affects fix accuracy, so it is less reliable than a simultaneous fix.",
-    "tags": ["Chartwork", "Fixing"]
+    "question": "State the formula for finding the elevation of a light, and explain what happens when Geographical Range exceeds Luminous Range (and vice versa).",
+    "answer": "Elevation of light = Charted height + height of MHWS − height of tide. If Geographical Range exceeds Luminous Range, the mariner will see a faint point of light strengthening as she closes — bearings can be taken as soon as it's sighted. If Luminous Range exceeds Geographical Range, she will see a 'loom' (a glow in the sky above the light) but cannot get a bearing to the light itself until within geographical range.",
+    "tags": ["Lights", "ALL"]
   },
   {
     "id": "nav-003",
     "category": "nav-radar",
-    "question": "What is an Estimated Position (EP) and how does it differ from a Dead Reckoning (DR) position?",
-    "answer": "A DR position is derived only from course steered and distance run through the water (no allowance for wind/current). An EP additionally allows for the estimated effects of leeway, tidal stream/current and steering error, giving a more realistic best estimate of position when no fix is available.",
-    "tags": ["Chartwork"]
+    "question": "Explain a horizontal angle (station pointer) fix using three charted marks.",
+    "answer": "Two horizontal angles (each between a pair of marks, taken with a sextant held horizontally, or by subtracting compass/relative bearings) each define a position circle passing through the vessel and that pair of marks — the fix is where the two circles intersect. Subtracting one bearing from another cancels out any constant compass error, such as a misaligned lubber line. The method fails if the vessel lies on or near the circle passing through all three marks.",
+    "tags": ["Chartwork", "Fixing"]
   },
   {
     "id": "nav-004",
     "category": "nav-radar",
-    "question": "Define 'chart datum' and explain its relationship to tidal predictions.",
-    "answer": "Chart datum is the reference level (usually close to Lowest Astronomical Tide, LAT) from which charted depths and drying heights are measured, and to which predicted tidal heights in tide tables are added, so that a charted depth plus the predicted tidal height gives the actual depth of water at that time.",
-    "tags": ["Tides"]
+    "question": "How is a Vertical Sextant Angle (VSA) used to find distance off a lighthouse?",
+    "answer": "Take a vertical sextant angle of the light (base must be visible at sea level, not below the horizon), calculate the light's elevation (Charted Height + MHWS − Height of Tide, or just Charted Height if no tide data given), then enter the VSA distance-off tables (e.g. Norie's) with the elevation and angle to read off the range — giving a circle of position. Combined with a simultaneous compass bearing of the same light, this gives a full fix.",
+    "tags": ["Chartwork", "VSA"]
   },
   {
     "id": "nav-005",
     "category": "nav-radar",
-    "question": "What is the difference between spring and neap tides?",
-    "answer": "Spring tides occur near new and full moon when the sun and moon's gravitational pull align, producing the greatest tidal range (highest highs, lowest lows). Neap tides occur near the moon's first/last quarter when the sun and moon pull at right angles, producing the smallest tidal range.",
-    "tags": ["Tides"]
+    "question": "Distinguish Dead Reckoning (DR) from an Estimated Position (EP).",
+    "answer": "Dead Reckoning: a position derived only from true course steered and distance run through the water, with NO allowance for leeway, tide or current — very approximate. Estimated Position: the best estimate of position, additionally allowing for leeway (if any) and for tide/current. Both are plotted after the event, from log book information — they are history, not a prediction.",
+    "tags": ["DR", "EP"]
   },
   {
     "id": "nav-006",
     "category": "nav-radar",
-    "question": "On radar, what is the difference between True Motion and Relative Motion display modes?",
-    "answer": "In Relative Motion, own ship stays fixed (usually at the centre) and all other targets, including fixed objects like land, move relative to own ship's movement through the water/ground. In True Motion, own ship and all moving targets move across the display in their true (actual) directions and speeds, while fixed targets (land) remain stationary — useful for a more intuitive picture of actual movement, especially in coastal/traffic areas.",
-    "tags": ["Radar"]
+    "question": "What is a Projected EP, and for whom is it especially useful?",
+    "answer": "A Projected EP estimates the vessel's position at a future time (e.g. in an hour), based on the course already being steered and a projected log reading, to check in advance for proximity to a charted danger — the course is already fixed, so no course-to-steer calculation is needed. It is especially useful for sailing yachts, whose course may be constrained by the wind.",
+    "tags": ["EP"]
   },
   {
     "id": "nav-007",
     "category": "nav-radar",
-    "question": "Define CPA and TCPA and explain their use in collision avoidance.",
-    "answer": "CPA (Closest Point of Approach) is the minimum distance at which a target is predicted to pass own ship if both vessels maintain their current course and speed. TCPA (Time to CPA) is the time remaining until that closest approach occurs. Both are derived from radar/ARPA plotting and are used to assess risk of collision and the urgency/timing of any avoiding action.",
-    "tags": ["Radar", "ARPA"],
-    "media": {
-      "image": "/images/radar-relative-motion.svg",
-      "imageAlt": "Diagram of a relative motion line and CPA on a radar plot"
-    }
+    "question": "Explain the Four-Point Bearing method of finding distance off.",
+    "answer": "Note the time when a lighthouse/mark bears 45° off the bow, hold a steady course, then note the time it bears exactly abeam (90°). The distance run between the two bearings (found from speed × time) equals the distance off the mark when abeam, since the two bearing lines and the track form a right-angled isosceles triangle.",
+    "tags": ["Chartwork", "Distance off"]
   },
   {
     "id": "nav-008",
     "category": "nav-radar",
-    "question": "What is 'parallel indexing' and why is it used?",
-    "answer": "Parallel indexing is a radar technique where a parallel line is set on the display at a chosen offset from own ship, aligned to a fixed radar-conspicuous object (e.g. a headland or buoy). By ensuring the object's echo tracks along that line, the OOW can monitor that the vessel maintains a required clearance/track relative to that object, providing a continuous check on position independent of GPS, useful in coastal/pilotage waters.",
-    "tags": ["Radar"]
+    "question": "Distinguish Ground Track from Water Track.",
+    "answer": "Ground Track is the path the vessel actually follows over the seabed (given by successive GPS positions) — Course Over Ground and Speed Over Ground (COG/SOG) relate to it. Water Track is the path through the water itself, which differs from ground track whenever there is tide or current; water speed and log distance relate to it, and the vessel's heading lies along the water track unless there is leeway.",
+    "tags": ["Ground track", "Water track"]
   },
   {
     "id": "nav-009",
     "category": "nav-radar",
-    "question": "What is the difference between an ENC and an RNC, and what does 'RCDS mode' mean on ECDIS?",
-    "answer": "An ENC (Electronic Navigational Chart) is a vector chart produced to IHO S-57/S-101 standard by (or on behalf of) a national hydrographic office, with layered, queryable data enabling full ECDIS functions (e.g. automatic grounding alarms). An RNC (Raster Navigational Chart) is simply a scanned image of a paper chart with no underlying intelligent data. When an ECDIS is used with RNCs (no adequate ENC coverage), it operates in Raster Chart Display System (RCDS) mode, which has reduced functionality, and paper charts (or an appropriate backup) must be carried/available as required by the flag state.",
-    "tags": ["ECDIS"]
+    "question": "Outline the 4-step 'GTTW' method for finding a Course to Steer against a tide.",
+    "answer": "GTTW — Get To The Waypoint: 1. Ground Track: draw the intended track from your position to the waypoint, extended beyond it. 2. Time: decide a time interval (e.g. 1 hour) and draw a distance triangle for it. 3. Tide: from the start point, plot the tide vector for that time interval (marked with a triple arrow). 4. Water Track: from the end of the tide vector, swing an arc equal to your boat's water distance for that interval onto the ground track — this line is your required heading/course to steer (after applying leeway, variation, deviation, in that order).",
+    "tags": ["Course to steer"]
   },
   {
     "id": "nav-010",
     "category": "nav-radar",
-    "question": "Name the main alarm/indication types an ECDIS must provide.",
-    "answer": "Typically includes: anti-grounding (look-ahead) alarm when the vessel's safety contour or a charted danger will be crossed within a set time/distance, off-track alarm, approach to a critical point on the route, positioning system failure/degradation, chart datum mismatch, and different-chart-scale-in-use alerts, among other IMO performance-standard alarms.",
-    "tags": ["ECDIS"]
+    "question": "How is a Running Fix taken from a single landmark?",
+    "answer": "Take a bearing of the mark (giving Position Line 1, PL1) and note the time. Continue on, and after an interval plot an EP allowing for tide, which lets you transfer PL1 forward by the distance/direction made good to give a Transferred Position Line (TPL). At the same later time, take a second bearing of the same mark (PL2). The fix is where PL2 crosses the TPL.",
+    "tags": ["Running fix"]
   },
   {
     "id": "nav-011",
     "category": "nav-radar",
-    "question": "Define variation and deviation and explain how they combine into 'compass error'.",
-    "answer": "Variation is the angular difference between True North and Magnetic North at a given place, caused by the Earth's magnetic field, and changes with location/time (charted with annual change). Deviation is the angular difference between Magnetic North and Compass North, caused by the ship's own magnetism, and varies with the ship's heading. Compass error = variation + deviation (applied algebraically, both named East or West), and is applied to convert compass course/bearing to true, or vice versa.",
-    "tags": ["Compass"]
+    "question": "Name the four stages of passage planning (APEM) and who is responsible for the plan.",
+    "answer": "Appraisal (gathering all relevant information on the intended voyage); Planning (compiling the passage plan and briefing the bridge team); Execution (carrying it out under prevailing conditions); Monitoring (continuously checking progress against the plan). The navigating officer prepares the detailed berth-to-berth plan per the Master's requirements and the IMO Guidelines (SOLAS Ch V, Reg 34 and its Annexes).",
+    "tags": ["Passage planning", "APEM"]
   },
   {
     "id": "nav-012",
     "category": "nav-radar",
-    "question": "Give the mnemonic and method for converting compass to true bearings (and vice versa).",
-    "answer": "'CADET' — Compass to True: Add East (when converting Compass → True, add Easterly errors, subtract Westerly). Going the other way (True → Compass) the sign is reversed: subtract East, add West. Compass error (variation + deviation, applied algebraically) is applied to the compass reading to obtain true, and the reverse to convert true back to compass for steering.",
-    "tags": ["Compass"]
+    "question": "During the Planning stage, what additional information should be marked on the charts?",
+    "answer": "All radar-conspicuous objects and RACONs usable for position fixing; transit marks, clearing bearings and clearing ranges; parallel index lines where appropriate; and the intended track plotted to clear all hazards by a safe margin (a longer, safer route is always preferred over a shorter, more hazardous one) — with advance warning of a hazard given before the vessel transfers to the next chart.",
+    "tags": ["Passage planning"]
   },
   {
     "id": "nav-013",
     "category": "nav-radar",
-    "question": "List the four stages of passage planning as required by SOLAS/the IMO Guidelines.",
-    "answer": "Appraisal (gathering all relevant information — charts, publications, weather, UKC, company/ port requirements), Planning (drawing the intended track, marking hazards, no-go areas, contingencies, parallel indexes, abort points), Execution (carrying out the plan, taking into account prevailing conditions), and Monitoring (continuously checking progress against the plan and the vessel's position, and cross-checking by independent means).",
-    "tags": ["Passage planning"]
+    "question": "How frequently should a vessel's position normally be fixed during an ocean crossing versus in coastal waters?",
+    "answer": "Ocean crossing: three times a day if fixing celestially (stars at morning twilight, a sun-run-sun during the day, stars at evening twilight), or once a watch if fixing by GPS. Coastal waters: a fix should be made at intervals equal to half the time it would take to reach the nearest danger.",
+    "tags": ["Passage planning", "Monitoring"]
   },
   {
     "id": "nav-014",
     "category": "nav-radar",
-    "question": "What is meant by 'Under Keel Clearance' (UKC) and what factors must be allowed for when calculating it?",
-    "answer": "UKC is the vertical distance between the deepest point of the ship's hull (keel) and the seabed. Calculating a safe passage/berth UKC must allow for: charted depth and tidal height, ship's static draught (and any list/trim), squat at the planned speed, sea/swell-induced heave/pitch/roll allowance, and chart/survey data accuracy, arriving at a minimum UKC policy figure (often a percentage of draught or a fixed minimum, per company/port requirements).",
-    "tags": ["Passage planning"]
+    "question": "According to IMO Resolution A.285(VIII), does taking a pilot relieve the OOW of responsibility for the vessel's safety?",
+    "answer": "No. Despite the pilot's duties, his presence does not relieve the OOW of responsibility for the safety of the vessel. The OOW must co-operate closely with the pilot, maintain an accurate check on position and movement, and if in doubt about the pilot's actions or intentions, seek clarification — and if doubt remains, notify the Master immediately and take whatever action is necessary before the Master arrives.",
+    "tags": ["Passage planning", "Pilotage"]
   },
   {
     "id": "nav-015",
     "category": "nav-radar",
-    "question": "In IALA Region A, what colour, shape and topmark does a port-hand and a starboard-hand lateral mark carry when proceeding in the 'conventional direction of buoyage' (from seaward)?",
-    "answer": "Port-hand: red, can (cylindrical) shape, red can topmark if fitted, even numbering. Starboard-hand: green, conical shape, green conical topmark if fitted, odd numbering. (IALA Region B, e.g. Americas, reverses the colours: red = starboard, green = port.)",
-    "tags": ["Buoyage"],
-    "media": {
-      "image": "/images/iala-region-a-lateral.svg",
-      "imageAlt": "Port hand red can buoy and starboard hand green conical buoy, IALA Region A"
-    }
+    "question": "When checking an unfamiliar paper chart before use, what key things should you verify?",
+    "answer": "It is the largest scale available (check the Admiralty Folio); it is authentic (chart/publication stamp, chart number, watermark held to the light) and up to date (check against the Cumulative List); the edition number/date and latest correction number/date (bottom left corner) are current per the latest Notices to Mariners; the source data diagram (survey quality, via NP100); the datum used; and chart symbols (per chart 5011). Depths are always shown below Chart Datum.",
+    "tags": ["Chart checking"]
   },
   {
     "id": "nav-016",
     "category": "nav-radar",
-    "question": "How are IALA cardinal marks used, and how do you identify a North cardinal mark by its topmark and light?",
-    "answer": "Cardinal marks indicate the location of a danger relative to the mark by their compass name (N/E/S/W) — pass on the named side of the mark. A North cardinal mark has two black cones, both pointing up, as a topmark (yellow bands over black, black over yellow colouring depending on scheme), and shows a continuous quick or very quick flashing white light.",
-    "tags": ["Buoyage"]
+    "question": "What is CATZOC, and what is the ECDIS default 'Safety Contour' if none is set?",
+    "answer": "CATZOC (Category of Zone of Confidence) indicates the quality/reliability of the survey data underlying an ENC. If the Safety Depth and Safety Contour are not set by the user, an ECDIS will default to a 30-metre Safety Contour, shown as a grey line — depths on ECDIS are always shown below Chart Datum, with no allowance for height of tide.",
+    "tags": ["ECDIS"]
   },
   {
     "id": "nav-017",
     "category": "nav-radar",
-    "question": "What information can be obtained by taking a 'vertical sextant angle' of a lighthouse or object of known height?",
-    "answer": "A vertical sextant angle, combined with the charted height of the object (corrected for tide if needed) and standard tables/formula (Range = height / tan(angle), adjusted for eye height and dip/refraction), gives the distance (range) off that object, which can be used alone or combined with a simultaneous bearing to obtain a fix (bearing and distance fix).",
-    "tags": ["Chartwork", "Sextant"]
+    "question": "What is the difference between ECDIS (using ENCs) and an RCDS (using ARCS raster charts)?",
+    "answer": "ECDIS uses official vector Electronic Navigational Charts (ENCs) with intelligent, queryable data (e.g. 'pick reports' on marks) and full ECDIS functions such as automatic grounding alarms. An RCDS (Raster Chart Display System, e.g. ARCS) simply displays scanned images of paper charts — containing no more or less information than the paper chart, with only limited pick-reporting on some variants, and no vector-based safety-contour alarms.",
+    "tags": ["ECDIS", "RCDS"]
   },
   {
     "id": "nav-018",
     "category": "nav-radar",
-    "question": "What is 'set and drift' and how are they determined from a fix?",
-    "answer": "Set is the direction towards which a current/tidal stream flows; drift is its rate (speed), usually in knots. They can be determined by comparing the DR position (from course/speed through the water only) with an actual fix at the same time: the direction from the DR to the fix is the set, and the distance between them divided by the time elapsed gives the drift.",
-    "tags": ["Tides", "Chartwork"]
+    "question": "What is NP136 (Ocean Passages of the World) used for, and what is NP350?",
+    "answer": "NP136, Ocean Passages of the World, supports deep-sea voyage planning on major routes with chapters on weather, currents, ice hazards and distances for each ocean, route diagrams, and Great Circle vs Rhumb Line route assessment. NP350, Distance Tables, is a three-part regional series giving the shortest distances between ports, used alongside NP136.",
+    "tags": ["Nautical publications"]
   },
   {
     "id": "nav-019",
     "category": "nav-radar",
-    "question": "What checks should be made to verify a GPS/GNSS position is reliable?",
-    "answer": "Cross-check against an independent source (visual/radar fix, another GNSS receiver, DR/EP), monitor HDOP and number of satellites in use, check for a RAIM/integrity alarm, verify the datum in use matches the chart's datum (e.g. WGS84), and be alert to sudden unexplained jumps in position which may indicate signal loss, multipath error, or jamming/spoofing.",
-    "tags": ["GNSS"]
+    "question": "What is NP100 (Mariner's Handbook), and what do NP5124–NP5128 (Routeing Charts) contain?",
+    "answer": "NP100, the Mariner's Handbook, gives clear guidance on charts and their use, navigational communication, the maritime environment, restrictions to navigation, and pollution/conservation regulations. Routeing Charts NP5124–5128 (12 monthly charts per region) show meteorological/oceanographic conditions by month — routes, distances, ocean currents, ice limits, load line zones, and wind roses — essential for ocean passage planning.",
+    "tags": ["Nautical publications"]
   },
   {
     "id": "nav-020",
     "category": "nav-radar",
-    "question": "What navigational lights indicate a vessel constrained by her draught (CBD)?",
-    "answer": "By night: three all-round red lights in a vertical line, or a cylinder as a day shape, in addition to the lights for a power-driven vessel underway. This signals to other vessels that she has very limited ability to deviate from her course due to draught in relation to available depth of water.",
-    "tags": ["Lights", "CBD"]
+    "question": "What do NP1–NP72 (Sailing Directions) and NP74–NP88 (Admiralty List of Lights, ALL) contain?",
+    "answer": "Sailing Directions ('Pilot Books', NP1–72) cover navigational hazards, buoyage, pilotage, regulations, port facilities, and seasonal/ice/climatic conditions for coastal navigation. The Admiralty List of Lights and Fog Signals (ALL, 15 volumes, NP74–88) lists each light's International Number, name, position, characteristics, height, nominal range, and structure description/remarks — found via the ALL index using the chart's proper name.",
+    "tags": ["Nautical publications", "ALL"]
+  },
+  {
+    "id": "nav-021",
+    "category": "nav-radar",
+    "question": "List the six volumes of the Admiralty List of Radio Signals (ALRS) and their general content.",
+    "answer": "Vol 1: Maritime Radio Stations (coast radio, satellite comms, TMAS, anti-piracy). Vol 2: Radio Aids to Navigation, DGPS, Legal/Radio Time Signals (incl. Racons, AIS, eLoran). Vol 3: Maritime Safety Information (weather, NAVTEX/SafetyNET, Subfacts/Gunfacts). Vol 4: Meteorological Observation Stations. Vol 5: GMDSS (distress/SAR, SOLAS/ITU extracts). Vol 6: Pilot Services, VTS and Port Operations.",
+    "tags": ["ALRS"]
+  },
+  {
+    "id": "nav-022",
+    "category": "nav-radar",
+    "question": "Name the three types of MSI navigational warning under the World Wide Navigational Warning System (WWNWS), and their approximate coverage.",
+    "answer": "NAVAREA warnings: long-range, one of 21 global geographical areas, issued by an Area Co-ordinator (via Inmarsat SafeNET/EGC), typically from 250nm off the coast outward. Coastal warnings: issued by the country of origin for a specific coastal region (NAVTEX/VHF/MF), typically from the port's fairway/safe-water mark out to 250nm. Local warnings: supplement coastal warnings with detailed inshore information, often from Coastguard/Port Control, sometimes in the national language only.",
+    "tags": ["MSI", "Navigational warnings"]
+  },
+  {
+    "id": "nav-023",
+    "category": "nav-radar",
+    "question": "What are the four compulsory NAVTEX message types, and what should you do on receiving a navigational warning?",
+    "answer": "Compulsory message types: A (Navigation Warnings), B (Meteorological Warnings), D (Search and Rescue), L (Additional Navigation Warnings). On receipt: read the text completely; check if it affects your passage/trading area; plot positions as relevant; correct affected charts; log the entry; sign and file the warning; inform the Master if significant; and inform the relieving officer.",
+    "tags": ["MSI", "Navigational warnings"]
+  },
+  {
+    "id": "nav-024",
+    "category": "nav-radar",
+    "question": "Distinguish the Weekly Notices to Mariners, the Cumulative List, and the Annual Summary of Notices to Mariners.",
+    "answer": "Weekly Notices to Mariners: issued weekly, containing corrections to charts and all Admiralty publications (in 8 sections including NAVAREA I reprints). Cumulative List of NMs (NP234(B)): issued every January and June/July, listing each chart's current edition date and any relevant NMs issued since. Annual Summary of NMs (NP247): issued annually, containing general NMs still in force, reprints of Temporary/Preliminary notices still in force, and Sailing Directions corrections for the year.",
+    "tags": ["Chart correction"]
+  },
+  {
+    "id": "nav-025",
+    "category": "nav-radar",
+    "question": "What is the procedure for correcting a Standard Nautical Chart with a Temporary or Preliminary (T&P) Notice to Mariners?",
+    "answer": "Check the 'Charts Affected' list against your portfolio; find the chart and confirm its last-applied correction matches the NM's stated previous update; apply the correction IN PENCIL and note the T&P number (with year if needed) at the bottom left corner; log the action in the Chart Correction Log. When the T&P is later cancelled (notified monthly), the pencilled correction is erased and the log updated accordingly.",
+    "tags": ["Chart correction", "T&P notices"]
+  },
+  {
+    "id": "nav-026",
+    "category": "nav-radar",
+    "question": "What is the difference between an ARCS 'Navigator' licence and a 'Skipper' licence?",
+    "answer": "A Navigator licence (required to meet MCA/IMO carriage requirements) is valid for a year and includes weekly updates carrying the same corrections as the paper Notices to Mariners, available by email/internet download. A Skipper licence (for private yachts) gives lifelong use of the purchased chart CD, with updates available separately on a quarterly or annual basis.",
+    "tags": ["Chart correction", "ARCS"]
+  },
+  {
+    "id": "nav-027",
+    "category": "nav-radar",
+    "question": "What causes tides, and what is the difference between a semi-diurnal and a diurnal tide?",
+    "answer": "Tides are caused by the gravitational pull of the moon and sun combined with the Earth's rotation. The moon's pull raises a bulge of water on the near side of the Earth and a smaller one on the far side; as the Earth spins beneath these bulges (about every 24h 50min for two full cycles), most places get two highs and two lows a day — a semi-diurnal tide, with about 12h 25m between successive high waters. Where the moon's orbital tilt and landmasses disrupt this, some areas (notably the Pacific) get only one high water in about 25 hours — a diurnal tide.",
+    "tags": ["Tides"]
+  },
+  {
+    "id": "nav-028",
+    "category": "nav-radar",
+    "question": "Explain Spring and Neap tides, and Equinoctial Springs.",
+    "answer": "When the sun and moon are aligned (new and full moon), their combined gravity produces Spring tides — a bigger tidal range (higher highs, lower lows). When they are at right angles (first/last quarter moon), the combined pull is weaker, giving Neap tides — a smaller range. This spring/neap cycle repeats about every 14 days. The very closest Earth-moon-sun alignment occurs twice a year (around the equinoxes in March and September), producing especially large 'equinoctial springs'.",
+    "tags": ["Tides", "Springs and neaps"]
+  },
+  {
+    "id": "nav-029",
+    "category": "nav-radar",
+    "question": "Define Chart Datum, LAT and HAT.",
+    "answer": "Chart Datum (CD): the lowest level of water ever expected (excluding meteorological effects) — for modern charts this equates to Lowest Astronomical Tide (LAT), the reference from which charted depths and tidal heights are measured. Highest Astronomical Tide (HAT): the highest level of water expected from astronomical effects alone — used on newer charts as the reference for bridge/cable clearances (instead of MHWS).",
+    "tags": ["Tidal terms"]
+  },
+  {
+    "id": "nav-030",
+    "category": "nav-radar",
+    "question": "Define Charted Depth, Charted Height, Drying Height and Height of Tide.",
+    "answer": "Charted Depth: depth shown on the chart, measured from Chart Datum (add height of tide for actual depth of water). Charted Height: height of a permanently-exposed feature ashore, measured from MHWS (or HAT on newer charts for clearances). Drying Height: height of an object (e.g. a rock) that covers and dries with the tide, measured above Chart Datum. Height of Tide: the difference between Chart Datum and the actual sea level at a given time.",
+    "tags": ["Tidal terms"]
+  },
+  {
+    "id": "nav-031",
+    "category": "nav-radar",
+    "question": "Define MHWS, MHWN, MLWN, MLWS, and 'Range'.",
+    "answer": "Mean High Water Springs (MHWS): average height of High Water at Springs, from CD. Mean High Water Neaps (MHWN): average HW height at Neaps. Mean Low Water Neaps (MLWN): average Low Water height at Neaps. Mean Low Water Springs (MLWS): average LW height at Springs. Range: the difference between the levels of high and low water — the Mean Spring Range and Mean Neap Range define typical spring/neap tides for a port.",
+    "tags": ["Tidal terms"]
+  },
+  {
+    "id": "nav-032",
+    "category": "nav-radar",
+    "question": "What is a 'secondary port', and how do you find the tide at one?",
+    "answer": "A secondary port has no full daily tide table of its own; instead, the tide tables give TIME and HEIGHT DIFFERENCES from a linked 'standard port', found via the port's index number in Part II ('the Differences') of the Admiralty Tide Tables. Applying these differences (and any seasonal change) to the standard port's HW/LW times and heights, then plotting the result on the standard port's tidal curve, gives the secondary port's tide.",
+    "tags": ["Tides", "Secondary ports"]
+  },
+  {
+    "id": "nav-033",
+    "category": "nav-radar",
+    "question": "State the formula for '% Springs' used to choose between the spring and neap tidal curve.",
+    "answer": "% Springs = [(Range of the Day − Mean Neap Range) ÷ (Mean Spring Range − Mean Neap Range)] × 100. The result gives the position between the neap curve (dashed) and spring curve (solid) to interpolate from; a value over 100% still means read from the springs curve (interpolation is never extrapolated beyond the springs line).",
+    "tags": ["Tides", "% Springs"]
+  },
+  {
+    "id": "nav-034",
+    "category": "nav-radar",
+    "question": "What is skywave interference in LORAN-type systems, and when is it worst?",
+    "answer": "The skywave is a signal reflected off the ionosphere that travels further than the direct groundwave and so arrives later; if it overlaps the groundwave it can corrupt the timing measurement, which is why the time difference is measured very early in the pulse (around the 3rd carrier wave), before the skywave arrives. Skywave interference is worst at dusk (as the ionosphere's F-layers combine) and at dawn (as they split).",
+    "tags": ["LORAN", "Radio navigation"]
+  },
+  {
+    "id": "nav-035",
+    "category": "nav-radar",
+    "question": "What is eLORAN, and what advantage does it offer as a GNSS backup?",
+    "answer": "eLORAN (Enhanced LORAN) is a modernised, internationally standardised terrestrial positioning/navigation/timing system intended as a robust backup to GNSS (GPS/GLONASS etc.), accurate to 8–20 metres. Unlike GNSS, it uses high-powered, low-frequency terrestrial transmitters, making it very hard to jam, and is under civilian (not military) control; it adds a dedicated data channel carrying corrections and integrity information not present in the original LORAN-C.",
+    "tags": ["eLORAN"]
+  },
+  {
+    "id": "nav-036",
+    "category": "nav-radar",
+    "question": "What do the terms X-band and S-band mean for marine radar, and give the wavelength/frequency of each.",
+    "answer": "X-band (3cm radar): wavelength ~3cm, frequency 9,300–9,500 MHz. S-band (10cm radar): wavelength ~10cm, frequency 2,900–3,100 MHz. 'RADAR' itself stands for RAdio Detection And Ranging.",
+    "tags": ["Radar basics"]
+  },
+  {
+    "id": "nav-037",
+    "category": "nav-radar",
+    "question": "State the basic radar range formula, and name the main radar set components.",
+    "answer": "Range = ½ × (300 m/µs × time taken for the pulse to travel out and back, in µs). Main components: Transmitter (produces microwave pulses, controls pulse length/PRF), Antenna/Scanner (radiates and receives the beam, rotating ~20rpm), TR (Transmit/Receive) cell (isolates the sensitive receiver while transmitting), Receiver (amplifies weak returning echoes), and the Display (presents the processed information — modern sets use a raster-scan synthetic display; older sets used a real-time PPI/cathode-ray display).",
+    "tags": ["Radar basics"]
+  },
+  {
+    "id": "nav-038",
+    "category": "nav-radar",
+    "question": "What determines the width of the radar beam, and what is 'bearing discrimination'?",
+    "answer": "Beam width is determined by scanner width and transmitted frequency — a wider scanner or higher frequency gives a narrower beam. Bearing discrimination is the radar's ability to distinguish two targets on different bearings at the same range: a narrow horizontal beam width gives GOOD discrimination; a wide one gives POOR discrimination and can make small gaps (e.g. harbour entrances) disappear from the display, and radar bearings of land must be corrected for half the beam width.",
+    "tags": ["Radar beam"]
+  },
+  {
+    "id": "nav-039",
+    "category": "nav-radar",
+    "question": "Why is vertical beam width made much wider than horizontal beam width, and what does IMO require?",
+    "answer": "A wide vertical beam width compensates for the vessel's rolling, so the beam still strikes targets even as the ship pitches/rolls. IMO requires a minimum vertical beam width of 20°. A side effect is that the lower part of the beam can reflect off a smooth sea surface and interfere with the direct beam, creating layered 'lobes' that can cause low targets to appear at some ranges but not others.",
+    "tags": ["Radar beam"]
+  },
+  {
+    "id": "nav-040",
+    "category": "nav-radar",
+    "question": "What determines a radar's minimum detection range, and what is 'range discrimination'?",
+    "answer": "Minimum range is roughly half the pulse length (limited by how fast the TR cell can switch from transmit to receive). Range discrimination is the ability to distinguish two targets at different ranges on the SAME bearing: a short pulse gives GOOD range discrimination; a long pulse gives POOR range discrimination (targets must be more than half a pulse length apart to separate — 150m apart on long pulse) but achieves greater range/detection probability, useful at long range or in rain.",
+    "tags": ["Radar", "Pulse length"]
+  },
+  {
+    "id": "nav-041",
+    "category": "nav-radar",
+    "question": "What is Pulse Repetition Frequency (PRF), and roughly what values are typical?",
+    "answer": "PRF is the number of pulses transmitted per second; combined with scanner rotation speed, it governs how many pulses strike a target per sweep (more pulses = better detection chance), and it limits the theoretical maximum range (the return must arrive before the next pulse is sent). Radars typically use about 2000 pulses/second at short range, decreasing to about 500 pulses/second at long range (giving theoretical maximum ranges of roughly 41 to 162 miles respectively).",
+    "tags": ["Radar", "PRF"]
+  },
+  {
+    "id": "nav-042",
+    "category": "nav-radar",
+    "question": "Give the radar range (radar horizon) formula, and the three main factors affecting practical detection range.",
+    "answer": "Range (nm) = 2.2 × [√(Antenna height, m) + √(Target height, m)] — the radar horizon is about 6% further than the optical line of sight. The three factors affecting practical detection range are: height of the scanner, height and reflective properties of the target, and atmospheric conditions.",
+    "tags": ["Radar range"]
+  },
+  {
+    "id": "nav-043",
+    "category": "nav-radar",
+    "question": "What five factors affect how strongly a target reflects radar energy? (Give the mnemonic.)",
+    "answer": "MASTS: Material (good conductors like steel/aluminium/carbon fibre reflect well; GRP is transparent to radar and needs a fitted reflector; wood gives a weak reflection); Aspect (angle presented to the beam); Size (more pulses striking a bigger target = stronger return, height matters more than width); Texture/surface roughness (rough scatters, smooth concentrates the reflection); Shape (affects size, aspect and roughness — special shapes are used as radar reflectors).",
+    "tags": ["Radar", "MASTS"]
+  },
+  {
+    "id": "nav-044",
+    "category": "nav-radar",
+    "question": "Approximately how much does heavy rain, fog, and sand/dust reduce radar detection range?",
+    "answer": "Rain: 1 inch/hour can reduce detection by up to 50%. Hail & snow: heavy snow can reduce detection by up to 50%. Fog: at 45m visibility, detection can be reduced by up to 30%. Dust/sand: sandstorms can reduce detection by up to 30%.",
+    "tags": ["Radar", "Weather effects"]
+  },
+  {
+    "id": "nav-045",
+    "category": "nav-radar",
+    "question": "Distinguish sub-refraction, super-refraction and ducting.",
+    "answer": "Sub-refraction: cold polar air over a warmer sea deflects the beam UPWARD, reducing range by up to 40% and causing signal loss at short range. Super-refraction: relatively warm air over a cooler sea (common in the Tropics, Red Sea, Gulf of Aden, Med) INCREASES radar range. Ducting: a temperature inversion traps the beam between the inversion layer and the surface (a 'surface duct'), which can increase range up to 400 miles if the antenna is within the duct — common in the Red Sea, Gulf of Aden and Med in summer.",
+    "tags": ["Radar", "Propagation anomalies"]
+  },
+  {
+    "id": "nav-046",
+    "category": "nav-radar",
+    "question": "What causes a Second Trace Echo, and what are Side Lobes/Side Echoes?",
+    "answer": "A Second Trace Echo occurs when energy from one pulse is received only after the NEXT pulse has already been sent, making a distant target (beyond the selected range) appear falsely close on the display. Side Lobes/Side Echoes: not all energy is focused into the main beam — weak side lobes can detect very strong targets at close range, showing as a curved pattern of false echoes either side of (or in a full circle around) the true target.",
+    "tags": ["Radar", "Errors"]
+  },
+  {
+    "id": "nav-047",
+    "category": "nav-radar",
+    "question": "Distinguish a radar 'shadow sector' from a 'blind sector'/'blind spot'.",
+    "answer": "A blind sector (or blind spot) is a permanent shadow directly behind an obstruction (e.g. a mast/funnel) where NO energy reaches — usually small and rarely a problem. A shadow sector is the larger area of REDUCED energy around it, which can mask genuine targets (from own ship's structure, another vessel, or high cliffs/land) and is a more significant safety concern since it can hide dangers without the observer realising.",
+    "tags": ["Radar", "Errors"]
+  },
+  {
+    "id": "nav-048",
+    "category": "nav-radar",
+    "question": "What criteria make a good object for Parallel Indexing?",
+    "answer": "Fixed and charted; conspicuous, standing proud of the general coastline; located on the beam rather than ahead or astern; steep-to (so its radar-echo edge closely matches its charted position); and a 3nm range scale is preferred over 6nm for pilotage waters.",
+    "tags": ["Parallel indexing"]
+  },
+  {
+    "id": "nav-049",
+    "category": "nav-radar",
+    "question": "Compare Head-up, Course-up and North-up (relative motion) radar display modes.",
+    "answer": "Head-up (relative motion): no gyro input needed, but the picture rotates with every yaw/course change, making collision avoidance harder. Course-up (relative motion): gyro-stabilised to a chosen heading, so minor yaw doesn't rotate the picture. North-up (relative motion): the most common mode on passage — North is always at the top, giving an immediate/intuitive indication of collision risk and allowing parallel indexing on land, though stationary targets appear to move on the reciprocal of own ship's course.",
+    "tags": ["Radar display modes"]
+  },
+  {
+    "id": "nav-050",
+    "category": "nav-radar",
+    "question": "What is 'True Motion' radar display, and how does Sea-stabilised differ from Ground-stabilised?",
+    "answer": "In True Motion, own ship moves across the display on her real course/speed (resetting when reaching the screen edge), rather than staying fixed at the centre. Sea-stabilised (inputs: course & speed through the water): a target stopped in the water shows stationary; land appears to move against the tide. Ground-stabilised (inputs: a fixed reference point or GPS): a target stopped in the water appears to move WITH the tide; land shows stationary. Ground-stabilised true motion must NOT be used for collision avoidance, as it can misrepresent a target's true aspect in a tidal stream.",
+    "tags": ["Radar stabilisation"]
+  },
+  {
+    "id": "nav-051",
+    "category": "nav-radar",
+    "question": "Outline the correct radar switch-on procedure (first several steps).",
+    "answer": "1. Confirm the scanner is clear of obstructions/personnel and not tagged out. 2. Turn ALL controls (brilliance, gain, contrast, anti-rain/sea clutter) to minimum, and switch off auto-clutter/enhance/trails. 3. Set main power to STANDBY (max wait 4 minutes per IMO) then switch ON. 4. Adjust Brilliance for eye comfort. 5. Adjust Contrast for a clear heading marker/text. Then select Band (X or S), Range Scale (typically 6 or 12nm), and initially Long Pulse.",
+    "tags": ["Radar setup"]
+  },
+  {
+    "id": "nav-052",
+    "category": "nav-radar",
+    "question": "What is the correct use of the Gain and Sea Clutter controls?",
+    "answer": "Gain: increase until a light, speckled background 'grass' is just visible — too little loses weak echoes, too much loses contrast and can obscure targets. Sea Clutter (Swept Gain/STC): reduces gain progressively near the centre of the display (out to about 4–10nm) to suppress wave clutter — use only as much as needed (a searching technique, varying by radial), and NEVER apply it if there is no sea running, since it is the most dangerous control (capable of removing genuine small targets along with the clutter).",
+    "tags": ["Radar controls"]
+  },
+  {
+    "id": "nav-053",
+    "category": "nav-radar",
+    "question": "What is Rain Clutter (FTC) control, and how can you search for a target hidden in rain?",
+    "answer": "Rain Clutter uses Fast Time Constant (FTC) differentiation, showing only the sharply-rising near edge of each contact — useful for improving discrimination in precipitation on short-range pictures, but can also suppress genuine targets if over-applied. To find a target within rain: search with sea clutter if the rain is close inshore; 'search' with the gain control; use rain clutter in a searching fashion; or switch to S-band/longer pulse/lower power to reduce the rain response and reveal targets beyond it.",
+    "tags": ["Radar controls", "Rain clutter"]
+  },
+  {
+    "id": "nav-054",
+    "category": "nav-radar",
+    "question": "Compare X-band and S-band radar performance.",
+    "answer": "X-band: better target response for a given size, more sea clutter, much better definition/range discrimination/bearing accuracy — preferred for accurate coastal navigation, but its wavelength (comparable to a large raindrop) is badly attenuated by precipitation. S-band: a larger, more powerful wave that suffers less attenuation in rain (better for seeing through/beyond precipitation), but is 3.3× coarser for a given aerial width and has a slightly greater radar horizon.",
+    "tags": ["Radar", "X-band vs S-band"]
+  },
+  {
+    "id": "nav-055",
+    "category": "nav-radar",
+    "question": "What are the IMO accuracy requirements for the radar heading marker and EBL?",
+    "answer": "Heading marker: must align with 000° in head-up mode within ±1°, with a maximum on-screen thickness of 0.5°; adjustment range must be at least ±5°. Electronic Bearing Line (EBL): accuracy of 1°. Range rings/VRM: accuracy within 1.5% of the maximum range of the scale in use, or 70 metres, whichever is greater. Compass input to the radar should be accurate to within ½°.",
+    "tags": ["Radar", "IMO requirements"]
+  },
+  {
+    "id": "nav-056",
+    "category": "nav-radar",
+    "question": "What consequence follows if the radar heading marker is misaligned, and how should this NOT be corrected?",
+    "answer": "If misaligned: all TRUE bearings taken from the display will be off by the same amount, as will parallel index lines — but RELATIVE bearings (relative to the heading marker itself) remain correct. It should NEVER be corrected using the alignment of a berth while alongside, or using bearings of close, indistinct, or unconfirmed targets — always use a small, distinct, positively identified target near the edge of the range scale in use.",
+    "tags": ["Radar", "Heading marker"]
+  },
+  {
+    "id": "nav-057",
+    "category": "nav-radar",
+    "question": "In radar plotting, define CPA and TCPA, and give the formula for TCPA.",
+    "answer": "CPA (Closest Point of Approach): the closest distance the target will pass from own ship if both maintain course/speed — measured perpendicular from the origin to the extended relative-motion line (OA extended). A CPA of zero means a collision will occur ('CPA: COLLISION'). TCPA (Time to CPA) = (distance from A to the CPA point ÷ length of OA) × total plot time.",
+    "tags": ["Radar plotting", "CPA", "TCPA"],
+    "media": {
+      "image": "/images/radar-relative-motion.svg",
+      "imageAlt": "Relative motion line from a target through the CPA point on a radar plot"
+    }
+  },
+  {
+    "id": "nav-058",
+    "category": "nav-radar",
+    "question": "In the WOA plotting triangle, what do WO, OA and WA each represent?",
+    "answer": "WO: Own ship's true track/vector (Way of Own ship) for the plot interval. OA: the target's RELATIVE track, as directly observed on the radar (own ship stays at the origin). WA: the target's TRUE track/vector (Way of Another), found by completing the triangle — WA = WO + OA.",
+    "tags": ["Radar plotting", "WOA triangle"]
+  },
+  {
+    "id": "nav-059",
+    "category": "nav-radar",
+    "question": "What plot interval is normally used for manual radar plotting, and why?",
+    "answer": "A plotting interval of 3 or 6 minutes is normal, with a minimum of 3 plots over at least 2 intervals (minimum 6–12 minutes total). 6 minutes is 1/10th of an hour, so distances are easy to calculate (e.g. 20 knots = 2nm in 6 minutes). Each side of the WOA triangle must represent the same time period.",
+    "tags": ["Radar plotting"]
+  },
+  {
+    "id": "nav-060",
+    "category": "nav-radar",
+    "question": "How is a target's Aspect determined and named (red or green)?",
+    "answer": "Aspect is the angle at which the target vessel presents herself to own ship, measured between the extended target true-vector line (WA extended) and a line from the target (A) back to the origin. It is named RED or GREEN depending on which side of the target vessel is turned toward (closer to) own ship — e.g. if own ship sees the target's starboard side, the aspect is Green (and a green sidelight would be visible at night).",
+    "tags": ["Radar plotting", "Aspect"]
+  },
+  {
+    "id": "nav-061",
+    "category": "nav-radar",
+    "question": "On the radar plot, how do you find the effect of altering COURSE on the CPA?",
+    "answer": "Rotate the WO vector from position W by the amount of the course alteration to get the new vector WO1 (same length if speed is unchanged). Draw a line from O1 through the target's plotted position A and extend it to the nearest point to the origin — that gives the new (predicted) CPA. In practice a check plot (A1) is made after the likely time to execute the alteration, and the new relative-motion line is drawn through A1, parallel to O1–A, to find the actual achieved CPA.",
+    "tags": ["Radar plotting", "Course alteration"]
+  },
+  {
+    "id": "nav-062",
+    "category": "nav-radar",
+    "question": "How is 'Resumption of Course' found on a radar plot?",
+    "answer": "Walk (transfer) the ORIGINAL relative-motion line (OA) across until it just touches the desired CPA range ring. The point where this transferred line crosses the NEW relative-motion line (O1–A) is the Point of Resumption (R) — the point at which the original course and speed can safely be resumed.",
+    "tags": ["Radar plotting"]
+  },
+  {
+    "id": "nav-063",
+    "category": "nav-radar",
+    "question": "What does ARPA stand for, and what carriage requirements apply by vessel size under SOLAS Ch V?",
+    "answer": "ARPA = Automatic Radar Plotting Aid. 300–499 GT: an Electronic Plotting Aid (EPA) — manual acquisition/plotting of at least 10 targets, no automatic tracking. Over 499 GT and under 3,000 GT: an Automatic Tracking Aid (ATA) — manual acquisition, automatic tracking of at least 10 targets. 3,000 GT and over: a full ARPA, with manual or automatic acquisition of at least 20 targets and a trial manoeuvre facility.",
+    "tags": ["ARPA", "SOLAS"]
+  },
+  {
+    "id": "nav-064",
+    "category": "nav-radar",
+    "question": "What is a 'target swap', and under what conditions does it occur?",
+    "answer": "Target swap is when the computer confuses tracked targets, swapping their vectors or dropping one — it happens when a tracked target enters heavy clutter, passes close to an untracked target, or when two tracked targets' tracking 'windows' overlap as they pass close to each other. If the computer cannot re-find a swapped/lost target, it raises a 'lost target' or 'bad echo' alarm.",
+    "tags": ["ARPA", "Target swap"]
+  },
+  {
+    "id": "nav-065",
+    "category": "nav-radar",
+    "question": "What are the Minimum Acquisition Range (MAR) and Guard Zones on an ARPA?",
+    "answer": "MAR: an area around own ship, set by the observer, within which targets will NOT be automatically acquired (though targets already tracked continue to be tracked within it) — useful to avoid the computer auto-acquiring heavy clutter near own ship. Guard Zones (Guard Rings): observer-set bands at a chosen range from own ship within which echoes are automatically acquired as they enter — targets already inside or between zones when set up will NOT be acquired until they actually enter/cross into the zone.",
+    "tags": ["ARPA"]
+  },
+  {
+    "id": "nav-066",
+    "category": "nav-radar",
+    "question": "Give five key IMO minimum performance standards for ARPA.",
+    "answer": "Must track at least 20 targets in auto acquisition (10 in manual); must continue tracking for at least 5 of 10 consecutive scans; must display history of at least 4 positions over at least 8 minutes; must present a target's motion TREND within 1 minute of acquisition (or after a manoeuvre) and its PREDICTED motion within 3 minutes; and minimum CPA accuracy should be within 0.3 nautical miles.",
+    "tags": ["ARPA", "IMO standards"]
+  },
+  {
+    "id": "nav-067",
+    "category": "nav-radar",
+    "question": "Why must ground-stabilised true motion never be used for anti-collision decisions on ARPA?",
+    "answer": "Because own ship's ground vector and the ground vectors it derives for other targets are only as accurate as the reference input (e.g. a fixed echo reference or Doppler log mode) and can be distorted by tide/current — in a strong tidal stream this can seriously misrepresent a target's TRUE aspect, especially in head-on situations, leading to an unsafe manoeuvre. Ground stabilisation is, however, useful for pure navigational/pilotage purposes.",
+    "tags": ["ARPA", "Ground stabilisation"]
+  },
+  {
+    "id": "nav-068",
+    "category": "nav-radar",
+    "question": "How can you tell, just by looking at an ARPA/radar display, whether it is in RM(R) or TM(T) mode?",
+    "answer": "Own ship cannot show a relative trail (it can't move relative to itself) — so if a trail appears on own ship, the display must be True Motion, True trails: TM(T). If trails are switched on but own ship shows NO trail, the trails must be relative, meaning the display is Relative Motion, Relative trails: RM(R). Vectors, independently of trails: if vectors are on, own ship can only ever show a TRUE vector.",
+    "tags": ["ARPA", "Display modes"]
   }
 ]

@@ -2,141 +2,484 @@
   {
     "id": "gsk-001",
     "category": "gsk",
-    "question": "Define metacentric height (GM) and its significance.",
-    "answer": "GM is the vertical distance between the ship's centre of gravity (G) and her metacentre (M). A positive GM gives initial stability (righting lever) when heeled; too small a GM makes the ship 'tender' (slow, uncomfortable rolling), while too large a GM makes her 'stiff' (fast, violent rolling, high stresses on structure/cargo).",
-    "tags": ["Stability"]
+    "question": "What is meteorology, and what do yachtsmen mainly care about?",
+    "answer": "Meteorology is the study of movements and phenomena in the Earth's atmosphere, especially for weather forecasting. Yachtsmen are principally interested in wind strength and direction, as these have the most effect on a small boat's safety and comfort at sea.",
+    "tags": ["Meteorology"]
   },
   {
     "id": "gsk-002",
     "category": "gsk",
-    "question": "What is the difference between 'list' and 'trim'?",
-    "answer": "List is an angle of inclination to port or starboard (athwartships), usually caused by unequal transverse distribution of weight. Trim is the difference between forward and aft draughts (fore-and-aft inclination), caused by the longitudinal distribution of weight relative to the centre of flotation.",
-    "tags": ["Stability"]
+    "question": "Name the two lowest layers of the atmosphere and their key features.",
+    "answer": "Troposphere: closest to the surface, extends to about 16km, contains all global wind/weather systems, densest layer, temperature decreases with height. Stratosphere: from about 16km to 48km, very calm with virtually no wind or weather; contains the ozone layer, which traps UV-B radiation.",
+    "tags": ["Atmosphere"]
   },
   {
     "id": "gsk-003",
     "category": "gsk",
-    "question": "What is the Free Surface Effect (FSE) and how is it reduced?",
-    "answer": "FSE is the virtual rise of G caused by liquid in a slack (partially filled) tank shifting as the ship heels, reducing effective GM and stability. It is reduced by pressing tanks full or keeping them empty, using longitudinal/transverse subdivisions (baffle plates), and minimising the number of slack tanks at once.",
-    "tags": ["Stability"]
+    "question": "What is dry air composed of, and what is standard atmospheric pressure?",
+    "answer": "Dry air is about 78% nitrogen, 21% oxygen, 1% argon, plus trace gases. Atmospheric pressure is measured in millibars (mb) or hectopascals (hPa) — 1 mb = 1 hPa. It varies roughly between 970–1030 mb; standard/average sea-level pressure is taken as 1013 mb.",
+    "tags": ["Atmosphere", "Pressure"]
   },
   {
     "id": "gsk-004",
     "category": "gsk",
-    "question": "What is the difference between a bulkhead deck and a freeboard deck?",
-    "answer": "The bulkhead deck is the uppermost deck to which the transverse watertight bulkheads are carried, and up to which watertight integrity of the hull is maintained. The freeboard deck is normally the uppermost complete deck exposed to weather and sea, used as the reference for calculating freeboard/load lines; on many ships they coincide.",
-    "tags": ["Construction"]
+    "question": "Why does air move, and what is the relationship between pressure and wind strength?",
+    "answer": "Warm air is lighter (low pressure); cold air is heavier (high pressure). Air (wind) flows from high pressure to low pressure. The greater the pressure difference between two places, the faster the air moves and the stronger the wind.",
+    "tags": ["Pressure", "Wind"]
   },
   {
     "id": "gsk-005",
     "category": "gsk",
-    "question": "What is a double bottom and what is its purpose?",
-    "answer": "A double bottom is the watertight space formed between the outer (shell) plating and an inner bottom (tank top), subdivided into tanks by longitudinal/transverse framing. It protects against bottom damage/grounding, provides ballast/fuel/fresh water capacity, and contributes to longitudinal strength.",
-    "tags": ["Construction"]
+    "question": "What are isobars, and what do closely-spaced isobars indicate?",
+    "answer": "Isobars are lines on a weather chart joining places of equal barometric pressure; they never cross. The closer together the isobars, the steeper the pressure gradient and the stronger the wind; isobars far apart indicate calm conditions. Wind speed is inversely proportional to the distance between isobars.",
+    "tags": ["Isobars"]
   },
   {
     "id": "gsk-006",
     "category": "gsk",
-    "question": "Name the classes of fire and give an example fuel/source for each.",
-    "answer": "Class A: solid combustible materials (wood, paper, textiles). Class B: flammable liquids (oil, petrol, paint). Class C: flammable gases (propane, methane). Class D: combustible metals (magnesium, sodium). Class E (electrical, used in some classifications): fires involving live electrical equipment. Class F: cooking oils/fats.",
-    "tags": ["Fire fighting"]
+    "question": "Define 'veering' and 'backing' wind, and Buys Ballot's Law.",
+    "answer": "Veering: wind direction changing clockwise. Backing: wind direction changing anticlockwise. Buys Ballot's Law: if you stand with your back to the true wind in the Northern Hemisphere, the centre of low pressure lies about 90°–130° on your LEFT-hand side (on your RIGHT in the Southern Hemisphere).",
+    "tags": ["Wind terminology", "Buys Ballot"]
   },
   {
     "id": "gsk-007",
     "category": "gsk",
-    "question": "Explain the 'fire triangle' and how each fixed system attacks it.",
-    "answer": "The fire triangle is heat, fuel and oxygen (a fourth element, the chemical chain reaction, gives the 'fire tetrahedron'). Water cools (removes heat); foam smothers and cools (excludes oxygen, some cooling); CO2 and inert gas systems smother by displacing oxygen; dry powder interrupts the chemical chain reaction.",
-    "tags": ["Fire fighting"]
+    "question": "What is the Coriolis effect, and how does it deflect moving air?",
+    "answer": "The Earth's rotation deflects anything moving freely over its surface — to the RIGHT of its path in the Northern Hemisphere, and to the LEFT in the Southern Hemisphere. The force is zero at the equator and increases toward the poles; the stronger the wind, the greater the effect. This is why air flowing from a high to a low does not move in a straight line but is deflected (e.g. the Trade Winds become north-easterly rather than a straight northerly flow).",
+    "tags": ["Coriolis"]
   },
   {
     "id": "gsk-008",
     "category": "gsk",
-    "question": "What precautions and procedures apply before releasing a fixed CO2 flooding system into a machinery space?",
-    "answer": "Confirm the space is evacuated and a muster/headcount taken, stop ventilation fans and close all openings/dampers/skylights, stop machinery that draws air from the space if possible, sound the warning alarm and allow the pre-discharge delay, then operate the release from the CO2 room per the operating instructions, and post a guard to prevent re-entry until the space is ventilated and gas-freed.",
-    "tags": ["Fire fighting", "CO2 system"]
+    "question": "Name the three wind types considered for GSK and the three forces that create them.",
+    "answer": "Geostrophic Wind: theoretical wind above friction (>600m) where isobars are straight, from pressure gradient force + Coriolis force. Gradient Wind: also above friction, but where isobars are curved, adding Centrifugal (Cyclostrophic) force — this decreases wind speed around a Low and increases it around a High. Surface Wind: the wind actually felt at the Earth's surface once friction is included.",
+    "tags": ["Wind types"]
   },
   {
     "id": "gsk-009",
     "category": "gsk",
-    "question": "What is the SOLAS requirement for lifeboat capacity markings, and what does an EPIRB do?",
-    "answer": "Each lifeboat must be marked with its maximum permitted number of persons, the ship's name/port of registry, and IMO number, dimensions etc. An EPIRB (Emergency Position Indicating Radio Beacon) is a GMDSS distress alerting device that, when activated (manually or automatically by hydrostatic release + flotation), transmits a distress signal with position via satellite (COSPAS-SARSAT) to alert SAR authorities.",
-    "tags": ["LSA", "GMDSS"]
+    "question": "How does friction alter the surface wind compared to the gradient wind, over sea and over land?",
+    "answer": "Friction slows the wind by about 30% over the sea and 50% over the land, and (because it weakens Coriolis relative to the pressure gradient force) backs the surface wind by roughly 15° over open sea and up to 30–40° over land relative to the gradient wind. A wind blowing off the land will therefore appear to veer by as much as 15° for a few miles out to sea.",
+    "tags": ["Friction", "Wind"]
   },
   {
     "id": "gsk-010",
     "category": "gsk",
-    "question": "What is a SART and how does it assist search and rescue?",
-    "answer": "A Search and Rescue Transponder (SART) responds to X-band radar interrogation from a searching vessel/aircraft by transmitting a series of responses that appear as a line of dots on the searcher's radar display, indicating range and bearing to the survivor craft, with detection range typically several miles depending on searcher's antenna height.",
-    "tags": ["LSA", "SAR"]
+    "question": "Describe the three-cell circulation model (Hadley, Ferrel, Polar cells) and the ITCZ.",
+    "answer": "Warm air rises at the equator (Hadley cell) and sinks near 30°N/S, creating a high-pressure belt there; a Ferrel cell lies between about 30° and 60°, and a Polar cell from 60° to the pole. The ITCZ (Intertropical Convergence Zone), also called the Doldrums or Equatorial Trough, is where the Trade Winds converge near the equator — characterised by calms and light variable winds alternating with squalls, heavy rain and thunderstorms; gales are rare except in tropical cyclones.",
+    "tags": ["ITCZ", "Global circulation"]
   },
   {
     "id": "gsk-011",
     "category": "gsk",
-    "question": "What is required for immersion suits and thermal protective aids (TPAs) under SOLAS?",
-    "answer": "SOLAS generally requires an immersion suit of appropriate size for every person on board on certain ship types/voyages (or the vessel carries sufficient TPAs where full provision of immersion suits isn't required), designed to reduce the body's rate of heat loss in cold water; TPAs are bags/covering made of waterproof, low-conductivity material for survival craft occupants.",
-    "tags": ["LSA"]
+    "question": "Describe the Trade Winds, the Horse Latitudes/Variables, and the Westerlies.",
+    "answer": "Trade Winds: steady winds blowing from the subtropical highs (~30°N/S) toward the equator, NE in the Northern Hemisphere and SE in the Southern; average force 3–4, very persistent. Horse Latitudes/Variables: belts of light, variable winds centred near 30° latitude, between the Trades and the Westerlies. Westerlies: prevailing westerly winds poleward of the Variables, made highly variable by passing depressions; strong and frequent in the 'Roaring Forties' south of ~40°S.",
+    "tags": ["Trade winds", "Westerlies"]
   },
   {
     "id": "gsk-012",
     "category": "gsk",
-    "question": "What is the purpose of the ISM Code?",
-    "answer": "The International Safety Management (ISM) Code provides an international standard for the safe management and operation of ships and for pollution prevention, requiring companies to establish a Safety Management System (SMS) covering safety/environmental policy, procedures, designated person ashore (DPA), reporting of non-conformities, emergency preparedness, and internal audits.",
-    "tags": ["ISM"]
+    "question": "What are subtropical anticyclones, and what are monsoons?",
+    "answer": "Subtropical anticyclones (e.g. the Azores High) are usually warm, quasi-permanent high-pressure features of the Earth's general circulation. Monsoons are seasonal winds caused by the extreme summer heating/winter cooling of large landmasses, most notably in the Indian Ocean: the SW Monsoon (roughly June–September, wind from the SW as heated land draws in the SE Trade across the equator) and the NE Monsoon (roughly November–March/April).",
+    "tags": ["Monsoons"]
   },
   {
     "id": "gsk-013",
     "category": "gsk",
-    "question": "What is the purpose of the ISPS Code and what are the three security levels?",
-    "answer": "The International Ship and Port Facility Security (ISPS) Code provides a framework for assessing and managing security risk to ships and port facilities. Security Level 1: normal, minimum protective measures maintained at all times. Level 2: heightened risk, additional protective measures for a period. Level 3: exceptional, further specific protective measures for a limited period when an incident is probable or imminent.",
-    "tags": ["ISPS"]
+    "question": "What are jet streams?",
+    "answer": "Narrow bands of very high-velocity wind found high in the troposphere (roughly 6,100–9,144m), travelling west to east in meandering paths, forming at the boundary between hot and cold air masses. Speeds range from about 50 knots to over 215 knots; each hemisphere has a polar (50°–60°) and a subtropical (20°–30°) jet stream.",
+    "tags": ["Jet streams"]
   },
   {
     "id": "gsk-014",
     "category": "gsk",
-    "question": "What are the main annexes of MARPOL and what does each cover?",
-    "answer": "Annex I: Oil. Annex II: Noxious Liquid Substances (NLS) in bulk. Annex III: Harmful Substances carried in packaged form. Annex IV: Sewage. Annex V: Garbage. Annex VI: Air Pollution (SOx, NOx, ODS, and now GHG/carbon intensity measures).",
-    "tags": ["MARPOL"]
+    "question": "Explain how a sea breeze forms, and give its typical timing and strength.",
+    "answer": "During the day the sun heats the land faster than the sea; air over the land rises, drawing in cooler air from the sea to replace it. Sea breezes typically begin about half a mile offshore around 1000–1100, are strongest by about 1400, and stop by around 2000. They can reach Force 4 and will not develop if the gradient wind is 25 knots or more; they seldom extend more than 10 miles offshore.",
+    "tags": ["Sea breeze"]
   },
   {
     "id": "gsk-015",
     "category": "gsk",
-    "question": "What entries must be made in the Oil Record Book and Garbage Record Book, and who is responsible?",
-    "answer": "The Oil Record Book Part I (machinery space operations) logs bunkering, transfers, bilge water discharges/disposal ashore, and ODMCS/oily water separator use, signed by the officer in charge and countersigned by the master; Part II covers cargo/ballast operations on oil tankers. The Garbage Record Book logs discharge/incineration/landing of each garbage category with date, position and quantity. Both are legal documents that can be inspected by Port State Control.",
-    "tags": ["MARPOL", "Recordkeeping"]
+    "question": "Explain how a land breeze forms and how it compares in strength to a sea breeze.",
+    "answer": "At night the land cools faster than the sea; air over the land cools, becomes denser, and flows out to sea, drawing warmer air back in over the land to complete the circulation. Land breezes are weaker than sea breezes (often under 5 knots) and don't reach as far offshore, though when combined with katabatic winds off coastal hills they can reach 10 knots, or fresh-to-gale force where mountains back the coast (e.g. Corsica, Côte d'Azur).",
+    "tags": ["Land breeze"]
   },
   {
     "id": "gsk-016",
     "category": "gsk",
-    "question": "What is squat, and what factors increase it?",
-    "answer": "Squat is the combined effect of a ship's bodily sinkage and change of trim caused by the flow of water around the hull as it moves through the water, increasing effective draught. It increases with higher speed (roughly proportional to speed squared), shallow/restricted water (high block coefficient, narrow/shallow channels), and is greater by the bow for full-form vessels typically.",
-    "tags": ["Ship handling"]
+    "question": "What are katabatic and anabatic winds?",
+    "answer": "On clear nights, mountain slopes radiate heat; the cooled, heavier air rolls downhill, remaining in contact with the cold ground so it doesn't warm at the normal adiabatic lapse rate — this downslope flow is a Katabatic wind, which can reach Force 5–6 and combine with a gradient wind to produce local gale conditions (e.g. the Mistral in the Gulf of Lyon, the Bora in the North Adriatic). Anabatic winds are the milder, reverse uphill flow.",
+    "tags": ["Katabatic winds"]
   },
   {
     "id": "gsk-017",
     "category": "gsk",
-    "question": "Explain 'bank effect' and 'interaction' when navigating close to a bank or passing another vessel.",
-    "answer": "Bank effect (canal/squat effect): when a vessel's stern moves closer to a nearby bank, the stern is pushed away and the bow pulled towards the bank due to pressure/suction differences, tending to sheer the vessel off course. Interaction: when two vessels pass close (overtaking or meeting), the pressure fields between the hulls can cause bodily attraction, sheering, and a reduction in steering effectiveness, requiring reduced speed and increased passing distance in confined/shallow water.",
-    "tags": ["Ship handling"]
+    "question": "Define dew point and relative humidity.",
+    "answer": "Dew Point: the temperature to which an unsaturated parcel of air must be cooled before it becomes saturated and condensation begins. Relative Humidity: the mass of water vapour in an air mass compared with the maximum it could hold at that temperature, expressed as a percentage.",
+    "tags": ["Humidity"]
   },
   {
     "id": "gsk-018",
     "category": "gsk",
-    "question": "What items are typically found in a ship's medical chest categories under an MLC-compliant guide (e.g. medical stores by category)?",
-    "answer": "Categories generally include: medicaments (analgesics, antibiotics, antihistamines, cardiovascular, GI, respiratory drugs, IV fluids), medical equipment/instruments (resuscitation kit, splints, sutures), dressings/bandages, and antidotes, scaled to the ship's trading area, complement and whether a doctor is carried, per the flag state's medical guide (e.g. MFAG/ship captain's medical guide).",
-    "tags": ["Medical"]
+    "question": "List the five ways an air parcel can be cooled to form cloud.",
+    "answer": "1. Radiation — heat loss without vertical movement, forming stratus-type layers. 2. Thermal convection — a heated parcel rises and cools to its dew point, forming cumulus/cumulonimbus. 3. Frontal — air forced to rise at a frontal depression. 4. Orographic — air forced to rise over a hill/mountain. 5. Turbulence — moist air carried upward by mechanical turbulence at the surface.",
+    "tags": ["Cloud formation"]
   },
   {
     "id": "gsk-019",
     "category": "gsk",
-    "question": "What is the difference between a 'load line' and 'draught marks', and name the main load line zones/marks.",
-    "answer": "Draught marks show how deep the vessel is sitting in the water at that moment (forward/aft/midships). The load line (Plimsoll mark) is a fixed marking amidships showing the maximum permissible draught (freeboard) for different water densities/seasons/zones: TF (Tropical Fresh), F (Fresh), T (Tropical), S (Summer), W (Winter), WNA (Winter North Atlantic).",
-    "tags": ["Load lines"]
+    "question": "Explain the Latin cloud-naming prefixes/suffixes: cirrus, alto, nimbus, stratus, cumulus.",
+    "answer": "Cirrus = 'hair' (thin, wispy, high-altitude). Alto = middle level (e.g. Altocumulus). Nimbus = 'rain/storm' (e.g. Nimbostratus, Cumulonimbus). Stratus = 'layer' (a uniform flat sheet). Cumulus = 'heap' (clearly outlined, heaped-up cloud). The system was devised by Luke Howard in 1803.",
+    "tags": ["Cloud types"]
   },
   {
     "id": "gsk-020",
     "category": "gsk",
-    "question": "What is the purpose of watertight and weathertight subdivision, and give the difference between the two terms.",
-    "answer": "Subdivision by watertight bulkheads/decks limits flooding to one or a limited number of compartments after damage, preserving reserve buoyancy and stability (SOLAS damage stability requirements). Watertight means no water can pass under a designed head of water; weathertight means that under normal sea conditions, water will not penetrate the closure (e.g. some doors/hatches above the freeboard deck), which is a lower standard than watertight.",
-    "tags": ["Construction", "Stability"]
+    "question": "Roughly what altitudes define High, Middle and Low cloud, and name one type in each.",
+    "answer": "High clouds (~6–12km): Cirrus, Cirrocumulus, Cirrostratus. Middle clouds (~2–6km): Altocumulus, Altostratus, Nimbostratus (base can be as low as the surface). Low clouds (surface–~1.5km): Cumulus, Stratocumulus, Stratus. Cumulonimbus has a low base (600–1500m) but extends vertically to great heights (up to 14–20km).",
+    "tags": ["Cloud types"]
+  },
+  {
+    "id": "gsk-021",
+    "category": "gsk",
+    "question": "Describe Radiation fog and Advection fog.",
+    "answer": "Radiation fog (land fog): forms on clear nights as the land radiates away the heat absorbed during the day, cooling the air in contact with it to saturation; most common during anticyclones in winter, and can drift out to sea. Advection fog (sea fog): forms when warm, moist air flows over a colder sea surface; most likely in late spring/early summer before the sea has fully warmed, and can cover large ocean areas (e.g. the Grand Banks).",
+    "tags": ["Fog"]
+  },
+  {
+    "id": "gsk-022",
+    "category": "gsk",
+    "question": "Describe Frontal fog and Sea Smoke (Arctic Smoke), and how fog dissipates.",
+    "answer": "Frontal fog: forms where two moist air masses of different temperature meet, or where warm rain falling into a shallow cold layer evaporates and saturates it; usually less than 50 miles wide. Sea Smoke: very cold polar air moving over a much warmer sea. Fog dissipates when the sun warms the air enough to re-evaporate the droplets, or when wind mixes in air from a different source (e.g. as a front passes).",
+    "tags": ["Fog"]
+  },
+  {
+    "id": "gsk-023",
+    "category": "gsk",
+    "question": "Define Haze and Mist, and how do they differ?",
+    "answer": "Haze: restricted visibility caused by solid particles in the air, normally associated with LOW relative humidity. Mist: restricted visibility greater than 1000m caused by water droplets in the air, normally associated with HIGH relative humidity. (Fog is defined as visibility below 1000m.)",
+    "tags": ["Visibility"]
+  },
+  {
+    "id": "gsk-024",
+    "category": "gsk",
+    "question": "How do rain, hail and snow form, and what is 'terminal velocity' for raindrops?",
+    "answer": "Rain: cloud droplets grow by condensation/collision until too heavy to remain airborne. Hail: strong up-currents repeatedly carry raindrops upward where they freeze in layers before finally falling. Snow: water vapour freezes directly into ice crystals in sufficiently cold air. Terminal velocity is the constant falling speed reached once wind resistance balances gravity — roughly 2 mph for fine drops, 15 mph medium, 18 mph large drops.",
+    "tags": ["Precipitation"]
+  },
+  {
+    "id": "gsk-025",
+    "category": "gsk",
+    "question": "Briefly describe how a thunderstorm and lightning develop in a cumulonimbus cloud.",
+    "answer": "Strong convective up-currents in warm, unstable, moist air (or along a strong cold front) build cumulonimbus clouds; raindrops broken up by rising air gain a positive charge while the rising air gains a negative charge carried to the cloud's middle, and ice crystals in the upper cloud become negatively charged by friction. This charge separation (positive top and bottom, negative middle) builds until air resistance breaks down, producing a lightning discharge (~100 million volts in about a millionth of a second) and the resulting thunder.",
+    "tags": ["Thunderstorms"]
+  },
+  {
+    "id": "gsk-026",
+    "category": "gsk",
+    "question": "Give the four basic air mass classifications and one combined example.",
+    "answer": "Continental (c): over large land masses, dry. Marine/maritime (m): over the oceans, moist. Polar (P): poleward of 60°N/S. Tropical (T): within about 25° of the equator. Combined, e.g.: cP = Continental Polar (cold, dry); mT = Maritime Tropical (warm, wet). The boundary between two air masses is called a front.",
+    "tags": ["Air masses"]
+  },
+  {
+    "id": "gsk-027",
+    "category": "gsk",
+    "question": "Define warm front, cold front, occluded front, ridge and trough.",
+    "answer": "Warm front: boundary with warm air behind it (ahead of the depression's warm sector). Cold front: boundary with cold air behind it, following the warm sector. Occluded front: forms when the faster-moving cold front catches up with and lifts the warm front off the surface. Ridge: an elongated area of high pressure between lower-pressure areas (associated with good weather). Trough: an elongated area of low pressure, the opposite of a ridge.",
+    "tags": ["Fronts"]
+  },
+  {
+    "id": "gsk-028",
+    "category": "gsk",
+    "question": "Describe how a frontal depression forms and matures (wave to occlusion).",
+    "answer": "A kink or wave forms where a warm air mass pushes into a cold one (or vice versa) along a front; pressure falls at the bulge as warm, unstable air rises, and Coriolis force sets up a cyclonic (counter-clockwise, N. Hemisphere) circulation around the developing low. In its mid-life the cold front (moving faster) starts catching the warm front, shrinking the warm sector; eventually the cold front fully catches the warm front, lifting all the warm air off the surface — this is the occlusion, after which the depression can no longer be fed by warm air and dies.",
+    "tags": ["Frontal depressions"]
+  },
+  {
+    "id": "gsk-029",
+    "category": "gsk",
+    "question": "How do weather conditions change as a depression passes to the NORTH of your position (Northern Hemisphere)?",
+    "answer": "Wind backs SE and freshens, with cirrus (mares' tails) then cirrostratus appearing and the barometer falling; cumulus gives way to nimbostratus and rain at the warm front. Through the warm sector the wind veers SW, rain gives way to drizzle/fog, the barometer steadies, and it feels damp and humid. At the cold front the wind veers NW and increases, becoming squally with heavy rain/cumulonimbus, possibly thunder and hail; the barometer then rises quickly and temperature drops, with rain turning to showers as the wind moderates after the front passes.",
+    "tags": ["Depressions", "Weather changes"]
+  },
+  {
+    "id": "gsk-030",
+    "category": "gsk",
+    "question": "How do conditions differ if a depression passes to the SOUTH of your position instead?",
+    "answer": "You do not experience the fronts directly, so there are no sudden wind-direction or temperature changes. As the low approaches, the barometer falls, cloud thickens, the wind backs continuously, and there is rain. After the low's centre passes to the south, the barometer rises, the wind has backed through NE to NW, and the rain becomes lighter; large cumulonimbus along the cold front may be visible to the south.",
+    "tags": ["Depressions", "Weather changes"]
+  },
+  {
+    "id": "gsk-031",
+    "category": "gsk",
+    "question": "Give five general characteristics of depressions and name three depression sources other than the polar front.",
+    "answer": "General characteristics: (1) usually move SW to NE in the North Atlantic; (2) track roughly parallel to the warm-sector isobars; (3) if moving steadily for 12 hours, likely to continue similarly for the next 12 (unless it meets land); (4) two similarly-sized nearby depressions may rotate around and combine; (5) a depression weakens on encountering land, losing its warm, humid energy source. Other sources: Polar Lows (cold air warmed over warm seas), Heat/Thermal Lows (intense heating of land), Lee Lows (in the lee of a mountain in an airflow).",
+    "tags": ["Depressions"]
+  },
+  {
+    "id": "gsk-032",
+    "category": "gsk",
+    "question": "What is the Beaufort Scale, and who devised it?",
+    "answer": "A numerical scale of average wind strength, defined by visual reference to sea state, devised in 1808 by Admiral Sir Francis Beaufort. It runs from 0 (Calm, 0–1 knots) up through the gale/storm forces; Force 10 (Storm, 48–55 knots) shows very high tumbling waves and badly affected visibility. Force 12 (Hurricane) is shown on weather charts as an arrow with a triangle plus a single feather.",
+    "tags": ["Beaufort scale"]
+  },
+  {
+    "id": "gsk-033",
+    "category": "gsk",
+    "question": "Compare the Mercurial and Aneroid barometer, and state how often an aneroid should be checked.",
+    "answer": "The Mercurial barometer measures pressure by the height of a mercury column and is very accurate but delicate, requiring corrections — now rarely carried. The Aneroid barometer uses a partially evacuated corrugated metal box that changes shape with pressure, transferring movement via levers to a pointer; it is easy to read and needs no temperature or latitude correction, but should be compared against a standard barometer at least once every three months, as its accuracy drifts over time.",
+    "tags": ["Barometer"]
+  },
+  {
+    "id": "gsk-034",
+    "category": "gsk",
+    "question": "What is a barograph, and why is the pressure TREND more useful than a single reading?",
+    "answer": "A barograph is a recording aneroid barometer that continuously traces pressure onto a moving paper chart (a barogram) over about a week, rotated by clockwork; it should be mounted athwartships to avoid the pen skipping as the vessel rolls. A single pressure reading tells you little — it is the RATE OF CHANGE of pressure over a series of readings that reveals approaching weather, which is exactly what a barograph (or a manually plotted pressure/time graph) shows.",
+    "tags": ["Barograph"]
+  },
+  {
+    "id": "gsk-035",
+    "category": "gsk",
+    "question": "How does a wet-and-dry bulb (Mason's) hygrometer work, and what does a small 'wet-bulb depression' indicate?",
+    "answer": "Two identical thermometers are used, one with its bulb kept moist by a wet muslin wick; evaporation from the wick cools the wet bulb below the dry bulb's reading. Saturated air gives no depression; dry air can show a depression of up to 9°C. Entering the dry-bulb reading and the depression into a table (in the Mariner's Handbook) gives Relative Humidity and Dew Point. If the wet and dry bulb readings are close together, fog is likely in temperate climates; comparing sea temperature to dew point also predicts sea fog.",
+    "tags": ["Hygrometer"]
+  },
+  {
+    "id": "gsk-036",
+    "category": "gsk",
+    "question": "What is a Stevenson Screen, and what is a sling/whirling psychrometer?",
+    "answer": "A Stevenson Screen is a louvred box that allows air to pass freely, usually mounted at the rear of the bridge, housing the wet-and-dry bulb hygrometer (dry bulb to windward). A sling/whirling psychrometer mounts the same two thermometers on a handle that is swung to provide the ~4-knot airflow needed for an accurate reading — faster but slightly less accurate than the screen, and rarely used at sea (mainly for cargo spaces, air-conditioning, or by yacht crew assessing painting conditions).",
+    "tags": ["Hygrometer"]
+  },
+  {
+    "id": "gsk-037",
+    "category": "gsk",
+    "question": "What are the three parts of a standard shipping/weather forecast, in order?",
+    "answer": "1. Gale Warnings — issued before the main forecast (note the time it was issued, as it may be hours old). 2. The General Synopsis — positions, movement and speed of the systems causing/affecting the weather. 3. The Sea Area Forecast — wind strength/direction, wave height, weather and visibility for each area for the next 24 hours.",
+    "tags": ["Weather forecasts"]
+  },
+  {
+    "id": "gsk-038",
+    "category": "gsk",
+    "question": "On international weather map symbols, what does a 'feather' on a wind arrow represent, and how is Force 10 shown?",
+    "answer": "Internationally, each feather represents 5 knots, though for practical purposes one feather can be taken as one Beaufort force. Force 10 is shown by an arrow with a triangle at the end rather than five feathers; further feathers are added to the triangle as strength increases, and a triangle with one additional feather indicates hurricane Force 12.",
+    "tags": ["Weather symbols"]
+  },
+  {
+    "id": "gsk-039",
+    "category": "gsk",
+    "question": "Name the two marine wood-borers and give wood's key advantages and disadvantages as a boatbuilding material.",
+    "answer": "Marine borers: Shipworm (a mollusc, Teredo) and Gribble (a crustacean, Limnoria) — found mainly in temperate waters; prevented by pressure-impregnating timber with preservative and using resistant species. Wood advantages: floats, strong, good appearance, easy to work, skills widely available. Disadvantages: prone to rot, can burn, expensive, and a poor radar reflector.",
+    "tags": ["Wood", "Materials"]
+  },
+  {
+    "id": "gsk-040",
+    "category": "gsk",
+    "question": "How is steel produced, and what do Classification Society steel grades A–E signify?",
+    "answer": "Iron ore is smelted in a blast furnace to pig iron (92–96% iron), which is then refined to remove impurities (carbon, silicon, manganese, sulphur, phosphorus) to produce steel. Classification Societies grade shipbuilding steel A–E: A and B are mild steel (B higher quality); C, D and E are tougher grades with higher notch (crack) resistance, used in more highly stressed regions of the ship.",
+    "tags": ["Steel"]
+  },
+  {
+    "id": "gsk-041",
+    "category": "gsk",
+    "question": "Give steel's key advantages and disadvantages as a shipbuilding material.",
+    "answer": "Advantages: relatively strong, widely available, easy to work, cheap, and a good radar reflector. Disadvantages: liable to corrosion, relatively heavy, and conducts heat.",
+    "tags": ["Steel"]
+  },
+  {
+    "id": "gsk-042",
+    "category": "gsk",
+    "question": "Why must aluminium be welded under an inert gas shield, and what primer must never be used on it?",
+    "answer": "Aluminium with a high magnesium content burns fiercely and is hard to extinguish if ignited, so welding must be shielded from oxygen using an inert gas (usually argon). Lead-based primers must NEVER be used on aluminium — they cause severe galvanic corrosion; zinc chromate primer is used instead, and scaling hammers should never be used on the soft metal.",
+    "tags": ["Aluminium"]
+  },
+  {
+    "id": "gsk-043",
+    "category": "gsk",
+    "question": "Give aluminium's key advantages and disadvantages as a boatbuilding material.",
+    "answer": "Advantages: high strength-to-weight ratio (about 2/3 the strength of steel at 1/3 the weight), does not corrode as readily as steel (its oxide layer is stable and protective), good radar reflector. Disadvantages: relatively high cost, not all shipyards have the equipment/skills, low melting point (a serious fire risk), and susceptible to galvanic corrosion where joined to steel.",
+    "tags": ["Aluminium"]
+  },
+  {
+    "id": "gsk-044",
+    "category": "gsk",
+    "question": "What is GRP osmosis, and what by-product causes its characteristic 'vinegar' smell?",
+    "answer": "Osmosis in GRP occurs because water molecules are small enough to pass through gaps in the resin; over time this water reacts with impurities in a poorly-cured or lower-quality laminate, breaking it down and building up hygroscopic by-products (which draw in more water), eventually causing a blister — the visible sign of osmosis. One breakdown by-product is acetic acid, giving the characteristic vinegar smell.",
+    "tags": ["GRP", "Osmosis"]
+  },
+  {
+    "id": "gsk-045",
+    "category": "gsk",
+    "question": "Give FRP/GRP's key advantages and disadvantages as a boatbuilding material.",
+    "answer": "Advantages: high strength-to-weight ratio, non-corrosive, low cost if the mould is reused many times. Disadvantages: prone to blistering and delamination, burns intensely once alight giving off toxic fumes, and is a poor radar reflector (GRP boats need a dedicated radar reflector fitted).",
+    "tags": ["GRP", "FRP"]
+  },
+  {
+    "id": "gsk-046",
+    "category": "gsk",
+    "question": "List the main plans normally carried on board a vessel.",
+    "answer": "General Arrangement (GA) Plan; Fire and Emergency Plan (usually a modified GA); Docking Plans; Shell Expansion Plan; tank arrangements; wiring diagrams; bilge pumping system plan; cooling systems; engine room technical drawings; and (on sailing vessels) rigging plans. Originals should never leave the ship.",
+    "tags": ["Ship's plans"]
+  },
+  {
+    "id": "gsk-047",
+    "category": "gsk",
+    "question": "What must the Fire Control Plan show, per SOLAS II-2/15 and the Large Yacht Code Chapter 14?",
+    "answer": "Positions of control stations; sections enclosed by 'A' and 'B' class fire divisions; flammable liquid storage; fire alarms/detection/sprinklers; fixed and portable fire-fighting appliances; firemen's outfits; means of access and emergency escapes; and locations/means of control of systems and openings to be closed in a fire emergency. It must be kept up to date, with a duplicate set stored in a weathertight enclosure for shore fire-fighters to access.",
+    "tags": ["Fire plan", "SOLAS"]
+  },
+  {
+    "id": "gsk-048",
+    "category": "gsk",
+    "question": "What information must a Life-Saving Appliance (LSA) plan show, per SOLAS Chapter III?",
+    "answer": "Liferafts (throw-over and davit-launched), lifeboats, lifejackets and reserve stowage, emergency escape breathing apparatus, medical equipment, life rings/lights/MOB markers, muster stations, immersion suits, EPIRB & SART, emergency radio, flares/smokes, the grab bag, and boarding positions for abandoning ship.",
+    "tags": ["LSA plan", "SOLAS"]
+  },
+  {
+    "id": "gsk-049",
+    "category": "gsk",
+    "question": "What standard colour codes are used on a ship's Safety Plan (per SOLAS Chapter II-1)?",
+    "answer": "White on red = fire. White on green = evacuation. Black on yellow = hazards. White on blue = mandatory use of safety equipment. The Safety Plan is a simplified GA showing fire zones, fire/watertight doors, fire-fighting equipment, emergency escapes/routes and LSA locations, and must not be altered without flag state authority.",
+    "tags": ["Safety plan"]
+  },
+  {
+    "id": "gsk-050",
+    "category": "gsk",
+    "question": "What is oxidation (rust) versus chemical corrosion?",
+    "answer": "Oxidation: metal reacts with oxygen in the air to form an oxide; steel's oxide (rust) does not protect the metal and must be sealed off by paint, whereas aluminium's oxide bonds tightly and prevents further corrosion. Chemical corrosion: attack by acid or alkaline solutions (e.g. battery acid, galley waste) that chemically combine with and dissolve the metal.",
+    "tags": ["Corrosion"]
+  },
+  {
+    "id": "gsk-051",
+    "category": "gsk",
+    "question": "Explain galvanic corrosion and give the order of the galvanic scale from cathode/noble to anode/ignoble.",
+    "answer": "When two dissimilar metals are connected in an electrolyte (e.g. seawater), electrons flow from the less noble (anodic) metal to the more noble (cathodic) metal, corroding the anode. Galvanic scale (noble/cathode to ignoble/anode): Stainless Steel → Bronze → Copper → Lead/Tin → Iron/Steel → Aluminium → Zinc → Magnesium. The further apart two metals are on the scale, the greater the corrosion.",
+    "tags": ["Galvanic corrosion"]
+  },
+  {
+    "id": "gsk-052",
+    "category": "gsk",
+    "question": "Where in a vessel is galvanic corrosion most commonly a problem?",
+    "answer": "Near the propeller and prop-shaft; at through-hull fittings; where aluminium superstructures join steel hulls; and in the engine room where machinery/pipework is poorly insulated. Three conditions must exist for it to occur: anodic and cathodic areas, an electrical connection between them, and an electrolyte (e.g. seawater) in contact with both.",
+    "tags": ["Galvanic corrosion"]
+  },
+  {
+    "id": "gsk-053",
+    "category": "gsk",
+    "question": "Name five methods of controlling corrosion on steel, and describe passive cathodic protection.",
+    "answer": "Anti-corrosive paints; galvanising; insulation (including explosion bonding); passive cathodic protection (sacrificial anodes); active cathodic protection (impressed current). Passive cathodic protection uses sacrificial zinc anodes, bolted or welded (never insulated) to the hull near the stern, thrusters, sea suctions etc. Anodes must never be painted, and should be replaced before wastage reaches 50%; if an anode isn't corroding, something else is.",
+    "tags": ["Corrosion prevention"]
+  },
+  {
+    "id": "gsk-054",
+    "category": "gsk",
+    "question": "What is Impressed Current Cathodic Protection (ICCP), and how does it differ from sacrificial anodes?",
+    "answer": "ICCP applies a small externally-powered DC voltage (via a reference electrode, controller and power supply) to anodes (often platinum) that are electrically insulated from the hull, neutralising the natural galvanic current so the hull becomes cathodic. Unlike sacrificial anodes, the ICCP anode is not consumed and needs no replacement, but the system is more expensive, harder to retrofit, and depends on accurate detection of weak currents.",
+    "tags": ["Cathodic protection", "ICCP"]
+  },
+  {
+    "id": "gsk-055",
+    "category": "gsk",
+    "question": "What is 'explosion bonding' and why is it used to join aluminium superstructures to steel hulls?",
+    "answer": "An aluminium plate is laid over a steel plate with a controlled gap, and an explosive charge detonated over it; the resulting heat and pressure fuse the two metals together at the atomic level, forming a Structural Transition Joint. Unlike bolts/rivets with liners and sleeves, there is no gap for an electrolyte or impurities to enter, virtually eliminating galvanic corrosion — it is permanent, watertight, and needs no maintenance beyond the protective coating.",
+    "tags": ["Explosion bonding"]
+  },
+  {
+    "id": "gsk-056",
+    "category": "gsk",
+    "question": "What is IACS, and what is the main function of a Classification Society?",
+    "answer": "IACS is the International Association of Classification Societies. Classification Societies safeguard the interests of charterers, bankers, owners and underwriters by ensuring ships are constructed, equipped and maintained to satisfactory standards of strength, stability and safety — they were originally formed by insurers needing to assess a ship's condition.",
+    "tags": ["Classification societies"]
+  },
+  {
+    "id": "gsk-057",
+    "category": "gsk",
+    "question": "Name the six classification societies the UK authorises as Recognised Organisations (ROs).",
+    "answer": "Lloyd's Register (LR, United Kingdom); Bureau Veritas (BV, France); American Bureau of Shipping (ABS, United States); Det Norske Veritas/Germanischer Lloyd (DNV/GL, Norway/Germany); Registro Italiano (RI, Italy); Nippon Kaiji Kyokai (NK, Japan).",
+    "tags": ["Classification societies"]
+  },
+  {
+    "id": "gsk-058",
+    "category": "gsk",
+    "question": "Explain Lloyd's Register class notation '100 A1 LMC UMS'.",
+    "answer": "100: considered suitable for sea-going service. A: built/accepted in accordance with Lloyd's Class Rules and maintained accordingly (once lost, cannot be recovered). 1: anchors, cables and mooring equipment comply with Lloyd's Rules. The Maltese Cross symbol denotes a new ship built under Society Surveyor supervision. LMC: Lloyd's Machinery Certificate (all machinery meets Class Rules). UMS: Unattended Machinery Spaces.",
+    "tags": ["Classification societies", "Lloyd's"]
+  },
+  {
+    "id": "gsk-059",
+    "category": "gsk",
+    "question": "List four types of Class survey and how often each occurs.",
+    "answer": "Construction survey (during build, or on acceptance of an existing vessel — cannot reach the highest classification). Annual survey (every year, checking watertight integrity, machinery, stability data, steering gear etc.). Dry-docking survey (every 2 to 2.5 years, depending on hull protection, checking the hull, fittings and anodes). Special survey (every 5 years from build, a thorough internal/external structural examination including tank pressure tests and plate thickness gauging).",
+    "tags": ["Classification societies", "Surveys"]
+  },
+  {
+    "id": "gsk-060",
+    "category": "gsk",
+    "question": "What is 'reserve buoyancy', and why is watertight subdivision important?",
+    "answer": "Reserve buoyancy is the buoyancy provided by the watertight part of the hull above the waterline — available in an emergency (extra weight aboard, or flooding from damage) to keep the vessel afloat. Subdividing the hull with watertight bulkheads means damage typically floods only one or two compartments rather than the whole hull, converting some reserve buoyancy in the intact compartments into actual buoyancy so the ship can remain afloat.",
+    "tags": ["Reserve buoyancy"]
+  },
+  {
+    "id": "gsk-061",
+    "category": "gsk",
+    "question": "What is the 'All Seasons Load Line', and why do yachts often use it?",
+    "answer": "A load line assigned a freeboard greater than the minimum Summer Freeboard but lower than other seasonal load lines, shown as the standard Load Line disc/summer line plus single Deck and Fresh Water lines (no separate seasonal vertical line). Yachts often use it since they rarely load to their Summer mark (no cargo), allowing a reduction in scantlings since the maximum permitted displacement is reduced.",
+    "tags": ["Load lines"]
+  },
+  {
+    "id": "gsk-062",
+    "category": "gsk",
+    "question": "Name the main Load Line zones and their general wind/weather criteria.",
+    "answer": "Summer Zones: not more than 10% of winds Force 8 or more. Tropical Zones: better weather, deeper loading permitted (not more than 1% of winds Force 8+, with limits on tropical storms). Winter Zones: worse weather, loading restricted to the winter mark. The Winter North Atlantic mark applies to ships under 100m in length.",
+    "tags": ["Load lines"]
+  },
+  {
+    "id": "gsk-063",
+    "category": "gsk",
+    "question": "State the Fresh Water Allowance (FWA) formula, and why an FWA is needed at all.",
+    "answer": "FWA (mm) = Summer Load Displacement ÷ (4 × TPC), also expressed as FWA = 1/48th of the Summer Load Draught. A vessel floating in fresh water (less dense than salt water) displaces a greater volume and sits deeper for the same weight, so a Fresh Water load line is marked ABOVE the summer mark, showing how far she may be submerged past it while in fresh water.",
+    "tags": ["Load lines", "FWA"]
+  },
+  {
+    "id": "gsk-064",
+    "category": "gsk",
+    "question": "State the minimum requirements for hatchway coamings and weathertight doorways below the freeboard deck.",
+    "answer": "Hatchways should be hinged, sliding, or otherwise permanently secured, with at least two locking devices; those often opened at sea should be no more than 1m square with a coaming/sill at least 300mm above the deck. Doorways should have weathertight doors opening outward, operable from either side, sited near the centreline (or hinged forward if on the side), with a coaming/sill at least 300mm above the weather deck.",
+    "tags": ["Watertight integrity"]
+  },
+  {
+    "id": "gsk-065",
+    "category": "gsk",
+    "question": "Why are non-return valves important on tank vents and sounding pipes fitted low on a vessel?",
+    "answer": "Air pipes and tank vents/sounding pipes fitted low down are at greater risk of allowing water to flood in (rather than just venting air) if damaged or left open; non-return valves prevent this inadvertent flooding, which is a critical part of maintaining the vessel's overall watertight integrity alongside properly maintained hatches, doors, ventilators and freeing ports.",
+    "tags": ["Watertight integrity"]
+  },
+  {
+    "id": "gsk-066",
+    "category": "gsk",
+    "question": "What MARPOL limit applies to oil content in bilge water discharge, and what tonnage requires an Oily Water Separator?",
+    "answer": "Discharged bilge water must contain less than 15 parts per million (ppm) of oil. Ships of 400 gross tonnes or more (150GT for oil tankers) must carry oil separation and monitoring equipment; below that threshold, MARPOL compliance is still required, but all oil-contaminated water must instead be landed ashore (except in an emergency).",
+    "tags": ["MARPOL", "Bilge system"]
+  },
+  {
+    "id": "gsk-067",
+    "category": "gsk",
+    "question": "List the main components of a bilge pumping system and their functions.",
+    "answer": "Bilge pumps (at least two, self-priming); bilge wells (collect liquid for pumping); bilge level alarms (float switches); strainers — strum boxes (at the well suction) and mud boxes (in-line); bilge suction valves (Screw Lift Non-Return, SLNR, to stop back-flooding); a holding tank (lets oil/water separate); the Oily Water Separator (OWS); an Oil Content Meter (OCM) controlling a three-way valve (closed / overside / recirculate); an overboard non-return valve; and a seawater connection for priming/flushing.",
+    "tags": ["Bilge system"]
+  },
+  {
+    "id": "gsk-068",
+    "category": "gsk",
+    "question": "List at least five hazards of high bilge water levels.",
+    "answer": "Free surface effect on stability; fire hazard from oil in the bilges; dangerous/explosive gases; slippery, dangerous working surfaces; corrosion; oil/water reaching machinery lower down; effects on trim, heel and draught; poor cleanliness; and impaired visibility of lower spaces.",
+    "tags": ["Bilge system"]
+  },
+  {
+    "id": "gsk-069",
+    "category": "gsk",
+    "question": "What are the SOLAS requirements for the ship's fire main and pumps?",
+    "answer": "The system must be able to project two jets of water into any compartment, supplied by two pumps: one may be in the main machinery space (possibly main-engine driven); a second, independently powered pump (commonly a small diesel with auto/self-start and manual start capability) must be located OUTSIDE the main machinery space. The fire main typically rises to the freeboard deck before running forward/aft, to avoid penetrating watertight bulkheads at a lower level.",
+    "tags": ["Fire-fighting system", "SOLAS"]
   }
 ]

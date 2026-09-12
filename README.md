@@ -34,16 +34,22 @@ Instagram Reels / TikTok rather than a traditional quiz app.
 
 ## ⚠️ About the content
 
-This build ships with a full set of original flashcards (20 per category,
-80 total) written from standard COLREGS / SOLAS / MARPOL / GSK / navigation
-reference material, **not** from a source PDF — none was attached to the
-task that produced this app. Since **AEC** isn't a universally standard
-acronym in the OOW syllabus, it was interpreted here as **"Anchoring,
-Emergencies & Communications"**; adjust the category name/description in
-`src/data/categories.ts` if your notes define it differently.
+**OOW 3000 (COLREGS), GSK and Nav & Radar** are now sourced directly from
+the real course material: the official MCA Merchant Shipping Notice MSN
+1781 (the Collision Regulations, Rules 1–38 and Annexes I–IV) for OOW 3000,
+and the Bluewater Crew Training OOW course notes for GSK (Meteorology;
+Yacht Construction — materials, plans, corrosion, classification societies,
+load lines, bilge/fire systems) and Nav & Radar (chartwork & fixing,
+passage planning, Admiralty publications, chart correction, tides, LORAN/
+eLoran, radar theory, radar plotting, and ARPA). 47 + 69 + 68 = 184 cards
+across those three categories, written to track the source text closely.
 
-When you share the real notes PDF, the content can be dropped straight into
-the JSON files described below — no component code needs to change.
+**AEC** (Anchoring, Emergencies & Comms) has no source document yet — it
+still holds the 20 original placeholder cards from the first build, and
+"AEC" isn't a universally standard OOW syllabus acronym, so that
+interpretation is also just a placeholder. Send over notes for it (or say
+what it should stand for) and it'll get the same treatment; adjust the name
+in `src/data/categories.ts` in the meantime if you know what it should be.
 
 ## Adding / editing content
 

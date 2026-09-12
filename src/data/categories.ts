@@ -14,7 +14,7 @@ export const CATEGORIES: Category[] = [
     id: "gsk",
     name: "General Ship Knowledge",
     shortName: "GSK",
-    description: "Stability, construction, fire, LSA, SOLAS/MARPOL",
+    description: "Meteorology, construction, corrosion, class & load lines",
     gradient: ["#2dd4bf", "#38bdf8"],
   },
   {
