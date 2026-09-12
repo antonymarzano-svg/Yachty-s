@@ -3,6 +3,7 @@ import oow3000 from "./oow3000.json";
 import gsk from "./gsk.json";
 import navRadar from "./nav-radar.json";
 import aec from "./aec.json";
+import gmdss from "./gmdss.json";
 
 /**
  * All flashcards, aggregated from per-category JSON files.
@@ -15,6 +16,7 @@ export const ALL_CARDS: Flashcard[] = [
   ...(gsk as Flashcard[]),
   ...(navRadar as Flashcard[]),
   ...(aec as Flashcard[]),
+  ...(gmdss as Flashcard[]),
 ];
 
 export function cardsByTab(tab: TabId): Flashcard[] {

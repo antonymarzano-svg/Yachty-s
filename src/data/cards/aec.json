@@ -56,27 +56,6 @@
     "tags": ["Emergency", "Man overboard"]
   },
   {
-    "id": "aec-009",
-    "category": "aec",
-    "question": "What are the GMDSS sea areas A1 to A4, and what do they determine?",
-    "answer": "A1: within range of shore-based VHF coast station with continuous DSC alerting coverage. A2: beyond A1 but within range of MF coast station DSC coverage. A3: beyond A2 but within coverage of a geostationary satellite (e.g. Inmarsat), roughly 70°N to 70°S. A4: all other areas outside A1–A3 (polar regions), requiring HF (and satellite systems suited to high latitudes). The areas determine the minimum radio equipment a vessel must carry for distress and safety communications.",
-    "tags": ["GMDSS"]
-  },
-  {
-    "id": "aec-010",
-    "category": "aec",
-    "question": "What is a DSC distress alert and what information does it automatically transmit?",
-    "answer": "A Digital Selective Calling (DSC) distress alert is a short digital burst transmitted (VHF Ch 70, MF/HF) at the push of the dedicated distress button, automatically including the vessel's MMSI, position and time (if interfaced with GPS), and nature of distress if selected, alerting all DSC-equipped stations/vessels within range and prompting them to switch to the distress traffic channel.",
-    "tags": ["GMDSS"]
-  },
-  {
-    "id": "aec-011",
-    "category": "aec",
-    "question": "Distinguish between MAYDAY, PAN-PAN and SÉCURITÉ radiotelephony calls.",
-    "answer": "MAYDAY: grave and imminent danger to a ship/person requiring immediate assistance (highest priority, distress). PAN-PAN: urgent message concerning the safety of a ship or person, but not requiring immediate assistance (urgency, second priority). SÉCURITÉ: a safety message containing important navigational or meteorological warnings (safety, third priority).",
-    "tags": ["Communications", "GMDSS"]
-  },
-  {
     "id": "aec-012",
     "category": "aec",
     "question": "What actions/checks form part of an abandon ship procedure?",

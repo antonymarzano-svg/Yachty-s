@@ -89,6 +89,17 @@ export function CategoryWatermark({
           <circle cx="50" cy="50" r="11" />
         </svg>
       );
+    case "gmdss":
+      // antenna radiating signal waves — distress comms / DSC / radio
+      return (
+        <svg {...common} strokeWidth={2.5}>
+          <line x1="50" y1="30" x2="50" y2="78" />
+          <path d="M50 30 L42 18 M50 30 L58 18" />
+          <circle cx="50" cy="30" r="3" fill="currentColor" />
+          <path d="M32 46 A26 26 0 0 1 68 46" opacity="0.55" />
+          <path d="M22 38 A38 38 0 0 1 78 38" opacity="0.3" />
+        </svg>
+      );
     default:
       return null;
   }

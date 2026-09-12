@@ -14,12 +14,13 @@ Instagram Reels / TikTok rather than a traditional quiz app.
   an automatic web fallback so it also works in a plain browser)
 - Dark mode with a warm, per-category nautical color palette (port-red →
   starboard-green for COLREGS, teal/blue for GSK, ocean blue/indigo for
-  Nav & Radar, lighthouse amber/orange for AEC) plus a large low-opacity
-  nautical icon watermarked behind every plain-text card, so the feed feels
-  illustrated even before any custom artwork is added
-- Category pills for **OOW 3000**, **GSK**, **Nav & Radar**, **AEC**, plus a
-  **Mixed** feed that shuffles every category into one, each showing live
-  "mastered" progress
+  Nav & Radar, lighthouse amber/orange for AEC, violet/cyan for GMDSS) plus
+  a large low-opacity nautical icon watermarked behind every plain-text
+  card, so the feed feels illustrated even before any custom artwork is
+  added
+- Category pills for **OOW 3000**, **GSK**, **Nav & Radar**, **AEC**,
+  **GMDSS**, plus a **Mixed** feed that shuffles every category into one,
+  each showing live "mastered" progress
 - "Unmastered only" filter per tab
 - Cards can carry a scene-setting illustration on the front (e.g. two boats
   shown crossing for a Rule 15 question), a diagram/photo revealed with the
@@ -34,24 +35,31 @@ Instagram Reels / TikTok rather than a traditional quiz app.
 
 ## ⚠️ About the content
 
-**OOW 3000 (COLREGS), GSK and Nav & Radar** are now sourced directly from
-the real course material: the official MCA Merchant Shipping Notice MSN
-1781 (the Collision Regulations, Rules 1–38 and Annexes I–IV) for OOW 3000,
-and the Bluewater Crew Training OOW course notes for GSK (Meteorology;
+**OOW 3000 (COLREGS), GSK, Nav & Radar and GMDSS** are now sourced directly
+from the real course material: the official MCA Merchant Shipping Notice
+MSN 1781 (the Collision Regulations, Rules 1–38 and Annexes I–IV) for OOW
+3000; the Bluewater Crew Training OOW course notes for GSK (Meteorology;
 Yacht Construction — materials, plans, corrosion, classification societies,
 load lines, bilge/fire systems) and Nav & Radar (chartwork & fixing,
 passage planning, Admiralty publications, chart correction, tides, LORAN/
-eLoran, radar theory, radar plotting, and ARPA). 47 + 69 + 68 = 184 cards
-across those three categories, written to track the source text closely.
+eLoran, radar theory, radar plotting, and ARPA); and the Bluewater GMDSS
+General Operator's Certificate course notes for GMDSS (DSC & MMSI, GMDSS
+sea areas & equipment, radio theory & propagation, antennas, priority of
+communications & the MIRPDANIO distress format, VHF/SSB/NAVTEX/INMARSAT/
+Iridium, EPIRB & SART, batteries, radio regulations, the GMDSS logbook,
+phonetic alphabet and SAR co-ordination). 47 + 69 + 68 + 123 = 307 cards
+across those four categories, written to track the source text closely.
 
-**AEC** is actually **Auxiliary Equipment & Construction** — an engineering
-module (auxiliary machinery, equipment, ship construction) — and the tab
-name/description/watermark icon (now a gear) have been corrected to match.
-It still has no source document, though, so it's showing the 20 original
+**AEC** is **Auxiliary Equipment & Construction** — an engineering module
+(auxiliary machinery, equipment, ship construction) — and the tab name/
+description/watermark icon (a gear) have been corrected to match. It still
+has no source document, though, so it's showing 17 of the original
 placeholder cards from the very first build (anchoring, emergency
-procedures, GMDSS, mooring, etc.) — those topics don't actually belong to
-an engineering module and will be fully replaced once the real course
-notes are shared, the same way OOW 3000/GSK/Nav & Radar were.
+procedures, mooring, etc. — the 3 GMDSS-tagged placeholders were removed
+now that real GMDSS content exists in its own category above). Those
+remaining topics don't actually belong to an engineering module and will
+be fully replaced once the real course notes are shared, the same way
+OOW 3000/GSK/Nav & Radar/GMDSS were.
 
 ## Adding / editing content
 
@@ -65,8 +73,9 @@ src/data/
     oow3000.json       # COLREGS / rules of the road
     gsk.json            # General Ship Knowledge
     nav-radar.json      # Navigation & Radar / chartwork
-    aec.json             # Anchoring, Emergencies & Communications
-    index.ts             # aggregates the JSON files into one list
+    aec.json             # Auxiliary Equipment & Construction (placeholders)
+    gmdss.json            # GMDSS General Operator's Certificate content
+    index.ts               # aggregates the JSON files into one list
 ```
 
 To add a card, append an object to the relevant JSON file:

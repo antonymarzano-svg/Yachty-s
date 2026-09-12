@@ -1,0 +1,863 @@
+[
+  {
+    "id": "gmdss-001",
+    "category": "gmdss",
+    "question": "What does GMDSS stand for, and what is its purpose?",
+    "answer": "Global Maritime Distress and Safety System — it gives ships access to rescue organisations using fully automated procedures. Communication is generally directed to an RCC (Rescue Co-ordination Centre, sometimes called an MRCC, or just 'Coastguard').",
+    "tags": ["GMDSS basics"]
+  },
+  {
+    "id": "gmdss-002",
+    "category": "gmdss",
+    "question": "List the terrestrial and satellite routes GMDSS provides to reach an RCC, plus its other components.",
+    "answer": "Terrestrial: VHF/DSC, MF/DSC, HF/DSC. Satellite: INMARSAT-C (text only), Fleet FB (text/data/voice, needs a Marine Safety Terminal), Iridium (text/data/voice — recognised but not MCA-approved), and EPIRB (a secondary means of distress calling). The system additionally includes SART (Search & Rescue Radar Transponder, and AIS SART) and NAVTEX (receive-only).",
+    "tags": ["GMDSS basics"]
+  },
+  {
+    "id": "gmdss-003",
+    "category": "gmdss",
+    "question": "Define GMDSS Sea Area A1.",
+    "answer": "Within VHF radiotelephone (voice) range of a VHF DSC coast station keeping continuous GMDSS distress watch — about 30–40 miles.",
+    "tags": ["Sea areas"]
+  },
+  {
+    "id": "gmdss-004",
+    "category": "gmdss",
+    "question": "Define GMDSS Sea Area A2.",
+    "answer": "Within MF radiotelephone (voice) range of an MF DSC coast station keeping continuous GMDSS distress watch — about 250 miles.",
+    "tags": ["Sea areas"]
+  },
+  {
+    "id": "gmdss-005",
+    "category": "gmdss",
+    "question": "Define GMDSS Sea Area A3.",
+    "answer": "Within the global footprint of the Inmarsat satellite system (roughly 76°N to 76°S) where continuous alerting is available, excluding whichever A1/A2 areas also happen to fall within that footprint.",
+    "tags": ["Sea areas"]
+  },
+  {
+    "id": "gmdss-006",
+    "category": "gmdss",
+    "question": "Define GMDSS Sea Area A4.",
+    "answer": "Any area outside Areas A1, A2 and A3, north of latitude 76°N and south of latitude 76°S — the polar regions, where only HF and Iridium reach.",
+    "tags": ["Sea areas"]
+  },
+  {
+    "id": "gmdss-007",
+    "category": "gmdss",
+    "question": "Which vessels must carry GMDSS-compliant radio/satellite equipment, and what decides exactly which equipment they need?",
+    "answer": "All passenger vessels and cargo vessels over 300 tonnes engaged in international voyages. The GMDSS Sea Area(s) in which the vessel operates determines, in principle, which equipment it must carry (per ALRS Volume 5).",
+    "tags": ["Sea areas", "GMDSS basics"]
+  },
+  {
+    "id": "gmdss-008",
+    "category": "gmdss",
+    "question": "Summarise VHF radio with DSC as a piece of GMDSS equipment.",
+    "answer": "Short-range communication for Distress, Urgency, Safety and Routine messages — used ship-to-shore (an RCC in an emergency). Range depends on antenna height and transmit power — around 30–40nm.",
+    "tags": ["Equipment", "VHF"]
+  },
+  {
+    "id": "gmdss-009",
+    "category": "gmdss",
+    "question": "Summarise MF/HF SSB radio with DSC as a piece of GMDSS equipment.",
+    "answer": "Medium-to-long-range communications for Distress, Urgency, Safety and Routine traffic, ship-to-shore. MF has an approximate range of 250nm; HF can reach 7000nm and more.",
+    "tags": ["Equipment", "SSB"]
+  },
+  {
+    "id": "gmdss-010",
+    "category": "gmdss",
+    "question": "Summarise the NAVTEX receiver as GMDSS equipment.",
+    "answer": "Receives MSI (Maritime Safety Information) — both International and National stations — from NAVTEX transmitting stations worldwide. Range about 300nm.",
+    "tags": ["Equipment", "NAVTEX"]
+  },
+  {
+    "id": "gmdss-011",
+    "category": "gmdss",
+    "question": "Compare Inmarsat Fleet Broadband/Fleet One with Inmarsat C as GMDSS equipment.",
+    "answer": "Both give Distress, Urgency, Safety and Routine communication with worldwide coverage between 76°N and 76°S (Sea Area A3). Fleet Broadband/Fleet One carry voice, data and text; SAT-C (Inmarsat C) is text only.",
+    "tags": ["Equipment", "INMARSAT"]
+  },
+  {
+    "id": "gmdss-012",
+    "category": "gmdss",
+    "question": "Summarise Iridium as GMDSS equipment.",
+    "answer": "Distress, Urgency, Safety and Routine communications with true worldwide capability — including Sea Area A4 (the polar regions), which Inmarsat cannot reach.",
+    "tags": ["Equipment", "Iridium"]
+  },
+  {
+    "id": "gmdss-013",
+    "category": "gmdss",
+    "question": "Summarise the EPIRB as GMDSS equipment.",
+    "answer": "Cospas/Sarsat EPIRB — transmits on 406MHz to polar-orbiting Cospas/Sarsat satellites, giving global coverage via direct-wave propagation.",
+    "tags": ["Equipment", "EPIRB"]
+  },
+  {
+    "id": "gmdss-014",
+    "category": "gmdss",
+    "question": "Summarise the SART as GMDSS equipment.",
+    "answer": "Activated by a searching vessel's 9GHz, X-band, 3cm radar — transmits a signal back giving range and bearing to the activated SART. Range is approximately 5–7nm at sea level, 30–50nm from aircraft-borne radar. AIS SARTs use newer technology to show the casualty's position via AIS instead.",
+    "tags": ["Equipment", "SART"]
+  },
+  {
+    "id": "gmdss-015",
+    "category": "gmdss",
+    "question": "Why must GMDSS vessels also carry a hand-held VHF radio, and what are its key features?",
+    "answer": "A waterproof hand-held VHF, with its own fully charged lithium battery pack, is required for use in survival craft in an emergency for search-and-rescue communications — maximum power output is normally restricted to 8W.",
+    "tags": ["Equipment", "VHF"]
+  },
+  {
+    "id": "gmdss-016",
+    "category": "gmdss",
+    "question": "What problem does DSC (Digital Selective Calling) solve, and how does it work in essence?",
+    "answer": "It removes the need for a radio operator to keep continuous watch. DSC works like an old-fashioned paging device: every vessel is allocated a unique 'telephone' number (its MMSI), and when a DSC call is sent to that MMSI, only the addressed unit sounds an audible alarm — even though all radios in range receive the transmission.",
+    "tags": ["DSC"]
+  },
+  {
+    "id": "gmdss-017",
+    "category": "gmdss",
+    "question": "How is a DSC distress alert triggered, and what information does it automatically transmit?",
+    "answer": "By pressing and holding the DISTRESS button (under a sprung-loaded cover) for a pre-determined 3–5 seconds. The alert transmits the vessel's identity (MMSI), position (normally from GNSS) and a date/time stamp; Nature of Distress can also be included if a 'designated' alert is sent. It's normal for the DSC alert to be followed by an RT Mayday call and message.",
+    "tags": ["DSC"]
+  },
+  {
+    "id": "gmdss-018",
+    "category": "gmdss",
+    "question": "Since DSC alerting exists, is it still necessary to keep a continuous watch on VHF Ch16 / MF 2182kHz?",
+    "answer": "No — DSC alerting means it is no longer a strict requirement, since any DSC alert will alarm the bridge to an incoming important message. However, Ofcom and the USCG still recommend monitoring Ch16 when practicable, and routine DSC calling is preferred over voice-calling on Ch16/2182kHz to reduce congestion.",
+    "tags": ["DSC"]
+  },
+  {
+    "id": "gmdss-019",
+    "category": "gmdss",
+    "question": "What is an MMSI, and how is a unique vessel MMSI structured?",
+    "answer": "Maritime Mobile Service Identity — a 9-digit number used with all DSC equipment (VHF/MF/HF). A unique vessel MMSI is a 3-digit MID (Maritime Identification Digits, denoting country of registry — e.g. 232–235 for the UK) followed by 6 more digits, e.g. 235 123456.",
+    "tags": ["MMSI"]
+  },
+  {
+    "id": "gmdss-020",
+    "category": "gmdss",
+    "question": "How do Group and Coast Station MMSIs differ from a unique vessel MMSI?",
+    "answer": "A Group MMSI is formatted 0<MID>xxxxx (e.g. 0 235 12345); a Coast Station MMSI is 00<MID>xxxx (e.g. 00 235 1234) — the leading zero(s) distinguish them from an ordinary vessel's 9-digit MMSI.",
+    "tags": ["MMSI"]
+  },
+  {
+    "id": "gmdss-021",
+    "category": "gmdss",
+    "question": "What special MMSI-style numbers are used for Aids to Navigation, AIS SARTs and SAR aircraft?",
+    "answer": "Aid to Navigation (ATN): 99 followed by 7 digits (e.g. 99 1234567). AIS SART: 970 followed by 6 digits. SAR Aircraft: 111<MID>xxx.",
+    "tags": ["MMSI"]
+  },
+  {
+    "id": "gmdss-022",
+    "category": "gmdss",
+    "question": "How are Inmarsat C and EPIRB identities formatted, and how do they differ from an MMSI?",
+    "answer": "Inmarsat C Identity is a 9-digit number starting with 4, followed by the 3-digit MID and 5 more digits (e.g. 4 235 12345) — Fleet Broadband/Iridium identities start with +870. An EPIRB's ID is a unique 15-digit hexadecimal code, entirely separate from any MMSI or other identifier.",
+    "tags": ["MMSI", "EPIRB"]
+  },
+  {
+    "id": "gmdss-023",
+    "category": "gmdss",
+    "question": "What four ways can a vessel identify itself in GMDSS communications, and when is each typically used?",
+    "answer": "Vessel's Name (most common, though not always unique); Call Sign (a unique alphanumeric identifier, often preferred by merchant/commercial vessels); MMSI (used alongside the name/call sign whenever DSC equipment is involved); Inmarsat Identity (a unique numeric code, for SAT-C or Fleet FB traffic). A Mayday implicitly addresses 'All Stations' so no called-station identity is needed.",
+    "tags": ["Vessel identification"]
+  },
+  {
+    "id": "gmdss-024",
+    "category": "gmdss",
+    "question": "Give the approximate range of VHF, MF and HF for reaching an RCC, and why they differ.",
+    "answer": "VHF (Area A1): approx. 30–40nm, based on antenna height (direct wave/line-of-sight). MF (Area A2): approx. 250 miles, based on transmitter power (ground wave). HF (Areas A3/A4): approx. 400 miles to worldwide, dependent on many factors including frequency choice and time of day (sky wave).",
+    "tags": ["Equipment ranges"]
+  },
+  {
+    "id": "gmdss-025",
+    "category": "gmdss",
+    "question": "What does the HF skip-range table show, and what two 'rules of thumb' go with it?",
+    "answer": "It shows approximate range in nautical miles for each HF band (4, 6, 8, 12, 16MHz) across 1, 2 and 3 skips — e.g. 8MHz gives roughly 800/1600/2400nm. Rule 1: 8MHz is a good all-round frequency, mixing ground wave and sky wave. Rule 2: at night, ranges roughly double.",
+    "tags": ["Equipment ranges", "Propagation"]
+  },
+  {
+    "id": "gmdss-026",
+    "category": "gmdss",
+    "question": "Distinguish DC from AC electricity, as used on board.",
+    "answer": "DC (Direct Current) flows one way, from the positive to the negative terminal, and is stored in batteries — typically 12V on small vessels, 24V/48V on larger ones. AC (Alternating Current) is produced by a generator/alternator, oscillates between 'Live' and 'Neutral', cannot be stored, and in the UK alternates 50 times a second (50Hz).",
+    "tags": ["Radio basics"]
+  },
+  {
+    "id": "gmdss-027",
+    "category": "gmdss",
+    "question": "How does a radio wave get produced and carry a voice signal?",
+    "answer": "An alternating current fed down a wire radiates a radio wave as a by-product. A microphone converts voice into an electrical signal, which is amalgamated with a high-frequency 'carrier' wave and transmitted via an antenna; at the receiver, the carrier is stripped away leaving the audible signal, which a speaker converts back to sound.",
+    "tags": ["Radio basics"]
+  },
+  {
+    "id": "gmdss-028",
+    "category": "gmdss",
+    "question": "How does Frequency Modulation (FM) work, and where is it used in marine radio?",
+    "answer": "The voice signal varies the frequency of the carrier wave (amplitude stays constant). FM is used for Marine VHF — it gives a clear, high-quality signal but is range-limited to line-of-sight.",
+    "tags": ["Modulation"]
+  },
+  {
+    "id": "gmdss-029",
+    "category": "gmdss",
+    "question": "How does Amplitude Modulation (AM) work, and why is it unsuitable for most marine use?",
+    "answer": "The voice signal varies the amplitude of a fixed-frequency carrier. AM gives good range and quality but is highly inefficient and power-hungry — a problem on a vessel with limited power, which is why marine MF/HF radio uses Single Side Band (SSB) instead.",
+    "tags": ["Modulation"]
+  },
+  {
+    "id": "gmdss-030",
+    "category": "gmdss",
+    "question": "What is Single Side Band (SSB), and what two benefits does it give over plain AM?",
+    "answer": "SSB suppresses the carrier wave and transmits only one of the two (identical) sidebands. This reduces the required bandwidth (more channels available) and reduces power usage (no power wasted transmitting the carrier) — at the cost of some signal quality, though it's still normally clear enough to understand.",
+    "tags": ["Modulation"]
+  },
+  {
+    "id": "gmdss-031",
+    "category": "gmdss",
+    "question": "What do the emission codes A3E, J3E and F3E mean?",
+    "answer": "A3E = Amplitude Modulation (commercial radio); J3E = Single Side Band without carrier (used on all marine MF/HF channels); F3E = Frequency Modulation (used on VHF for speech). The first letter is emission type, the digit '3' means an analogue signal, and 'E' means the transmission carries human speech/music.",
+    "tags": ["Modulation"]
+  },
+  {
+    "id": "gmdss-032",
+    "category": "gmdss",
+    "question": "Name the three components of radiowave propagation and which frequency band each predominates in.",
+    "answer": "Direct Wave (VHF and satellite — line of sight), Ground Wave (MF), and Sky Wave (HF). Any one may predominate depending on the transmitting frequency.",
+    "tags": ["Propagation"]
+  },
+  {
+    "id": "gmdss-033",
+    "category": "gmdss",
+    "question": "Describe MF ground-wave propagation and why it gives such a stable signal.",
+    "answer": "The ground wave travels at or near the earth's surface, gradually losing energy as it passes over the ground and 'hugging' the earth's shape — this gives very stable signals at the receiver, but requires great transmitter power and large antennas for range. Most MF radios are limited to 250W, giving a typical range of about 250nm (roughly 1W ≈ 1nm).",
+    "tags": ["Propagation", "SSB"]
+  },
+  {
+    "id": "gmdss-034",
+    "category": "gmdss",
+    "question": "Describe HF sky-wave propagation, including what a 'skip' is.",
+    "answer": "The sky wave travels up towards the ionosphere, which refracts it back down to earth, often far from the transmitter — giving HF its large range. The returning signal can bounce off the earth's surface back up to the ionosphere again — each such bounce is a 'skip', and HF can skip up to three times, giving ranges from ~400 miles up to potentially worldwide.",
+    "tags": ["Propagation"]
+  },
+  {
+    "id": "gmdss-035",
+    "category": "gmdss",
+    "question": "What are 'skip distance' and the 'dead space'/'silent zone' at HF?",
+    "answer": "Skip distance is the minimum range at which a given HF frequency can communicate by sky wave — the higher the frequency, the greater the skip distance. The dead space (or silent zone) is the gap between where the ground wave fades out and where the sky wave first returns to earth — no communication is possible on that frequency within it. Changing frequency moves where the sky wave lands.",
+    "tags": ["Propagation"]
+  },
+  {
+    "id": "gmdss-036",
+    "category": "gmdss",
+    "question": "Distinguish Simplex, Duplex and Semi-Duplex radio operation.",
+    "answer": "Simplex: only one station transmits at a time, alternating transmit/receive on the same frequency — used for all distress and calling channels so everyone can hear everyone. Duplex: simultaneous transmit and receive on two separate frequencies, used for radiotelephone/telex public correspondence (like a normal phone call), limited to two stations at a time. Semi-Duplex: different transmit/receive frequencies, but only one direction can be used at a time (the equipment can't transmit and receive simultaneously).",
+    "tags": ["Radio basics"]
+  },
+  {
+    "id": "gmdss-037",
+    "category": "gmdss",
+    "question": "What antenna types are used for VHF versus MF/HF terrestrial radio?",
+    "answer": "VHF uses a whip antenna or dipole, typically 2m (or 1m on smaller boats). MF/HF uses a long whip, typically 7m in multiple screw-together sections, or a long-wire antenna — the latter can hamper cargo operations on commercial ships but works well affixed to a sailing yacht's backstay.",
+    "tags": ["Antennas"]
+  },
+  {
+    "id": "gmdss-038",
+    "category": "gmdss",
+    "question": "Compare the antenna types used by Fleet Broadband/Fleet One versus Inmarsat C and Iridium.",
+    "answer": "Fleet Broadband/Fleet One use a gyro-stabilised, directional dish antenna (in a protective fibreglass dome) that actively tracks the satellite. Inmarsat C and Iridium use a simpler omni-directional antenna in a fibreglass cover that does not track the satellite.",
+    "tags": ["Antennas", "INMARSAT", "Iridium"]
+  },
+  {
+    "id": "gmdss-039",
+    "category": "gmdss",
+    "question": "What is the half-wave dipole principle of antenna design?",
+    "answer": "Antenna efficiency is closely related to wavelength — best results come when antenna length equals half the wavelength of the signal. A half-wave dipole is built from two quarter-wavelength elements joined at the centre; it is an efficient radiator/receptor at short wavelengths such as VHF.",
+    "tags": ["Antennas"]
+  },
+  {
+    "id": "gmdss-040",
+    "category": "gmdss",
+    "question": "What safety features are built into a long-wire antenna installation, and why?",
+    "answer": "A weak link (thinner-gauge wire, about one-third the antenna's breaking strain), fitted between the insulator and the mast, is designed to break first if the antenna comes under excess strain from ship movement (hogging/sagging). A safety loop, of the same gauge as the antenna, then stops the broken antenna falling onto the deck below and causing injury.",
+    "tags": ["Antennas"]
+  },
+  {
+    "id": "gmdss-041",
+    "category": "gmdss",
+    "question": "List key points of routine antenna maintenance.",
+    "answer": "Check regularly, especially after heavy weather or dusty/dirty cargo operations; keep insulators clean with soapy desalinated water (never abrasives); keep weatherproofing, lead-in cables and earth connections secure and undamaged; check stays/stand-offs; never paint insulators or radomes; and follow the manufacturer's service schedule for satcom antennas.",
+    "tags": ["Antennas"]
+  },
+  {
+    "id": "gmdss-042",
+    "category": "gmdss",
+    "question": "Give the primary distress/urgency/safety frequencies for VHF, MF and HF, and explain the 'DUSR' key.",
+    "answer": "VHF Ch70 (DSC) / Ch16 (RT) — both DUSR (Distress, Urgency, Safety, Routine). MF 2187.5kHz (DSC, DUS) / 2182kHz (RT, DUSR) / 2174.5kHz (Telex, DUS). HF has several DSC/RT/Telex triplets (e.g. 8414.5kHz DSC / 8291kHz RT / 8376.5kHz Telex), all DUS. DUSR = Distress, Urgency, Safety, Routine — the letters show which priority levels use that channel/frequency.",
+    "tags": ["Frequencies"]
+  },
+  {
+    "id": "gmdss-043",
+    "category": "gmdss",
+    "question": "Give the distress-related frequency/band for EPIRB, SART and NAVTEX.",
+    "answer": "EPIRB: COSPAS-SARSAT 406MHz (optional 121.5MHz homing) — Distress. SART: 9GHz, 3cm, X-band radar — Distress. NAVTEX: 518kHz international/English broadcast and 490kHz national/local-language broadcast — Safety.",
+    "tags": ["Frequencies", "EPIRB", "SART", "NAVTEX"]
+  },
+  {
+    "id": "gmdss-044",
+    "category": "gmdss",
+    "question": "What are the SMCP 'message markers', and why were they created?",
+    "answer": "The IMO Standard Marine Communication Phrases include eight message markers — Instruction, Advice, Warning, Information, Question, Answer, Request, Intention — used to prefix a message and remove ambiguity about the sender's intent, avoiding language-barrier misunderstandings that can cause accidents.",
+    "tags": ["SMCP"]
+  },
+  {
+    "id": "gmdss-045",
+    "category": "gmdss",
+    "question": "Distinguish the SMCP markers Instruction, Advice and Warning, with an example of each.",
+    "answer": "Instruction: a legally binding message from an authority (e.g. a VTS station) — 'INSTRUCTION. Do not cross the fairway.' Advice: a recommendation the recipient may choose whether to follow — 'ADVICE. Stand by on VHF Channel six nine.' Warning: informs of danger, for the recipient to act on — 'WARNING. Obstruction in the fairway.'",
+    "tags": ["SMCP"]
+  },
+  {
+    "id": "gmdss-046",
+    "category": "gmdss",
+    "question": "Distinguish the SMCP markers Information, Question/Answer, Request and Intention.",
+    "answer": "Information: restricted to observed facts, e.g. navigational/traffic info — 'INFORMATION. MV Noname will overtake to the West of you.' Question/Answer: an interrogative message and its reply. Request: asks for action from others — 'REQUEST. I require two tugs.' Intention: informs others of your own immediate navigational action — 'INTENTION. I will reduce my speed.'",
+    "tags": ["SMCP"]
+  },
+  {
+    "id": "gmdss-047",
+    "category": "gmdss",
+    "question": "Why does IMO recommend 'yes' or 'no' instead of 'affirmative' or 'negative' on the radio?",
+    "answer": "It's easy to miss the start of a word over the radio and hear only the ending — 'negative' heard from its second syllable could be mistaken for confirmation. 'Yes' and 'no' are shorter and far less easily confused.",
+    "tags": ["SMCP"]
+  },
+  {
+    "id": "gmdss-048",
+    "category": "gmdss",
+    "question": "Match each DSC alert type to its RT (voice) equivalent.",
+    "answer": "DISTRESS ALERT → MAYDAY. DISTRESS ALERT RELAY → MAYDAY RELAY. URGENCY ANNOUNCEMENT → PAN PAN. SAFETY ANNOUNCEMENT → SÉCURITÉ. ROUTINE → no RT equivalent (voice traffic simply proceeds).",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-049",
+    "category": "gmdss",
+    "question": "Define Distress (Mayday) and give the voice signal transmitted.",
+    "answer": "A vessel, aircraft, other mobile unit or person is in grave and imminent danger and requires immediate assistance (e.g. sinking, serious fire). Voice signal: 'Mayday, Mayday, Mayday.'",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-050",
+    "category": "gmdss",
+    "question": "Define Distress Alert Relay (Mayday Relay) and give the voice signal transmitted.",
+    "answer": "Used to forward another vessel's/person's distress when you've seen or heard unacknowledged distress signals, or they can't send their own distress message and further assistance is needed (e.g. red flares sighted, a ditching aircraft observed). Voice signal: 'Mayday Relay, Mayday Relay, Mayday Relay.'",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-051",
+    "category": "gmdss",
+    "question": "Define Urgency (Pan Pan) and give the voice signal transmitted.",
+    "answer": "An urgent message about the safety of a vessel, aircraft or person requiring urgent (not immediate/life-threatening) assistance — e.g. complete engine failure, damaged steering gear, or any medical assistance message. Voice signal: 'Pan Pan, Pan Pan, Pan Pan.'",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-052",
+    "category": "gmdss",
+    "question": "Define Safety (Sécurité) and give the voice signal transmitted.",
+    "answer": "An important navigational or meteorological warning, where no assistance is needed — e.g. an oil rig move, a floating derelict danger, a gale warning. Voice signal: 'Sécurité, Sécurité, Sécurité' (phonetically 'Saycuritay').",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-053",
+    "category": "gmdss",
+    "question": "What communications fall under the GMDSS category of 'Other'?",
+    "answer": "Anything outside Distress, Urgency or Safety — normal communications with ports, pilots, ship movement/VTS, routine inter-ship traffic, and private/business calls and messages.",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-054",
+    "category": "gmdss",
+    "question": "Explain the MIRPDANIO mnemonic for a distress call and message.",
+    "answer": "Distress CALL — M(ayday) x3, I(dentity): vessel name x3, callsign x1, MMSI x1. Distress MESSAGE — R(epeat) Mayday/name/callsign-MMSI, P(osition) (lat/long or range-and-bearing from a charted object), D(istress) (nature of distress), A(ssistance) (require immediate assistance), N(umber) of persons on board, I(nfo) (any other helpful info, e.g. abandoning to life rafts, weather), O(ver).",
+    "tags": ["Priority of communications", "MIRPDANIO"]
+  },
+  {
+    "id": "gmdss-055",
+    "category": "gmdss",
+    "question": "What is the correct procedure for transmitting a Distress Alert (Mayday) if you're in Sea Area A1?",
+    "answer": "Send a VHF DSC Distress Alert to All Stations on Ch70, then follow up with an RT Mayday call and message on Ch16 (using the MIRPDANIO format). A DSC Distress Alert is always sent to ALL STATIONS — never restricted to a geographical area.",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-056",
+    "category": "gmdss",
+    "question": "How does the procedure for a Distress Alert Relay on HF differ from an ordinary Distress Alert?",
+    "answer": "A Distress Alert Relay on HF should always be addressed to a specific coast station via ALRS Vol 5 — never sent as an 'all stations' alert, which would needlessly inform vessels far out of range that couldn't assist. (On VHF/MF it may still be sent to All Stations or a specific coast station.) The Mayday Relay message otherwise follows the exact format of the distress message received.",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-057",
+    "category": "gmdss",
+    "question": "What does an Urgency (Pan Pan) MESSAGE contain, after the PAN PAN x3 / All Stations x3 / identity x3 call?",
+    "answer": "Position (lat/long or range-and-bearing from a charted object), nature of the urgency, what assistance is requested, number of persons on board, any other info, then 'Over'.",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-058",
+    "category": "gmdss",
+    "question": "Why are Distress Alert Relay, Urgency and Safety DSC transmissions on MF/HF usually sent to a 'Geo-Area', while a plain Distress Alert never is?",
+    "answer": "MF/HF's long range (250nm+) means an unrestricted 'All Stations' call could alert vessels thousands of miles away that can't help and aren't interested — so these lower-priority calls are geographically restricted to the vicinity that matters. A genuine Distress Alert, however, is never geo-restricted, because you want every vessel in range to know.",
+    "tags": ["Priority of communications", "SSB"]
+  },
+  {
+    "id": "gmdss-059",
+    "category": "gmdss",
+    "question": "On receiving a Distress Alert or Mayday on VHF/MF, what is the correct procedure?",
+    "answer": "Inform the Master, commence log-keeping, listen to the message and write it down, and — if an RCC is likely within range for that sea area — wait up to 5 minutes for the RCC to acknowledge first. If you can offer assistance, acknowledge by voice ('Received Mayday'). If no traffic is heard, relay ashore by any means. Only re-acknowledge a repeating DSC alert with the RCC's permission.",
+    "tags": ["DSC", "Priority of communications"]
+  },
+  {
+    "id": "gmdss-060",
+    "category": "gmdss",
+    "question": "On receiving an HF DSC Distress Alert, why must you NEVER acknowledge it?",
+    "answer": "Because of HF's propagation range, the vessel in distress could be thousands of miles away — you would not be in a position to assist. Instead: inform the Master, log it, listen and write down the message, wait for an RCC to respond, and if no traffic is heard, relay the information ashore by any means — but do not acknowledge.",
+    "tags": ["DSC", "Priority of communications"]
+  },
+  {
+    "id": "gmdss-061",
+    "category": "gmdss",
+    "question": "What must a false DSC distress alert transmission be followed by, and why the urgency?",
+    "answer": "The alert must be reset (it will otherwise automatically repeat every four minutes) and a voice cancellation transmitted on the associated RT frequency (e.g. Ch70 → cancel on Ch16), giving: 'Mayday, All Stations x3, this is [vessel identity], MMSI [number], cancel my false distress alert sent on [channel/frequency] at [date/time UTC], Out.' The MMSI is critical, since it's the only vessel ID actually contained in the original DSC alert.",
+    "tags": ["DSC"]
+  },
+  {
+    "id": "gmdss-062",
+    "category": "gmdss",
+    "question": "What phrase imposes radio silence during a distress incident, and what phrase later lifts it?",
+    "answer": "'SEELONCE MAYDAY' — transmitted by the controlling station (usually the RCC) if non-distress traffic is heard on the distress channel/frequency during an incident. 'SEELONCE FEENEE' is transmitted once the incident is resolved, to terminate the silence.",
+    "tags": ["Priority of communications"]
+  },
+  {
+    "id": "gmdss-063",
+    "category": "gmdss",
+    "question": "Name several vessel reporting systems mentioned in GMDSS training, and where full details are found.",
+    "answer": "AMVER (American), AUSREP (Australian), CalDovRep (Dover Straits), WetRep (West European Tanker Reporting), GibRep (Straits of Gibraltar). Full details of what/who/when to report are in ALRS Volume 1 (anti-piracy) and ALRS Volume 6 (ship reporting systems).",
+    "tags": ["Vessel reporting"]
+  },
+  {
+    "id": "gmdss-064",
+    "category": "gmdss",
+    "question": "Name the six ALRS volumes and state which are most used for GMDSS.",
+    "answer": "Vol.1 Maritime Radio Stations; Vol.2 Radio Navigational Aids; Vol.3 Maritime Safety Information; Vol.4 Meteorological Observation Stations; Vol.5 GMDSS; Vol.6 Pilot Services, VTS and Port Operations. Volumes 1, 5 and 6 are the most used for GMDSS purposes — Vol.5 in particular is used to set up Sat-C, Fleet FB and NAVTEX receivers, and lists DSC operational stations and Land Earth Stations with their linked RCCs.",
+    "tags": ["Publications"]
+  },
+  {
+    "id": "gmdss-065",
+    "category": "gmdss",
+    "question": "Distinguish the ITU List of Ships Stations from the ITU List of Call Signs and Numerical Identities.",
+    "answer": "List of Ships Stations is alphabetical by vessel name — use it when you know a vessel's name and need its call sign/MMSI/satellite numbers. List of Call Signs and Numerical Identities is alphabetical/numerical by identifier — use it when you know a call sign, MMSI or satellite number and need the vessel's name.",
+    "tags": ["Publications"]
+  },
+  {
+    "id": "gmdss-066",
+    "category": "gmdss",
+    "question": "Give the main routine/working uses of VHF channels 6, 8/72/77, 13, 16, 67 and 70.",
+    "answer": "Ch16: Distress/Urgency/Safety/Routine calling. Ch06: primary inter-ship / airborne SAR channel. Ch08/72/77: routine inter-ship. Ch13: ship-to-ship bridge-to-bridge safety of navigation. Ch67: small craft safety (UK Coastguard). Ch70: DSC.",
+    "tags": ["VHF"]
+  },
+  {
+    "id": "gmdss-067",
+    "category": "gmdss",
+    "question": "Give the use of VHF channels 14, 15/17, 37/80 and 0.",
+    "answer": "Ch14: port operations. Ch15/17: on-board communications (low power). Ch37/80: primary marina contact. Ch0: SAR (Search and Rescue).",
+    "tags": ["VHF"]
+  },
+  {
+    "id": "gmdss-068",
+    "category": "gmdss",
+    "question": "What do the Squelch, Dual Watch and Power Setting controls do on a VHF/DSC radio?",
+    "answer": "Squelch suppresses background white noise when no signal is present. Dual Watch monitors Ch16 and one other channel simultaneously (Scan monitors all channels). Power Setting switches between High (25W) and Low (1W) transmit power.",
+    "tags": ["VHF"]
+  },
+  {
+    "id": "gmdss-069",
+    "category": "gmdss",
+    "question": "What are the three power settings on an SSB (MF/HF) radio, and the main MF working/distress frequencies?",
+    "answer": "Power: Low 10W / Medium 60W / High 250W. Frequencies: 2182kHz (RT — Distress/Urgency/Safety/Routine), 2187.5kHz (DSC — Distress/Urgency/Safety), 2177kHz (DSC — ship-to-ship/shore-to-ship routine), 2189.5kHz (DSC — ship-to-shore routine).",
+    "tags": ["SSB"]
+  },
+  {
+    "id": "gmdss-070",
+    "category": "gmdss",
+    "question": "What is the difference between the Course Tuner, Medium Tuner and Fine Tuner/Clarifier on an SSB radio?",
+    "answer": "Course Tuner adjusts in 1kHz steps; Medium Tuner in 10Hz (0.1kHz) steps; the Fine Tuner/Clarifier gives the finest adjustment, to 2 decimal places — all used, by ear, to make a received signal as clear as possible.",
+    "tags": ["SSB"]
+  },
+  {
+    "id": "gmdss-071",
+    "category": "gmdss",
+    "question": "Distinguish RF Gain, AGC and AF Gain on an SSB radio.",
+    "answer": "RF Gain manually adjusts receiver sensitivity/amplification for a weak or strong incoming signal. AGC (Automatic Gain Control) does this automatically, smoothing out fading — it switches off while you adjust RF Gain manually, then back on. AF Gain is simply the volume control.",
+    "tags": ["SSB"]
+  },
+  {
+    "id": "gmdss-072",
+    "category": "gmdss",
+    "question": "Explain how DSC 'sends to a Geographical Area (Geo-Area)', and why it's mainly used on MF/HF rather than VHF.",
+    "answer": "The DSC data packet includes a centre position and a range; receiving equipment compares this to its own position and only alarms if within that radius — the transmission itself still travels its full physical range, only the ALARM is geographically limited. It's rarely used on VHF (whose range is already short, ~40nm) but is often essential on MF/HF, where sky-wave propagation could otherwise alert vessels thousands of miles away.",
+    "tags": ["DSC", "SSB"]
+  },
+  {
+    "id": "gmdss-073",
+    "category": "gmdss",
+    "question": "On which two frequencies does NAVTEX transmit, and which message categories can never be de-selected?",
+    "answer": "518kHz (international, English) and 490kHz (national, local language). Categories A (Navigational Warnings), B (Meteorological Warnings), D (Search and Rescue information) and L (additional Navigational Warnings) cannot be de-selected on a NAVTEX receiver.",
+    "tags": ["NAVTEX"]
+  },
+  {
+    "id": "gmdss-074",
+    "category": "gmdss",
+    "question": "What is a NAVTEX 'Transmitter Identification Character', and why should only the minimum necessary stations be programmed in?",
+    "answer": "Each shore transmitting station is assigned a letter (A, B, C...) — a single physical station may use different letters for its International versus Local-language broadcasts. ALRS Vol 5's range-ring charts show which stations actually cover your voyage; programming only those avoids irrelevant traffic and duplicate messages (the receiver won't reprint a duplicate anyway).",
+    "tags": ["NAVTEX"]
+  },
+  {
+    "id": "gmdss-075",
+    "category": "gmdss",
+    "question": "What marks the start and end of a NAVTEX message, and roughly how often are messages received?",
+    "answer": "A message starts with 'ZCZC' followed by the station/sequence code (e.g. GB12), then date/time, a warning reference number, and the message text; it ends with 'NNNN'. Programmed NAVTEX stations are automatically received roughly every 4 hours.",
+    "tags": ["NAVTEX"]
+  },
+  {
+    "id": "gmdss-076",
+    "category": "gmdss",
+    "question": "Which two organisations provide GMDSS-approved satellite distress communications, and why does Fleet Broadband cost more than Sat-C?",
+    "answer": "INMARSAT and IRIDIUM. Sat-C is text-only with an omnidirectional antenna, keeping cost low; Fleet Broadband uses a directional, gyro-stabilised dish that must track the satellite, which is more complex and expensive — but gives a far better data transfer rate and voice capability.",
+    "tags": ["INMARSAT", "Iridium"]
+  },
+  {
+    "id": "gmdss-077",
+    "category": "gmdss",
+    "question": "List the satellite Short Access Codes (32, 38, 39, 41, 42, 43) and their meanings.",
+    "answer": "32 – Medical Advice (Urgency); 38 – Medical Assistance (Urgency); 39 – Maritime Assistance/Pan Pan (Urgency); 41 – Meteorological Report, Sat-C only (Safety); 42 – Navigational Hazards (Safety); 43 – Ship Reporting, e.g. AMVER/AUSREP (Safety). All are transmitted at ROUTINE priority — the code itself is what routes the message urgently to the right shore authority.",
+    "tags": ["Short Access Codes"]
+  },
+  {
+    "id": "gmdss-078",
+    "category": "gmdss",
+    "question": "What are Prioritisation and Pre-emption on Inmarsat Fleet systems, and what are the 4 priority levels?",
+    "answer": "Distress = P3, Urgency = P2, Safety = P1, Other/Routine = P0. Prioritisation means a higher-priority call is always put through ahead of a lower one; Pre-emption means a lower-priority call already in progress can be interrupted by a higher-priority one if needed.",
+    "tags": ["INMARSAT"]
+  },
+  {
+    "id": "gmdss-079",
+    "category": "gmdss",
+    "question": "Describe Sat-C (Inmarsat C) as a system — its medium, antenna and ID format.",
+    "answer": "A text-only messaging system with a small omnidirectional antenna (no moving parts, doesn't track the satellite) — cheaper and simpler than Fleet Broadband. Its ID is a 9-digit number starting with 4 (4<MID>xxxxx).",
+    "tags": ["INMARSAT"]
+  },
+  {
+    "id": "gmdss-080",
+    "category": "gmdss",
+    "question": "How do you send an undesignated versus a designated Sat-C distress alert, and how must a Sat-C distress message end?",
+    "answer": "Undesignated: simply press the distress button(s) for 3–5 seconds — this sends your ID, position and possibly course/speed. Designated: first select a distress type from the menu, choose the LES, then press the distress button(s). Either way, follow up with a typed Mayday message sent at DISTRESS priority through the same LES — and Sat-C messages must be terminated with four Ns: 'NNNN'.",
+    "tags": ["INMARSAT"]
+  },
+  {
+    "id": "gmdss-081",
+    "category": "gmdss",
+    "question": "Name the four Inmarsat Ocean Regions used by Sat-C, and the four regions used by Fleet Broadband.",
+    "answer": "Sat-C: Atlantic Ocean Region East (AORE), Atlantic Ocean Region West (AORW), Pacific Ocean Region (POR), Indian Ocean Region (IOR). Fleet Broadband: Americas (AMER), Europe/Middle East/Africa (EMEA), Asia/Pacific (APAC), Middle East/Asia (MEAS). Both systems' satellites are geostationary and equatorial, giving 76°N–76°S coverage.",
+    "tags": ["INMARSAT"]
+  },
+  {
+    "id": "gmdss-082",
+    "category": "gmdss",
+    "question": "Name the three major components of the Inmarsat satellite system.",
+    "answer": "Space Segment (the geostationary satellites themselves — four primary, five backup); Land Earth Stations (LES, the ground link between satellite and telecoms network, each associated with a default RCC); and Mobile/Ship Earth Stations (MES/SES, the vessel's own terminal). The Network Operations Centre (NOC) in the UK coordinates the whole system 24 hours a day.",
+    "tags": ["INMARSAT"]
+  },
+  {
+    "id": "gmdss-083",
+    "category": "gmdss",
+    "question": "What is EGC (Enhanced Group Calling), and what four message services does it provide via Sat-C?",
+    "answer": "EGC lets Sat-C terminals receive special broadcast message groups without individual addressing: SafetyNET/SafetyNET II (MSI and SAR-related information), RescueNET (dedicated to MRCC coordination), FleetNET (a commercial service to predesignated terminals), and INMARSAT C Service Messages (system status/maintenance notices).",
+    "tags": ["EGC", "SafetyNET"]
+  },
+  {
+    "id": "gmdss-084",
+    "category": "gmdss",
+    "question": "How do you select the correct satellite to log into for EGC SafetyNET reception, and what alarms does an incoming message trigger?",
+    "answer": "Find your current NAVAREA (not the satellite footprint) on the ALRS Vol 5 chart, then check the accompanying table to see which satellite serves that NAVAREA's SafetyNET broadcasts — remembering also to check for coastal-area warnings. Messages with Urgency or Distress priority trigger audible and visual alarms and are automatically printed on SOLAS-compliant terminals.",
+    "tags": ["EGC", "SafetyNET"]
+  },
+  {
+    "id": "gmdss-085",
+    "category": "gmdss",
+    "question": "What is required to make a Fleet Broadband/Fleet One terminal GMDSS-compliant, and what is this combined service called?",
+    "answer": "An additional Marine Safety Terminal (MST) must be connected, giving access to receiving MSI, initiating a Distress/Distress Relay Alert, and using Short Access Codes. The overall GMDSS-capable service is called 'Fleet Safety'.",
+    "tags": ["INMARSAT"]
+  },
+  {
+    "id": "gmdss-086",
+    "category": "gmdss",
+    "question": "What is the '505' code, and when would a vessel need to use it?",
+    "answer": "A vessel fitted with a Fleet system but WITHOUT an MST (so not GMDSS/Fleet Safety compliant) can still call the emergency code '505' for direct access to one of three RCCs: Australia RCC, Den Helder RCC (Netherlands), or Norfolk RCC (USA).",
+    "tags": ["INMARSAT"]
+  },
+  {
+    "id": "gmdss-087",
+    "category": "gmdss",
+    "question": "What key advantage does Iridium have over Inmarsat, and what trade-off does its smaller antenna bring?",
+    "answer": "Iridium's network of 64 satellites gives truly global coverage, including Sea Area A4 (the polar regions) where Inmarsat cannot reach — using a much smaller, cheaper omnidirectional antenna than a Fleet dish. The trade-off is a reduced data transfer rate, though once a distress contact is made with an RCC, normal voice communication can continue.",
+    "tags": ["Iridium"]
+  },
+  {
+    "id": "gmdss-088",
+    "category": "gmdss",
+    "question": "What frequency do 406MHz EPIRBs transmit on, how often, and why were they chosen for GMDSS over the older 121.5MHz beacons?",
+    "answer": "A half-second burst every 50 seconds on 406MHz, containing a digital ID unique to that beacon. 406MHz beacons transmit a more powerful, frequency-stable signal than the older 121.5MHz type, letting COSPAS-SARSAT detect and locate them far more accurately and reliably distinguish a genuine beacon from interference.",
+    "tags": ["EPIRB"]
+  },
+  {
+    "id": "gmdss-089",
+    "category": "gmdss",
+    "question": "Why is registering a 406MHz EPIRB so important, and what must be kept updated?",
+    "answer": "The beacon's message encodes the location of the specific database it's registered to, so registration lets rescue authorities instantly identify the vessel and its owner from the signal alone. Registration details (vessel/ownership changes, loss, theft, etc.) must be kept promptly up to date with the relevant registration authority.",
+    "tags": ["EPIRB"]
+  },
+  {
+    "id": "gmdss-090",
+    "category": "gmdss",
+    "question": "Name the three types of COSPAS-SARSAT satellite orbit and their respective advantage.",
+    "answer": "LEOSAR (Low Earth Orbit) — good for Polar regions. MEOSAR (Medium Earth Orbit) — faster response time. GEOSAR (Geostationary Earth Orbit) — fastest response time, but GNSS-derived position only.",
+    "tags": ["EPIRB"]
+  },
+  {
+    "id": "gmdss-091",
+    "category": "gmdss",
+    "question": "What is the correct procedure if an EPIRB is accidentally activated (a false alert)?",
+    "answer": "Per WRC-12 Resolution 9: immediately stop the inadvertent transmission, then contact the appropriate Rescue Co-ordination Centre (via a coast station or land earth station) and cancel the distress alert. The 'appropriate' RCC is generally the one closest to your position, though any RCC would do.",
+    "tags": ["EPIRB"]
+  },
+  {
+    "id": "gmdss-092",
+    "category": "gmdss",
+    "question": "How does a SART respond when interrogated by a searching vessel's radar, and how does its appearance change as the range closes?",
+    "answer": "It transmits a swept-frequency response appearing as a line of 12 'blip' dots outward along the bearing from the SART, spaced 0.6nm apart on the PPI. As the search vessel closes to within about 1nm, the dots widen into arcs, and eventually — very close — into complete concentric circles, a useful cue to slow down.",
+    "tags": ["SART"]
+  },
+  {
+    "id": "gmdss-093",
+    "category": "gmdss",
+    "question": "What radar scale, bandwidth and range should be used to best detect a SART, and why is a SART easier to spot than an ordinary radar reflector echo?",
+    "answer": "Use the 6nm or 12nm range scale (the response line can extend ~9.5nm beyond the SART's true position, so several dots need to be visible), and a medium radar bandwidth (anything under 5MHz slightly attenuates the SART signal). A SART is a transmitter, not just a passive reflector, so its distinctive 12-dot pattern is much easier to recognise than a single ordinary echo, and its return can be as strong as one from a far larger object.",
+    "tags": ["SART"]
+  },
+  {
+    "id": "gmdss-094",
+    "category": "gmdss",
+    "question": "What critical limitation applies to SART detection, and how does mounting affect a SART's range?",
+    "answer": "A SART only responds to X-Band (3cm) radar — it will NOT be seen on S-band (10cm) radar. Mounting height matters greatly: examples given are ~1.8nm lying flat on a liferaft floor, ~2.5nm standing upright, and ~2.0nm floating in the water — a well-mounted SART in moderate weather can exceed 10nm detection range to a large ship's radar.",
+    "tags": ["SART"]
+  },
+  {
+    "id": "gmdss-095",
+    "category": "gmdss",
+    "question": "How does an AIS-SART work, and what does it look like to receiving equipment?",
+    "answer": "It derives position and time from a built-in GNSS receiver and, once per minute, transmits its position as eight identical AIS Class-A position reports. Its 9-digit MMSI-style ID always starts with 970. On a receiving display it appears as a circle with a cross through it.",
+    "tags": ["SART"]
+  },
+  {
+    "id": "gmdss-096",
+    "category": "gmdss",
+    "question": "What reserve power must SOLAS-compliant vessels provide for GMDSS equipment?",
+    "answer": "A reserve source of energy able to power the GMDSS installation for one hour (if the emergency generator is in the upper part of the vessel) or six hours (otherwise) — most vessels rely on a battery supply with automatic charging for this.",
+    "tags": ["Batteries"]
+  },
+  {
+    "id": "gmdss-097",
+    "category": "gmdss",
+    "question": "How is a lead-acid battery constructed, and how is its state of charge measured?",
+    "answer": "Spongy lead (negative) and lead dioxide (positive) plates submerged in dilute sulphuric acid. As current is drawn, the plates turn to lead sulphate and the electrolyte weakens — reversible by charging. State of charge is checked with a hydrometer reading of the electrolyte's specific gravity: 1250–1280 = fully charged, 1200 = half-charge, 1150 or less = flat.",
+    "tags": ["Batteries"]
+  },
+  {
+    "id": "gmdss-098",
+    "category": "gmdss",
+    "question": "Compare Gel and AGM batteries to standard lead-acid batteries.",
+    "answer": "Gel batteries are sealed (acid held in a gel), maintenance-free and tolerant of motion/heeling since there's no liquid to spill — but risk damage or explosion from overcharging gas build-up. AGM (Absorbed Glass Matt) batteries hold electrolyte close against the plates for better discharge/recharge efficiency, and perform best if recharged before dropping below 50% discharge.",
+    "tags": ["Batteries"]
+  },
+  {
+    "id": "gmdss-099",
+    "category": "gmdss",
+    "question": "What distinguishes NiCd (Nickel Cadmium) batteries from lead-acid, and what precaution is essential when charging them?",
+    "answer": "NiCd cells use nickel hydrate/cadmium oxide plates in a potassium hydroxide electrolyte — 1.2V charged, considered flat at 1.1V — and are more expensive but more tolerant of poor maintenance than lead-acid. They must be charged from a constant-current charger, NEVER a lead-acid type charger, and must never be short-circuited to discharge (produces dangerous heat and hydrogen).",
+    "tags": ["Batteries"]
+  },
+  {
+    "id": "gmdss-100",
+    "category": "gmdss",
+    "question": "Give three key battery maintenance/safety rules for lead-acid batteries.",
+    "answer": "Keep batteries clean (dirt/electrolyte build-up on the top can leak current); top up only with distilled water (about 10mm above the plates) and NEVER sea water; and ensure good ventilation while charging, since the hydrogen/oxygen produced is highly explosive. Never add water to pure acid — always acid to water, slowly.",
+    "tags": ["Batteries"]
+  },
+  {
+    "id": "gmdss-101",
+    "category": "gmdss",
+    "question": "What do the fuse codes T, F and FF mean, and how do you test a fuse's continuity?",
+    "answer": "T = Anti-surge (Time-delay, tolerates a momentary current surge), F = Fast blow, FF = Very fast blow — an anti-surge fuse must never be substituted where a fast-blow type is required, or vice versa. To test: switch off equipment first, remove jewellery/watches, use insulated tools, and check the fuse's resistance with a multimeter (high resistance = blown) — always test it while still in its holder too, since dirt/corrosion there can also cause a false 'blown' reading.",
+    "tags": ["Fault finding"]
+  },
+  {
+    "id": "gmdss-102",
+    "category": "gmdss",
+    "question": "State the golden rule for connecting a multi-meter when measuring current, and why it matters.",
+    "answer": "The multi-meter must be connected in SERIES with the load when measuring current — NEVER connect it ACROSS a voltage source on a current range (AC or DC Amps), or you risk blowing the meter's overload fuse or damaging the device under test. (Voltage and resistance, by contrast, are measured with the meter connected ACROSS the component.)",
+    "tags": ["Fault finding"]
+  },
+  {
+    "id": "gmdss-103",
+    "category": "gmdss",
+    "question": "What is Telex/NBDP, and what do the abbreviations ARQ and FEC stand for?",
+    "answer": "Telex is an international system of printed-message telegraphy sent via radio (NBDP — Narrow Band Direct Printing) or satellite. ARQ = Automatic Repetition reQuest (point-to-point mode, checks and re-requests each group of characters). FEC = Forward Error Correction (broadcast/'All Stations' mode — each character is sent, then repeated, so distress traffic or NAVTEX-style broadcasts can be received without a return channel).",
+    "tags": ["Telex"]
+  },
+  {
+    "id": "gmdss-104",
+    "category": "gmdss",
+    "question": "What is a Telex 'answerback', and how is a ship's answerback formatted?",
+    "answer": "A unique identifier every telex terminal is programmed with, exchanged before and after a message to confirm you're connected to the right subscriber and that the message got through. A ship's answerback consists of its SELCALL number and callsign followed by the letter X, e.g. '32456 GABC X'.",
+    "tags": ["Telex"]
+  },
+  {
+    "id": "gmdss-105",
+    "category": "gmdss",
+    "question": "What information does a UK ship's radio licence contain?",
+    "answer": "The ship's name and radio call sign; its public correspondence category (e.g. HX for vessels under 300 tons); types of transmitter equipment fitted; the 9-figure MMSI; and the 5-figure SELCALL number. Permitted frequencies, emission class and maximum power are given separately in the accompanying Licence Terms Booklet.",
+    "tags": ["Radio regulations"]
+  },
+  {
+    "id": "gmdss-106",
+    "category": "gmdss",
+    "question": "What do the watch-keeping categories H24, H16, H8 and HX mean?",
+    "answer": "H24: continuous radio service while at sea. H16: 16 hours per day. H8: 8 hours per day. HX: no fixed hours of service. Regardless of category, a ship must not close down its service before finishing all distress/urgency/safety traffic and, where practicable, exchanging traffic with a coast station in the area.",
+    "tags": ["Radio regulations"]
+  },
+  {
+    "id": "gmdss-107",
+    "category": "gmdss",
+    "question": "What does the 1884 Post Office Protection Act govern in relation to radio operation, and who has ultimate authority on board?",
+    "answer": "Section 11 forbids intercepting communications other than those the station is licensed to receive — anything received involuntarily must never be reproduced in any form. The Master (or person responsible for the ship) has supreme authority; operators must comply with the regulations or face a fine, and their Authority to Operate may be revoked.",
+    "tags": ["Radio regulations"]
+  },
+  {
+    "id": "gmdss-108",
+    "category": "gmdss",
+    "question": "What restrictions apply to test transmissions of radio equipment?",
+    "answer": "Tests must last less than 10 seconds and must include the station's identity. Ch16/2182kHz must be avoided, and an artificial antenna or reduced power should be used if possible.",
+    "tags": ["Radio regulations"]
+  },
+  {
+    "id": "gmdss-109",
+    "category": "gmdss",
+    "question": "List the key documents a UK-registered, compulsorily fitted GMDSS ship must carry.",
+    "answer": "Ship's Radio Licence; radio operator's Certificate(s) of competency; the GMDSS Radio Log Book; a copy of the Post Office Act 1884; the ITU List of Call Signs and Numerical Identities; a list of Coast Stations (e.g. ALRS Vol 1); the ITU Manual for Maritime Mobile Services; the ITU List of Ship Stations; and the Admiralty List of Radio Signals (ALRS).",
+    "tags": ["Radio regulations"]
+  },
+  {
+    "id": "gmdss-110",
+    "category": "gmdss",
+    "question": "State the official order of priority of communications under the Radio Regulations.",
+    "answer": "1. Distress, 2. Urgency, 3. Safety, 4. Routine — in that strict order.",
+    "tags": ["Radio regulations", "Priority of communications"]
+  },
+  {
+    "id": "gmdss-111",
+    "category": "gmdss",
+    "question": "What GMDSS checks must be carried out daily, weekly and monthly?",
+    "answer": "Daily: DSC internal test (no radiation) on VHF/MF/HF, battery voltage/charge check, printer paper check. Weekly: a live DSC test call to a coast station, test of the reserve energy source (e.g. motor generator), and a survival-craft VHF radio test on Ch15/17. Monthly: EPIRB and SART self-test and security check, battery/connection inspection, and a routine check of the main hand-held GMDSS radio(s).",
+    "tags": ["GMDSS checks"]
+  },
+  {
+    "id": "gmdss-112",
+    "category": "gmdss",
+    "question": "What GMDSS checks are done before a major passage and annually?",
+    "answer": "Before a major passage: an Inmarsat-C PVT (link) test, and a NAVTEX self-test. Annually: an external GMDSS equipment audit by an approved auditing company. All these tests must be noted and signed off in the GMDSS Logbook.",
+    "tags": ["GMDSS checks"]
+  },
+  {
+    "id": "gmdss-113",
+    "category": "gmdss",
+    "question": "What are the three sections of the GMDSS Radio Log Book, and where is it kept?",
+    "answer": "Kept on the navigating bridge, near the radio installation. Section A: particulars of the ship (name, call sign, IMO number, sea areas, maintenance method). Section B: details of radio personnel (names, certificates, who's designated for emergency comms and for tests/checks). Section C: record of communications — distress/urgency/safety traffic summaries, important incidents, daily position, and daily/weekly/monthly check results. The Master inspects and signs each day's entries.",
+    "tags": ["GMDSS logbook"]
+  },
+  {
+    "id": "gmdss-114",
+    "category": "gmdss",
+    "question": "Give the phonetic alphabet code words for the letters that are most often confused by ear: B, D, M, N and P.",
+    "answer": "B = Bravo, D = Delta, M = Mike, N = November, P = Papa — chosen precisely because they're clearly distinguishable over a noisy radio channel, unlike the bare letters themselves.",
+    "tags": ["Phonetic alphabet"]
+  },
+  {
+    "id": "gmdss-115",
+    "category": "gmdss",
+    "question": "How are the figures 0–9 and a decimal point spelt out phonetically for radio use?",
+    "answer": "0 Nadazero, 1 Unaone, 2 Bissotwo, 3 Terrathree, 4 Kartefour, 5 Fantafive, 6 Soxisix, 7 Settesseven, 8 Oktoeight, 9 Novenine. A decimal point is spoken as 'Decimal' and a full stop as 'Stop' — each syllable equally emphasised.",
+    "tags": ["Phonetic alphabet"]
+  },
+  {
+    "id": "gmdss-116",
+    "category": "gmdss",
+    "question": "What do the procedural signals 'Interco' and 'Correction' mean?",
+    "answer": "'Interco' means an International Code group(or groups) follows. 'Correction' means: cancel my last word or group — the correct word or group follows.",
+    "tags": ["Phonetic alphabet"]
+  },
+  {
+    "id": "gmdss-117",
+    "category": "gmdss",
+    "question": "Name the three levels of the SAR co-ordination system and their roles.",
+    "answer": "RCC (Rescue Co-ordination Centre) — overall responsibility for establishing/managing the SAR system, providing facilities, training and policy. SMC (SAR Mission Co-ordinator) — runs an individual SAR operation, typically the RCC watch leader or a designee. OSC (On-Scene Co-ordinator) — co-ordinates the units actually on scene when two or more are working the same rescue.",
+    "tags": ["SAR"]
+  },
+  {
+    "id": "gmdss-118",
+    "category": "gmdss",
+    "question": "Who becomes the OSC when two or more SAR units are on scene, and what are the OSC's key duties?",
+    "answer": "The first unit on scene usually assumes OSC duties until the SMC directs otherwise (or, if out of RCC range/communication, the first arriving vessel assumes it automatically). Duties: send periodic SITREPs to the SMC, co-ordinate the on-scene units, implement the SMC's search action plan, control on-scene communications, monitor units' endurance and call for replacements, and brief newly arriving units.",
+    "tags": ["SAR"]
+  },
+  {
+    "id": "gmdss-119",
+    "category": "gmdss",
+    "question": "What frequencies carry on-scene SAR communications, and how can an Inmarsat-fitted ship extend this?",
+    "answer": "On-scene communications between SAR units and the OSC are normally short-range, on the VHF or MF distress and safety frequencies. An Inmarsat-fitted ship can supplement this with satellite links (Iridium, SAT-C or a Fleet system) to update and coordinate with an RCC that may be hundreds or thousands of miles away.",
+    "tags": ["SAR"]
+  },
+  {
+    "id": "gmdss-120",
+    "category": "gmdss",
+    "question": "What is the precise difference between a DISTRESS CALL and a DISTRESS MESSAGE, per the ALRS Glossary?",
+    "answer": "The DISTRESS CALL is simply the spoken word 'MAYDAY' three times followed by the vessel's name three times — it prefaces the message. The DISTRESS MESSAGE follows and consists of: the distress signal MAYDAY, name/call sign of the vessel, its position, the nature of the distress, the type of assistance required, number of persons on board, and any other information that may help the rescue.",
+    "tags": ["Glossary", "Priority of communications"]
+  },
+  {
+    "id": "gmdss-121",
+    "category": "gmdss",
+    "question": "Define MSI (Maritime Safety Information) and MMSI's near-namesake, EGC.",
+    "answer": "MSI = navigational and meteorological warnings, forecasts, distress alerts and other urgent safety-related information broadcast to ships (delivered via NAVTEX or SafetyNET). EGC = Enhanced Group Calling — the Inmarsat-C system enabling information providers to send messages for selective reception by many terminals across all four Ocean Regions at once.",
+    "tags": ["Glossary", "EGC"]
+  },
+  {
+    "id": "gmdss-122",
+    "category": "gmdss",
+    "question": "What do SOLAS, IMO and ITU stand for, and how do they relate to GMDSS?",
+    "answer": "SOLAS: International Convention for the Safety Of Life At Sea — the treaty that mandated 406MHz EPIRBs and underpins GMDSS carriage requirements. IMO: International Maritime Organization — sets the SMCP phrases and NAVAREA structure. ITU: International Telecommunication Union (part of the UN) — its World Administrative Radio Conference agrees the Radio Regulations that govern licensing and frequency use worldwide.",
+    "tags": ["Glossary"]
+  },
+  {
+    "id": "gmdss-123",
+    "category": "gmdss",
+    "question": "Distinguish RCC/MRCC from SAR and SARSAT in the glossary sense.",
+    "answer": "RCC/MRCC (Rescue/Maritime Rescue Co-ordination Centre) is the shore-based authority responsible for organising SAR operations within its region. SAR = Search And Rescue, the overall activity. SARSAT = Search And Rescue Satellite-Aided Tracking, the US/Canada/France/Russia satellite half of the COSPAS-SARSAT partnership that detects EPIRB signals.",
+    "tags": ["Glossary"]
+  }
+]

@@ -32,6 +32,14 @@ export const CATEGORIES: Category[] = [
     // warm engine-room amber/brass tones
     gradient: ["#fbbf24", "#fb923c"],
   },
+  {
+    id: "gmdss",
+    name: "GMDSS",
+    shortName: "GMDSS",
+    description: "Distress comms, DSC, EPIRB/SART, INMARSAT & radio regs",
+    // violet → cyan: a radio-wave / signal-glow pairing distinct from the other 4
+    gradient: ["#a78bfa", "#22d3ee"],
+  },
 ];
 
 export const CATEGORY_MAP: Record<string, Category> = Object.fromEntries(

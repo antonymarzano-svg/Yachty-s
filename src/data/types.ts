@@ -6,7 +6,7 @@
  * any component code — just edit/append JSON and drop files in `public/`.
  */
 
-export type CategoryId = "oow3000" | "gsk" | "nav-radar" | "aec";
+export type CategoryId = "oow3000" | "gsk" | "nav-radar" | "aec" | "gmdss";
 
 /** A feed selection: a real category, or the special "mixed" feed of every category shuffled together. */
 export type TabId = CategoryId | "mixed";
