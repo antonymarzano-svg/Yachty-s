@@ -22,8 +22,17 @@ Instagram Reels / TikTok rather than a traditional quiz app.
   bottom, so no card is ever just plain text on a flat background
 - Category pills for **OOW 3000**, **GSK**, **Nav & Radar**, **AEC**,
   **GMDSS**, plus a **Mixed** feed that shuffles every category into one,
-  each showing live "mastered" progress
+  each showing live "mastered" progress, and a **News** tab of real,
+  hand-refreshed yachting headlines
 - "Unmastered only" filter per tab
+- Some cards (currently all of OOW 3000) open as a tap-an-answer
+  multiple-choice quiz instead of plain tap-to-flip — instant right/wrong
+  feedback, then it auto-flips to the full explanation
+- A points & rank system, always visible top-right: answering a quiz
+  correctly, or tapping "Master" on a flip card, earns points once per
+  card (an honest "Not yet" tap costs nothing and un-masters a card, but
+  never claws points back) — climb a real yacht career ladder from
+  **Deckhand** all the way to **Officer of the Watch**
 - Cards can carry a scene-setting illustration on the front (e.g. two boats
   shown crossing for a Rule 15 question), a diagram/photo revealed with the
   answer on the back, an inline audio clip (e.g. COLREGS sound signals) with
@@ -145,13 +154,18 @@ src/
     AudioPlayer.tsx        # custom inline audio player (not <audio controls>)
     VideoPlayer.tsx         # custom video player (play/pause, ±10s, seek, mute, fullscreen)
     MasteredButton.tsx      # heart icon toggle
-    DoubleTapBurst.tsx       # big center heart pop on double-tap
-    Heart.tsx                 # shared heart svg
-    CategoryTabs.tsx           # top pill selector incl. "Mixed", + unmastered-only toggle
-    CategoryScene.tsx           # per-category full-bleed illustrated cover art
+    NotYetButton.tsx          # "I don't know this yet" counterpart — no points, un-masters
+    DoubleTapBurst.tsx         # big center heart pop on double-tap
+    Heart.tsx                   # shared heart svg
+    QuizOptions.tsx               # tap-an-answer multiple choice, instant feedback
+    RankBadge.tsx                   # top-right points/rank pill
+    CategoryTabs.tsx                 # top pill selector incl. "Mixed"/"News", + unmastered-only toggle
+    CategoryScene.tsx                 # per-category full-bleed illustrated cover art
+    NewsCard.tsx / NewsFeed.tsx / NewsScene.tsx  # the "News" tab
   hooks/
     useMasteredStore.ts   # localStorage-backed "mastered" progress
-    useHaptics.ts          # Capacitor Haptics wrapper
+    usePointsStore.ts       # localStorage-backed points (awarded once per card)
+    useHaptics.ts             # Capacitor Haptics wrapper
   data/                     # see "Adding / editing content" above
   App.tsx
 ```

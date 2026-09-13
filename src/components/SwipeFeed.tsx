@@ -7,6 +7,8 @@ interface SwipeFeedProps {
   cards: FlashcardData[];
   isMastered: (id: string) => boolean;
   onToggleMastered: (id: string) => void;
+  /** Awards points for a card once (no-op if already credited) — returns whether it was newly awarded. */
+  onAward: (cardId: string, amount: number) => boolean;
   /** Remount key — pass something that changes when the card list identity changes (e.g. filter/category) to reset scroll position. */
   resetKey: string;
   /** Show each card's origin category (used for the "Mixed" feed). */
@@ -23,6 +25,7 @@ export function SwipeFeed({
   cards,
   isMastered,
   onToggleMastered,
+  onAward,
   resetKey,
   showCategoryBadge,
 }: SwipeFeedProps) {
@@ -93,6 +96,7 @@ export function SwipeFeed({
           active={i === activeIndex}
           mastered={isMastered(card.id)}
           onToggleMastered={() => onToggleMastered(card.id)}
+          onAward={onAward}
           showCategoryBadge={showCategoryBadge}
         />
       ))}

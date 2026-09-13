@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { TABS } from "../data/categories";
 import type { TabId } from "../data/types";
 import { useHaptics } from "../hooks/useHaptics";
+import { RankBadge } from "./RankBadge";
 
 interface CategoryTabsProps {
   active: TabId;
@@ -9,6 +10,8 @@ interface CategoryTabsProps {
   progress: Record<TabId, { done: number; total: number }>;
   unmasteredOnly: boolean;
   onToggleUnmasteredOnly: () => void;
+  /** Current points total, shown as a rank badge pinned top-right (outside the scrollable tab row). */
+  points: number;
 }
 
 /** Horizontal pill selector fixed to the top, IG-story-tab style. "Mixed" shuffles every category into one feed. */
@@ -18,52 +21,56 @@ export function CategoryTabs({
   progress,
   unmasteredOnly,
   onToggleUnmasteredOnly,
+  points,
 }: CategoryTabsProps) {
   const haptics = useHaptics();
 
   return (
     <div className="pointer-events-auto absolute inset-x-0 top-0 z-20 safe-top">
-      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar px-3 pb-2 pt-3">
-        {TABS.map((tab) => {
-          const p = progress[tab.id];
-          const isActive = tab.id === active;
-          const isMixed = tab.id === "mixed";
-          const isNews = tab.id === "news";
-          return (
-            <button
-              key={tab.id}
-              type="button"
-              onClick={() => {
-                if (tab.id !== active) haptics.selectionChanged();
-                onChange(tab.id);
-              }}
-              className={clsx(
-                "flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors",
-                isActive
-                  ? "border-white/80 bg-white text-slate-900"
-                  : isMixed
-                    ? "border-fuchsia-300/40 bg-fuchsia-500/10 text-fuchsia-200"
-                    : isNews
-                      ? "border-amber-300/40 bg-amber-500/10 text-amber-200"
-                      : "border-white/20 bg-black/30 text-white/80 backdrop-blur-md",
-              )}
-            >
-              {isMixed && <ShuffleIcon isActive={isActive} />}
-              {isNews && <NewsIcon isActive={isActive} />}
-              {tab.shortName}
-              {p && p.total > 0 && (
-                <span
-                  className={clsx(
-                    "text-[11px] font-medium",
-                    isActive ? "text-slate-500" : "text-white/50",
-                  )}
-                >
-                  {p.done}/{p.total}
-                </span>
-              )}
-            </button>
-          );
-        })}
+      <div className="flex items-center gap-2 px-3 pb-2 pt-3">
+        <div className="flex min-w-0 flex-1 items-center gap-2 overflow-x-auto no-scrollbar">
+          {TABS.map((tab) => {
+            const p = progress[tab.id];
+            const isActive = tab.id === active;
+            const isMixed = tab.id === "mixed";
+            const isNews = tab.id === "news";
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => {
+                  if (tab.id !== active) haptics.selectionChanged();
+                  onChange(tab.id);
+                }}
+                className={clsx(
+                  "flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors",
+                  isActive
+                    ? "border-white/80 bg-white text-slate-900"
+                    : isMixed
+                      ? "border-fuchsia-300/40 bg-fuchsia-500/10 text-fuchsia-200"
+                      : isNews
+                        ? "border-amber-300/40 bg-amber-500/10 text-amber-200"
+                        : "border-white/20 bg-black/30 text-white/80 backdrop-blur-md",
+                )}
+              >
+                {isMixed && <ShuffleIcon isActive={isActive} />}
+                {isNews && <NewsIcon isActive={isActive} />}
+                {tab.shortName}
+                {p && p.total > 0 && (
+                  <span
+                    className={clsx(
+                      "text-[11px] font-medium",
+                      isActive ? "text-slate-500" : "text-white/50",
+                    )}
+                  >
+                    {p.done}/{p.total}
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+        <RankBadge points={points} />
       </div>
 
       {active !== "news" && (

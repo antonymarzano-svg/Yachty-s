@@ -6,11 +6,13 @@ import { CategoryTabs } from "./components/CategoryTabs";
 import { SwipeFeed } from "./components/SwipeFeed";
 import { NewsFeed } from "./components/NewsFeed";
 import { useMasteredStore } from "./hooks/useMasteredStore";
+import { usePointsStore } from "./hooks/usePointsStore";
 
 export default function App() {
   const [tab, setTab] = useState<TabId>(CATEGORIES[0].id);
   const [unmasteredOnly, setUnmasteredOnly] = useState(false);
   const { isMastered, toggleMastered, countInCategory } = useMasteredStore();
+  const { points, awardOnce } = usePointsStore();
 
   // Shuffled once per session so the "Mixed" feed interleaves every
   // category instead of showing them back-to-back in file order.
@@ -38,6 +40,7 @@ export default function App() {
           cards={cards}
           isMastered={isMastered}
           onToggleMastered={toggleMastered}
+          onAward={awardOnce}
           resetKey={`${tab}:${unmasteredOnly}`}
           showCategoryBadge={tab === "mixed"}
         />
@@ -49,6 +52,7 @@ export default function App() {
         progress={progress}
         unmasteredOnly={unmasteredOnly}
         onToggleUnmasteredOnly={() => setUnmasteredOnly((v) => !v)}
+        points={points}
       />
 
       {/* subtle progress bar for whichever tab is active */}

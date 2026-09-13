@@ -5,15 +5,19 @@ import { CATEGORY_MAP } from "../data/categories";
 import { AudioPlayer } from "./AudioPlayer";
 import { VideoPlayer } from "./VideoPlayer";
 import { MasteredButton } from "./MasteredButton";
+import { NotYetButton } from "./NotYetButton";
 import { DoubleTapBurst } from "./DoubleTapBurst";
 import { CategoryScene } from "./CategoryScene";
 import { QuizOptions } from "./QuizOptions";
 import { useHaptics } from "../hooks/useHaptics";
+import { POINTS_PER_CORRECT } from "../data/ranks";
 
 interface FlashcardProps {
   card: FlashcardData;
   mastered: boolean;
   onToggleMastered: () => void;
+  /** Awards points for this card once (no-op if already credited) — returns whether it was newly awarded. */
+  onAward: (cardId: string, amount: number) => boolean;
   /** Is this the card currently centred in the feed? */
   active: boolean;
   index: number;
@@ -28,6 +32,7 @@ export function Flashcard({
   card,
   mastered,
   onToggleMastered,
+  onAward,
   active,
   index,
   total,
@@ -61,8 +66,12 @@ export function Flashcard({
   const handleQuizSelect = (i: number) => {
     if (!card.quiz) return;
     setQuizSelected(i);
-    if (i === card.quiz.correctIndex) haptics.success();
-    else haptics.error();
+    if (i === card.quiz.correctIndex) {
+      haptics.success();
+      onAward(card.id, POINTS_PER_CORRECT);
+    } else {
+      haptics.error();
+    }
     // Give a beat to see the correct/wrong colours, then reveal the full
     // explanation on the back — same rhythm as a Duolingo-style quiz.
     autoFlipTimer.current = window.setTimeout(() => {
@@ -76,17 +85,30 @@ export function Flashcard({
   };
 
   // Double-tap-to-master, IG-style: always bursts, but only ever turns
-  // mastery ON (never off) — mirrors "double tap to like".
+  // mastery ON (never off) — mirrors "double tap to like". Points are
+  // awarded once per card, the first time it's ever marked mastered.
   const doDoubleTapMaster = () => {
     haptics.success();
     setBurst((b) => b + 1);
-    if (!mastered) onToggleMastered();
+    if (!mastered) {
+      onToggleMastered();
+      onAward(card.id, POINTS_PER_CORRECT);
+    }
   };
 
   // The heart icon itself is a real on/off toggle, so mis-taps can be undone.
+  // Only turning it ON pays out (turning it off never claws points back).
   const doHeartToggle = () => {
     haptics.success();
+    if (!mastered) onAward(card.id, POINTS_PER_CORRECT);
     onToggleMastered();
+  };
+
+  // The "Not yet" button: an honest self-assessment that earns no points
+  // and un-masters the card if it had been marked otherwise.
+  const doNotYet = () => {
+    haptics.light();
+    if (mastered) onToggleMastered();
   };
 
   const handleTap = () => {
@@ -221,10 +243,15 @@ export function Flashcard({
         <DoubleTapBurst trigger={burst} />
       </div>
 
-      {/* Right-side action rail, IG-Reels style */}
-      <div className="absolute bottom-32 right-4 z-10 flex flex-col items-center gap-5">
-        <MasteredButton mastered={mastered} onToggle={doHeartToggle} />
-      </div>
+      {/* Right-side action rail, IG-Reels style — hidden on quiz cards, since
+          picking an option already tells us whether you know it and points
+          are awarded automatically. */}
+      {!card.quiz && (
+        <div className="absolute bottom-32 right-4 z-10 flex flex-col items-center gap-5">
+          <MasteredButton mastered={mastered} onToggle={doHeartToggle} />
+          <NotYetButton onPress={doNotYet} />
+        </div>
+      )}
     </div>
   );
 }
