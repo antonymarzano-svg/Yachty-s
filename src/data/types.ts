@@ -8,8 +8,12 @@
 
 export type CategoryId = "oow3000" | "gsk" | "nav-radar" | "aec" | "gmdss";
 
-/** A feed selection: a real category, or the special "mixed" feed of every category shuffled together. */
-export type TabId = CategoryId | "mixed";
+/**
+ * A feed selection: a real category, the special "mixed" feed of every
+ * category shuffled together, or the "news" feed (real headlines, not
+ * study content).
+ */
+export type TabId = CategoryId | "mixed" | "news";
 
 export interface Category {
   id: CategoryId;
@@ -51,6 +55,13 @@ export interface FlashcardMedia {
   videoLabel?: string;
 }
 
+export interface QuizChoice {
+  /** 2-4 short, tappable answer options. */
+  options: string[];
+  /** Index into `options` of the correct answer. */
+  correctIndex: number;
+}
+
 export interface Flashcard {
   id: string;
   category: CategoryId;
@@ -58,4 +69,10 @@ export interface Flashcard {
   answer: string;
   tags?: string[];
   media?: FlashcardMedia;
+  /**
+   * If present, the card opens as a tap-an-answer multiple-choice quiz
+   * instead of a plain tap-to-flip card — pick an option for instant right/
+   * wrong feedback, then flip for the full explanation (`answer`).
+   */
+  quiz?: QuizChoice;
 }

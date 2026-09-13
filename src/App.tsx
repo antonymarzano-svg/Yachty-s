@@ -4,6 +4,7 @@ import type { TabId } from "./data/types";
 import { cardsByTab, shuffle } from "./data/cards";
 import { CategoryTabs } from "./components/CategoryTabs";
 import { SwipeFeed } from "./components/SwipeFeed";
+import { NewsFeed } from "./components/NewsFeed";
 import { useMasteredStore } from "./hooks/useMasteredStore";
 
 export default function App() {
@@ -30,13 +31,17 @@ export default function App() {
 
   return (
     <div className="relative h-[100dvh] w-full overflow-hidden bg-[#071224]">
-      <SwipeFeed
-        cards={cards}
-        isMastered={isMastered}
-        onToggleMastered={toggleMastered}
-        resetKey={`${tab}:${unmasteredOnly}`}
-        showCategoryBadge={tab === "mixed"}
-      />
+      {tab === "news" ? (
+        <NewsFeed />
+      ) : (
+        <SwipeFeed
+          cards={cards}
+          isMastered={isMastered}
+          onToggleMastered={toggleMastered}
+          resetKey={`${tab}:${unmasteredOnly}`}
+          showCategoryBadge={tab === "mixed"}
+        />
+      )}
 
       <CategoryTabs
         active={tab}

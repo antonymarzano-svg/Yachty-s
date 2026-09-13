@@ -7,6 +7,7 @@ import { VideoPlayer } from "./VideoPlayer";
 import { MasteredButton } from "./MasteredButton";
 import { DoubleTapBurst } from "./DoubleTapBurst";
 import { CategoryScene } from "./CategoryScene";
+import { QuizOptions } from "./QuizOptions";
 import { useHaptics } from "../hooks/useHaptics";
 
 interface FlashcardProps {
@@ -34,12 +35,40 @@ export function Flashcard({
 }: FlashcardProps) {
   const [flipped, setFlipped] = useState(false);
   const [burst, setBurst] = useState(0);
+  const [quizSelected, setQuizSelected] = useState<number | null>(null);
   const tapTimer = useRef<number | null>(null);
+  const autoFlipTimer = useRef<number | null>(null);
   const haptics = useHaptics();
 
   useEffect(() => {
-    if (!active) setFlipped(false);
+    if (!active) {
+      setFlipped(false);
+      setQuizSelected(null);
+      if (autoFlipTimer.current !== null) {
+        window.clearTimeout(autoFlipTimer.current);
+        autoFlipTimer.current = null;
+      }
+    }
   }, [active]);
+
+  useEffect(
+    () => () => {
+      if (autoFlipTimer.current !== null) window.clearTimeout(autoFlipTimer.current);
+    },
+    [],
+  );
+
+  const handleQuizSelect = (i: number) => {
+    if (!card.quiz) return;
+    setQuizSelected(i);
+    if (i === card.quiz.correctIndex) haptics.success();
+    else haptics.error();
+    // Give a beat to see the correct/wrong colours, then reveal the full
+    // explanation on the back — same rhythm as a Duolingo-style quiz.
+    autoFlipTimer.current = window.setTimeout(() => {
+      setFlipped(true);
+    }, 900);
+  };
 
   const doFlip = () => {
     haptics.light();
@@ -70,6 +99,9 @@ export function Flashcard({
     }
     tapTimer.current = window.setTimeout(() => {
       tapTimer.current = null;
+      // On an unanswered quiz card, a plain tap shouldn't skip straight to
+      // the answer — picking an option is the primary interaction.
+      if (card.quiz && quizSelected === null && !flipped) return;
       doFlip();
     }, DOUBLE_TAP_MS);
   };
@@ -110,15 +142,36 @@ export function Flashcard({
             />
             <TopScrim />
             <TopOverlay index={index} total={total} badge={badge} />
-            <BottomScrim tall={false} />
-            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2.5 px-5 pb-28 pt-24">
-              <Eyebrow category={category.shortName} tag={card.tags?.[0]} />
-              <p className="text-[25px] font-bold leading-[1.2] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:text-[29px]">
+            <BottomScrim tall={!!card.quiz} />
+            <div
+              className={
+                card.quiz
+                  ? "absolute inset-x-0 bottom-0 flex max-h-[74%] flex-col gap-3 overflow-y-auto no-scrollbar px-5 pb-28 pt-24"
+                  : "absolute inset-x-0 bottom-0 flex flex-col gap-2.5 px-5 pb-28 pt-24"
+              }
+            >
+              <Eyebrow category={category.shortName} tag={card.tags?.[0]} quiz={!!card.quiz} />
+              <p
+                className={
+                  card.quiz
+                    ? "text-[20px] font-bold leading-[1.25] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:text-[23px]"
+                    : "text-[25px] font-bold leading-[1.2] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:text-[29px]"
+                }
+              >
                 {card.question}
               </p>
-              <p className="text-[13px] font-medium text-white/60">
-                Tap to flip · double-tap to master
-              </p>
+              {card.quiz ? (
+                <QuizOptions
+                  options={card.quiz.options}
+                  correctIndex={card.quiz.correctIndex}
+                  selected={quizSelected}
+                  onSelect={handleQuizSelect}
+                />
+              ) : (
+                <p className="text-[13px] font-medium text-white/60">
+                  Tap to flip · double-tap to master
+                </p>
+              )}
             </div>
           </div>
 
@@ -140,6 +193,9 @@ export function Flashcard({
             <BottomScrim tall />
             <div className="absolute inset-x-0 bottom-0 flex max-h-[72%] flex-col gap-4 overflow-y-auto no-scrollbar px-5 pb-28 pt-24">
               <Eyebrow category={category.shortName} tag={card.tags?.[0]} answer />
+              {card.quiz && quizSelected !== null && (
+                <QuizResult correct={quizSelected === card.quiz.correctIndex} />
+              )}
               <p className="text-[17px] leading-relaxed text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
                 {card.answer}
               </p>
@@ -240,18 +296,39 @@ function BottomScrim({ tall }: { tall: boolean }) {
   );
 }
 
+function QuizResult({ correct }: { correct: boolean }) {
+  return (
+    <div
+      className={
+        correct
+          ? "inline-flex w-fit items-center gap-1.5 rounded-full bg-emerald-500/25 px-3 py-1 text-sm font-semibold text-emerald-100"
+          : "inline-flex w-fit items-center gap-1.5 rounded-full bg-rose-500/25 px-3 py-1 text-sm font-semibold text-rose-100"
+      }
+    >
+      {correct ? "✓ Nice — that's right" : "✕ Not quite — here's why"}
+    </div>
+  );
+}
+
 function Eyebrow({
   category,
   tag,
   answer,
+  quiz,
 }: {
   category: string;
   tag?: string;
   answer?: boolean;
+  quiz?: boolean;
 }) {
   return (
     <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide">
       <span className="text-white/70">{answer ? "Answer" : category}</span>
+      {quiz && (
+        <span className="rounded-full bg-fuchsia-500/25 px-2.5 py-0.5 normal-case tracking-normal text-fuchsia-100">
+          Quiz
+        </span>
+      )}
       {tag && (
         <span className="rounded-full bg-white/15 px-2.5 py-0.5 normal-case tracking-normal text-white/80">
           {tag}

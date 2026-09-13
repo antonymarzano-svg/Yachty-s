@@ -24,9 +24,15 @@ export function useHaptics() {
     );
   }, []);
 
+  const error = useCallback(() => {
+    void Haptics.notification({ type: NotificationType.Error }).catch(
+      () => {},
+    );
+  }, []);
+
   const selectionChanged = useCallback(() => {
     void Haptics.selectionChanged().catch(() => {});
   }, []);
 
-  return { light, medium, success, selectionChanged };
+  return { light, medium, success, error, selectionChanged };
 }

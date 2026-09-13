@@ -57,8 +57,20 @@ export const MIXED_TAB = {
   description: "Every course shuffled into one feed",
 };
 
-/** Tabs shown in the top pill selector, "Mixed" first. */
+/**
+ * The real-world yachting news feed — not study content, just a tab. Kept
+ * separate from `CATEGORIES` since it carries no cards/mastery progress.
+ */
+export const NEWS_TAB = {
+  id: "news" as TabId,
+  name: "Yachting News",
+  shortName: "News",
+  description: "Real headlines from the yachting world, refreshed by hand",
+};
+
+/** Tabs shown in the top pill selector, "Mixed" first, "News" last. */
 export const TABS: Array<{ id: TabId; shortName: string }> = [
   MIXED_TAB,
   ...CATEGORIES,
+  NEWS_TAB,
 ];

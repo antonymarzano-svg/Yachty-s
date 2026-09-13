@@ -4,110 +4,291 @@
     "category": "oow3000",
     "question": "Rule 1 — To what waters do the Collision Regulations apply?",
     "answer": "They apply to all vessels upon the high seas and all waters connected therewith navigable by seagoing vessels. Special rules made by an appropriate authority for roadsteads, harbours, rivers, lakes or inland waterways connected with the high seas must conform as closely as possible to these Rules. Traffic separation schemes may be adopted by the Organization (IMO) for the purpose of these Rules.",
-    "tags": ["Rule 1", "Application"]
+    "tags": [
+      "Rule 1",
+      "Application"
+    ],
+    "quiz": {
+      "options": [
+        "All vessels on the high seas and connected navigable waters",
+        "Only vessels over 300 tons",
+        "Only power-driven vessels",
+        "Only vessels within 12nm of shore"
+      ],
+      "correctIndex": 0
+    }
   },
   {
     "id": "oow-002",
     "category": "oow3000",
     "question": "Rule 2 — What does the 'general prudential rule' (Responsibility) cover?",
     "answer": "(a) Nothing in the Rules exonerates any vessel, owner, master or crew from the consequences of neglecting the Rules or any precaution required by the ordinary practice of seamen or the special circumstances of the case. (b) Due regard shall be had to all dangers of navigation and collision and to any special circumstances, including the limitations of the vessels involved, which may make a departure from the Rules necessary to avoid immediate danger.",
-    "tags": ["Rule 2", "Responsibility"]
+    "tags": [
+      "Rule 2",
+      "Responsibility"
+    ],
+    "quiz": {
+      "options": [
+        "The Rules are absolute and can never be departed from",
+        "It's necessary to avoid immediate danger",
+        "The master decides on a whim",
+        "Radar is unavailable"
+      ],
+      "correctIndex": 1
+    }
   },
   {
     "id": "oow-003",
     "category": "oow3000",
     "question": "Rule 3 — Define 'vessel not under command' and 'vessel restricted in her ability to manoeuvre'.",
     "answer": "Vessel not under command: a vessel which, through some exceptional circumstance, is unable to manoeuvre as required by the Rules and is therefore unable to keep out of the way of another vessel. Vessel restricted in her ability to manoeuvre (RAM): a vessel which, from the nature of her work, is restricted in her ability to manoeuvre as required by the Rules and is therefore unable to keep out of the way of another vessel.",
-    "tags": ["Rule 3", "Definitions"]
+    "tags": [
+      "Rule 3",
+      "Definitions"
+    ],
+    "quiz": {
+      "options": [
+        "Restricted by the nature of her work (RAM)",
+        "Unable to manoeuvre due to an exceptional circumstance",
+        "Constrained by her draught",
+        "Engaged in towing"
+      ],
+      "correctIndex": 1
+    }
   },
   {
     "id": "oow-004",
     "category": "oow3000",
     "question": "Rule 3 — Give six examples of vessels 'restricted in their ability to manoeuvre'.",
     "answer": "(i) laying, servicing or picking up a navigation mark, submarine cable or pipeline; (ii) dredging, surveying or underwater operations; (iii) replenishing or transferring persons, provisions or cargo while underway; (iv) launching or recovering aircraft; (v) mine clearance operations; (vi) a towing operation which severely restricts the towing vessel and her tow in their ability to deviate from course.",
-    "tags": ["Rule 3", "RAM"]
+    "tags": [
+      "Rule 3",
+      "RAM"
+    ],
+    "quiz": {
+      "options": [
+        "A vessel engaged on pilotage",
+        "A vessel constrained by her draught",
+        "Launching or recovering aircraft",
+        "A sailing vessel close-hauled"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-005",
     "category": "oow3000",
     "question": "Rule 3 — Define 'vessel constrained by her draught', 'underway', and 'restricted visibility'.",
     "answer": "Constrained by her draught: a power-driven vessel which, because of her draught in relation to available depth and width of navigable water, is severely restricted in her ability to deviate from her course. Underway: not at anchor, made fast to the shore, or aground. Restricted visibility: any condition in which visibility is restricted by fog, mist, falling snow, heavy rainstorms, sandstorms or similar causes.",
-    "tags": ["Rule 3", "Definitions"]
+    "tags": [
+      "Rule 3",
+      "Definitions"
+    ],
+    "quiz": {
+      "options": [
+        "Making way through the water",
+        "Under power only",
+        "Not at anchor, made fast to the shore, or aground",
+        "In a traffic separation scheme"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-006",
     "category": "oow3000",
     "question": "Rule 3 — What does 'vessels in sight of one another' mean, and what is a 'vessel engaged in fishing'?",
     "answer": "Vessels are deemed to be in sight of one another only when one can be observed visually from the other. A 'vessel engaged in fishing' means any vessel fishing with nets, lines, trawls or other apparatus which restrict manoeuvrability — it does NOT include a vessel fishing with trolling lines or other apparatus which do not restrict manoeuvrability.",
-    "tags": ["Rule 3", "Definitions"]
+    "tags": [
+      "Rule 3",
+      "Definitions"
+    ],
+    "quiz": {
+      "options": [
+        "They are within radar range",
+        "One can be observed visually from the other",
+        "They are within VHF range",
+        "Both show navigation lights"
+      ],
+      "correctIndex": 1
+    }
   },
   {
     "id": "oow-007",
     "category": "oow3000",
     "question": "Rule 5 — What constitutes a proper look-out?",
     "answer": "Every vessel shall at all times maintain a proper look-out by sight AND hearing, as well as by all available means appropriate in the prevailing circumstances and conditions, so as to make a full appraisal of the situation and of the risk of collision.",
-    "tags": ["Rule 5", "Lookout"]
+    "tags": [
+      "Rule 5",
+      "Lookout"
+    ],
+    "quiz": {
+      "options": [
+        "Sight only",
+        "Radar only",
+        "Sight and hearing, and all available means",
+        "AIS only"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-008",
     "category": "oow3000",
     "question": "Rule 6 — What factors determine a safe speed for ALL vessels?",
     "answer": "(i) the state of visibility; (ii) traffic density, including concentrations of fishing vessels; (iii) manoeuvrability, especially stopping distance and turning ability; (iv) at night, background light such as from shore lights or backscatter of own lights; (v) the state of wind, sea and current, and proximity of navigational hazards; (vi) draught in relation to available depth of water.",
-    "tags": ["Rule 6", "Safe speed"]
+    "tags": [
+      "Rule 6",
+      "Safe speed"
+    ],
+    "quiz": {
+      "options": [
+        "Fuel remaining",
+        "Crew experience level",
+        "State of visibility",
+        "Insurance requirements"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-009",
     "category": "oow3000",
     "question": "Rule 6 — What ADDITIONAL factors apply to vessels with operational radar when assessing safe speed?",
     "answer": "(i) the characteristics, efficiency and limitations of the radar equipment; (ii) constraints imposed by the radar range scale in use; (iii) the effect on detection of sea state, weather and other interference; (iv) that small vessels, ice and floating objects may not be detected at an adequate range; (v) the number, location and movement of vessels detected by radar; (vi) the more exact assessment of visibility possible when radar is used to range vessels or objects nearby.",
-    "tags": ["Rule 6", "Safe speed", "Radar"]
+    "tags": [
+      "Rule 6",
+      "Safe speed",
+      "Radar"
+    ],
+    "quiz": {
+      "options": [
+        "The colour of the vessel's hull",
+        "Constraints of the radar range scale in use",
+        "The number of crew on watch",
+        "The vessel's flag state"
+      ],
+      "correctIndex": 1
+    }
   },
   {
     "id": "oow-010",
     "category": "oow3000",
     "question": "Rule 7 — How should risk of collision be determined, and what should never be relied on?",
     "answer": "Use all available means appropriate to the circumstances; if in doubt, risk shall be deemed to exist. Proper use shall be made of radar, including long-range scanning and plotting. Assumptions shall NOT be made on the basis of scanty information, especially scanty radar information. Risk is deemed to exist if the compass bearing of an approaching vessel does not appreciably change; it may also exist even with an appreciable bearing change when approaching a very large vessel, a tow, or at close range.",
-    "tags": ["Rule 7", "Risk of collision"]
+    "tags": [
+      "Rule 7",
+      "Risk of collision"
+    ],
+    "quiz": {
+      "options": [
+        "Assume no risk until proven otherwise",
+        "Ask the other vessel by VHF only",
+        "Assume risk exists",
+        "Rely on AIS CPA/TCPA only"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-011",
     "category": "oow3000",
     "question": "Rule 8 — What are the requirements for action taken to avoid collision?",
     "answer": "Action shall, if circumstances admit, be positive, made in ample time, and with due regard to good seamanship. Any alteration of course/speed shall be large enough to be readily apparent to another vessel by eye or radar; a succession of small alterations shall be avoided. If there is sufficient sea-room, alteration of course alone may be the most effective action provided it is made in good time, is substantial, and does not result in another close-quarters situation. Action must result in passing at a safe distance, and its effectiveness must be checked until the other vessel is finally past and clear. If necessary, a vessel shall slacken speed or take all way off.",
-    "tags": ["Rule 8", "Action to avoid collision"]
+    "tags": [
+      "Rule 8",
+      "Action to avoid collision"
+    ],
+    "quiz": {
+      "options": [
+        "As small as possible",
+        "Made only by the stand-on vessel",
+        "Always a speed change, never course",
+        "Large enough to be readily apparent"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-012",
     "category": "oow3000",
     "question": "Rule 9 — Summarise the rules for narrow channels.",
     "answer": "A vessel shall keep as near the outer limit of the channel on her starboard side as is safe and practicable. Vessels <20m and sailing vessels must not impede a vessel that can only navigate safely within the channel; the same applies to a vessel engaged in fishing. A vessel must not cross a narrow channel if it impedes a vessel confined to it. Overtaking in a narrow channel requires the Rule 34(c) sound signal and agreement of the vessel being overtaken. A vessel nearing a blind bend shall sound one prolonged blast (Rule 34(e)). Anchoring in a narrow channel should be avoided if circumstances admit.",
-    "tags": ["Rule 9", "Narrow channels"]
+    "tags": [
+      "Rule 9",
+      "Narrow channels"
+    ],
+    "quiz": {
+      "options": [
+        "In the centre of the channel",
+        "On the port side of the channel",
+        "As near the outer limit on her starboard side as safe",
+        "Wherever avoids anchored vessels"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-013",
     "category": "oow3000",
     "question": "Rule 10 — Summarise the key requirements in a Traffic Separation Scheme (TSS).",
     "answer": "Proceed in the appropriate lane in the general direction of traffic flow; keep clear of the separation line/zone as far as practicable; normally join/leave at the lane's termination, or at as small an angle as practicable from the side. Avoid crossing lanes, but if obliged, cross as nearly as practicable at right angles. Vessels <20m, sailing vessels and fishing vessels may use the inshore traffic zone and must not impede power-driven vessels in a lane. Avoid anchoring in a TSS or near its terminations. A vessel not using the scheme shall avoid it by as wide a margin as practicable.",
-    "tags": ["Rule 10", "TSS"]
+    "tags": [
+      "Rule 10",
+      "TSS"
+    ],
+    "quiz": {
+      "options": [
+        "At as near a right angle as practicable",
+        "At a shallow angle to save time",
+        "Only under sail",
+        "Never — crossing is prohibited"
+      ],
+      "correctIndex": 0
+    }
   },
   {
     "id": "oow-014",
     "category": "oow3000",
     "question": "Rule 12 — How do two sailing vessels determine which keeps out of the way of the other?",
     "answer": "(i) When each has the wind on a different side, the vessel with the wind on the PORT side keeps out of the way of the other. (ii) When both have the wind on the same side, the vessel to WINDWARD keeps out of the way of the vessel to leeward. (iii) If a vessel with the wind on the port side sees a vessel to windward and cannot determine with certainty which side the other has the wind, she shall keep out of the way. Windward side = the side opposite to that on which the mainsail is carried.",
-    "tags": ["Rule 12", "Sailing vessels"]
+    "tags": [
+      "Rule 12",
+      "Sailing vessels"
+    ],
+    "quiz": {
+      "options": [
+        "The vessel with the wind on her starboard side",
+        "The larger vessel",
+        "The vessel to leeward",
+        "The vessel with the wind on her port side"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-015",
     "category": "oow3000",
     "question": "Rule 13 — When is a vessel 'overtaking' and what must she do?",
     "answer": "A vessel is deemed to be overtaking when coming up on another from a direction more than 22.5° abaft her beam — i.e. a position from which, at night, she would see only the other's sternlight, not her sidelights. Any vessel overtaking any other shall keep out of the way of the vessel being overtaken, regardless of any subsequent change in bearing between the two vessels, until she is finally past and clear. If in doubt whether she is overtaking, a vessel shall assume that she is and act accordingly.",
-    "tags": ["Rule 13", "Overtaking"],
+    "tags": [
+      "Rule 13",
+      "Overtaking"
+    ],
     "media": {
       "frontImage": "images/colregs-overtaking-scene.svg",
       "frontImageAlt": "One vessel coming up from astern of another",
       "image": "images/colregs-overtaking-answer.svg",
       "imageAlt": "Overtaking vessel keeps clear while the vessel ahead holds her course"
+    },
+    "quiz": {
+      "options": [
+        "45°",
+        "90°",
+        "22.5°",
+        "112.5°"
+      ],
+      "correctIndex": 2
     }
   },
   {
@@ -115,12 +296,24 @@
     "category": "oow3000",
     "question": "Rule 14 — What action is required in a head-on situation, and how is it recognised?",
     "answer": "Each vessel shall alter course to starboard so that each passes on the port side of the other. Such a situation exists when a vessel sees the other ahead or nearly ahead, and by night sees her masthead lights in a line or nearly in a line and/or both sidelights, or by day observes the corresponding aspect. If in doubt, a vessel shall assume the situation exists and act accordingly.",
-    "tags": ["Rule 14", "Head-on"],
+    "tags": [
+      "Rule 14",
+      "Head-on"
+    ],
     "media": {
       "frontImage": "images/colregs-headon-scene.svg",
       "frontImageAlt": "Two vessels approaching each other bow to bow",
       "image": "images/colregs-headon-answer.svg",
       "imageAlt": "Both vessels alter course to starboard and pass port side to port side"
+    },
+    "quiz": {
+      "options": [
+        "Port",
+        "Whichever side has more sea room",
+        "Starboard",
+        "Stop engines and wait"
+      ],
+      "correctIndex": 2
     }
   },
   {
@@ -128,12 +321,24 @@
     "category": "oow3000",
     "question": "Rule 15 — What is the give-way vessel's action in a crossing situation?",
     "answer": "When two power-driven vessels are crossing so as to involve risk of collision, the vessel which has the other on her own starboard side shall keep out of the way and, if circumstances admit, avoid crossing ahead of the other vessel — normally by turning to starboard to pass astern.",
-    "tags": ["Rule 15", "Crossing"],
+    "tags": [
+      "Rule 15",
+      "Crossing"
+    ],
     "media": {
       "frontImage": "images/colregs-crossing-scene.svg",
       "frontImageAlt": "Two vessels approaching a crossing point at roughly a right angle",
       "image": "images/colregs-crossing-answer.svg",
       "imageAlt": "Give-way vessel turns to starboard to pass astern while the stand-on vessel holds her course"
+    },
+    "quiz": {
+      "options": [
+        "The vessel that has the other on her own port side",
+        "The faster vessel",
+        "The vessel that has the other on her own starboard side",
+        "The vessel already on a steady course"
+      ],
+      "correctIndex": 2
     }
   },
   {
@@ -141,19 +346,43 @@
     "category": "oow3000",
     "question": "Rule 16 — What is required of the give-way vessel?",
     "answer": "Every vessel directed to keep out of the way of another shall, so far as possible, take early and substantial action to keep well clear.",
-    "tags": ["Rule 16", "Give-way"]
+    "tags": [
+      "Rule 16",
+      "Give-way"
+    ],
+    "quiz": {
+      "options": [
+        "Sound five short blasts immediately",
+        "Reduce to bare steerage way only",
+        "Take early and substantial action to keep well clear",
+        "Always alter course to port"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-019",
     "category": "oow3000",
     "question": "Rule 17 — What are the stand-on vessel's obligations?",
     "answer": "Where one vessel is to keep out of the way, the other shall keep her course and speed, but may take action to avoid collision by her manoeuvre alone as soon as it becomes apparent the give-way vessel is not taking appropriate action. If collision cannot be avoided by the give-way vessel's action alone, the stand-on vessel shall take whatever action best aids to avoid collision. A power-driven stand-on vessel acting under this rule in a crossing situation shall not, if circumstances admit, alter course to port for a vessel on her own port side. This rule does not relieve the give-way vessel of her obligation to keep clear.",
-    "tags": ["Rule 17", "Stand-on"],
+    "tags": [
+      "Rule 17",
+      "Stand-on"
+    ],
     "media": {
       "frontImage": "images/colregs-crossing-scene.svg",
       "frontImageAlt": "Two vessels approaching a crossing point at roughly a right angle",
       "image": "images/colregs-crossing-answer.svg",
       "imageAlt": "Stand-on vessel holds her course and speed while the give-way vessel turns to starboard"
+    },
+    "quiz": {
+      "options": [
+        "She enters a narrow channel",
+        "It becomes apparent the give-way vessel isn't acting appropriately",
+        "She loses sight of the other vessel",
+        "The give-way vessel sounds one short blast"
+      ],
+      "correctIndex": 1
     }
   },
   {
@@ -161,129 +390,346 @@
     "category": "oow3000",
     "question": "Rule 18 — State the responsibilities between vessels (the basic pecking order), except where Rules 9, 10 & 13 require otherwise.",
     "answer": "A power-driven vessel underway keeps out of the way of: (i) a vessel not under command; (ii) a vessel restricted in her ability to manoeuvre; (iii) a vessel engaged in fishing; (iv) a sailing vessel. A sailing vessel underway keeps out of the way of NUC, RAM and fishing vessels. A vessel engaged in fishing, so far as possible, keeps out of the way of NUC and RAM vessels. Any vessel other than NUC/RAM shall, if possible, avoid impeding a vessel constrained by her draught displaying Rule 28 signals. A seaplane shall in general keep well clear of all vessels.",
-    "tags": ["Rule 18", "Responsibilities"]
+    "tags": [
+      "Rule 18",
+      "Responsibilities"
+    ],
+    "quiz": {
+      "options": [
+        "Another power-driven vessel of equal size",
+        "A vessel constrained by draught, only if also RAM",
+        "A sailing vessel",
+        "Any vessel showing an AIS signal"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-021",
     "category": "oow3000",
     "question": "Rule 19 — What action must a vessel take if she detects another by RADAR ALONE in restricted visibility?",
     "answer": "She must determine if a close-quarters situation is developing and/or risk of collision exists, and if so take avoiding action in ample time. Where that action is an alteration of course, so far as possible she shall avoid: (i) an alteration of course to PORT for a vessel forward of the beam (other than one being overtaken); (ii) an alteration of course TOWARDS a vessel abeam or abaft the beam.",
-    "tags": ["Rule 19", "Restricted visibility"]
+    "tags": [
+      "Rule 19",
+      "Restricted visibility"
+    ],
+    "quiz": {
+      "options": [
+        "Starboard",
+        "Either side equally",
+        "Any direction until visual contact",
+        "Port"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-022",
     "category": "oow3000",
     "question": "Rule 19 — What must a vessel do on hearing a fog signal apparently forward of the beam, or if unable to avoid a close-quarters situation forward of the beam?",
     "answer": "Except where it has been determined that no risk of collision exists, she shall reduce speed to the minimum at which she can be kept on her course, and if necessary take all way off, navigating with extreme caution until the danger of collision is over. Every vessel in restricted visibility shall proceed at a safe speed adapted to the prevailing circumstances, and a power-driven vessel shall have her engines ready for immediate manoeuvre.",
-    "tags": ["Rule 19", "Restricted visibility"]
+    "tags": [
+      "Rule 19",
+      "Restricted visibility"
+    ],
+    "quiz": {
+      "options": [
+        "Maintain full speed to clear the area faster",
+        "Alter course to port immediately",
+        "Reduce speed to the minimum at which you can be kept on course",
+        "Sound the distress signal"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-023",
     "category": "oow3000",
     "question": "Rule 21 — Define masthead light, sidelights and sternlight, including their arcs.",
     "answer": "Masthead light: a white light over the fore-and-aft centreline showing an unbroken arc of 225°, from right ahead to 22.5° abaft the beam on either side. Sidelights: green (starboard) and red (port), each over an unbroken arc of 112.5°, from right ahead to 22.5° abaft the beam on its own side (may be combined in one lantern on vessels <20m). Sternlight: a white light as near the stern as practicable, showing an unbroken arc of 135°, 67.5° from right aft on each side.",
-    "tags": ["Rule 21", "Definitions"]
+    "tags": [
+      "Rule 21",
+      "Definitions"
+    ],
+    "quiz": {
+      "options": [
+        "112.5°",
+        "135°",
+        "360°",
+        "225°"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-024",
     "category": "oow3000",
     "question": "Rule 21 — Define 'towing light', 'all-round light' and 'flashing light'.",
     "answer": "Towing light: a yellow light with the same characteristics as a sternlight (135° arc). All-round light: a light showing an unbroken arc of 360°. Flashing light: a light flashing at regular intervals at a frequency of 120 flashes or more per minute.",
-    "tags": ["Rule 21", "Definitions"]
+    "tags": [
+      "Rule 21",
+      "Definitions"
+    ],
+    "quiz": {
+      "options": [
+        "60 flashes per minute",
+        "30 flashes per minute",
+        "120 flashes per minute",
+        "240 flashes per minute"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-025",
     "category": "oow3000",
     "question": "Rule 22 — What are the minimum visibility ranges for lights on a vessel of 50 metres or more in length?",
     "answer": "Masthead light: 6 miles. Sidelight: 3 miles. Sternlight: 3 miles. Towing light: 3 miles. White/red/green/yellow all-round light: 3 miles.",
-    "tags": ["Rule 22", "Light ranges"]
+    "tags": [
+      "Rule 22",
+      "Light ranges"
+    ],
+    "quiz": {
+      "options": [
+        "3 miles",
+        "5 miles",
+        "10 miles",
+        "6 miles"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-026",
     "category": "oow3000",
     "question": "Rule 22 — What are the minimum visibility ranges for lights on vessels 12m–50m, and under 12m, in length?",
     "answer": "12m to <50m: masthead 5 miles (3 miles if <20m); sidelight 2 miles; sternlight 2 miles; towing light 2 miles; all-round light 2 miles. Under 12m: masthead 2 miles; sidelight 1 mile; sternlight 2 miles; towing light 2 miles; all-round light 2 miles.",
-    "tags": ["Rule 22", "Light ranges"]
+    "tags": [
+      "Rule 22",
+      "Light ranges"
+    ],
+    "quiz": {
+      "options": [
+        "2 miles",
+        "3 miles",
+        "5 miles",
+        "1 mile"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-027",
     "category": "oow3000",
     "question": "Rule 23 — What lights must a power-driven vessel underway exhibit?",
     "answer": "A masthead light forward; a second masthead light abaft of and higher than the forward one (optional if under 50m); sidelights; and a sternlight. A power-driven vessel under 12m may instead show an all-round white light plus sidelights; one under 7m with max speed ≤7 knots may show just an all-round white light (and sidelights if practicable).",
-    "tags": ["Rule 23", "Lights"]
+    "tags": [
+      "Rule 23",
+      "Lights"
+    ],
+    "quiz": {
+      "options": [
+        "One masthead light and an all-round white light only",
+        "Sidelights only",
+        "Two masthead lights, sidelights and a sternlight",
+        "A single all-round white light"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-028",
     "category": "oow3000",
     "question": "Rule 24 — What lights does a power-driven vessel exhibit when TOWING, and what changes if the tow exceeds 200 metres?",
     "answer": "Instead of the normal masthead light(s): two masthead lights in a vertical line (three if the tow, measured from the towing vessel's stern to the after end of the tow, exceeds 200m); plus sidelights, a sternlight, and a towing light (yellow) in a vertical line above the sternlight. If the tow exceeds 200m, the towing vessel also exhibits a diamond shape where it can best be seen. The vessel/object being towed exhibits sidelights, a sternlight, and (if the tow exceeds 200m) a diamond shape.",
-    "tags": ["Rule 24", "Towing"]
+    "tags": [
+      "Rule 24",
+      "Towing"
+    ],
+    "quiz": {
+      "options": [
+        "Two",
+        "One",
+        "Four",
+        "Three"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-029",
     "category": "oow3000",
     "question": "Rule 25 — What lights does a sailing vessel underway exhibit, and what may she add?",
     "answer": "Sidelights and a sternlight (may be combined in one lantern near the masthead on vessels <20m). She MAY additionally exhibit, at or near the masthead, two all-round lights in a vertical line — red over green — but not together with the combined lantern. A vessel under sail also being propelled by machinery shall exhibit forward a conical shape, apex downward (a 'motor-sailing' cone).",
-    "tags": ["Rule 25", "Sailing vessel lights"]
+    "tags": [
+      "Rule 25",
+      "Sailing vessel lights"
+    ],
+    "quiz": {
+      "options": [
+        "Green over red",
+        "White over red",
+        "Red over white",
+        "Red over green"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-030",
     "category": "oow3000",
     "question": "Rule 26 — What lights/shapes does a vessel TRAWLING exhibit, versus a vessel fishing OTHER than trawling?",
     "answer": "Trawling: two all-round lights in a vertical line, green over white (or two cones apex-to-apex vertically); plus a masthead light abaft and higher than the green light (optional <50m); plus sidelights/sternlight if making way. Fishing (not trawling): two all-round lights in a vertical line, red over white (or two cones apex-to-apex); plus, if outlying gear extends more than 150m horizontally, an all-round white light or cone apex-up in the direction of the gear; plus sidelights/sternlight if making way.",
-    "tags": ["Rule 26", "Fishing vessels"]
+    "tags": [
+      "Rule 26",
+      "Fishing vessels"
+    ],
+    "quiz": {
+      "options": [
+        "Red over white",
+        "White over green",
+        "Red over green",
+        "Green over white"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-031",
     "category": "oow3000",
     "question": "Rule 27 — What day shapes and lights does a vessel Restricted in her Ability to Manoeuvre (RAM) exhibit?",
     "answer": "Three all-round lights in a vertical line — red, white, red (top to bottom) where best seen. Day shapes: three shapes in a vertical line — ball, diamond, ball. When making way, add a masthead light(s), sidelights and sternlight. When at anchor, add the normal anchor light/shape as well.",
-    "tags": ["Rule 27", "RAM"]
+    "tags": [
+      "Rule 27",
+      "RAM"
+    ],
+    "quiz": {
+      "options": [
+        "Red, red, white",
+        "White, red, white",
+        "Red, green, red",
+        "Red, white, red"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-032",
     "category": "oow3000",
     "question": "Rule 27 — What does a vessel not under command (NUC) exhibit?",
     "answer": "Two all-round RED lights in a vertical line where they can best be seen, and two balls (or similar shapes) in a vertical line. If making way through the water, she additionally exhibits sidelights and a sternlight.",
-    "tags": ["Rule 27", "NUC"]
+    "tags": [
+      "Rule 27",
+      "NUC"
+    ],
+    "quiz": {
+      "options": [
+        "White",
+        "Green",
+        "Yellow",
+        "Red"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-033",
     "category": "oow3000",
     "question": "Rule 27 — A vessel engaged in dredging/underwater operations and restricted in her ability to manoeuvre must show extra signals when an obstruction exists. What are they?",
     "answer": "In addition to the normal RAM lights/shapes: two all-round RED lights (or two balls) in a vertical line to indicate the side on which the obstruction exists, and two all-round GREEN lights (or two diamonds) in a vertical line to indicate the side on which another vessel may pass.",
-    "tags": ["Rule 27", "Dredging"]
+    "tags": [
+      "Rule 27",
+      "Dredging"
+    ],
+    "quiz": {
+      "options": [
+        "The side where the obstruction exists",
+        "That she is aground",
+        "The side on which another vessel may pass",
+        "That she is not under command"
+      ],
+      "correctIndex": 2
+    }
   },
   {
     "id": "oow-034",
     "category": "oow3000",
     "question": "Rule 28 — What signal indicates a vessel constrained by her draught?",
     "answer": "In addition to the normal power-driven vessel lights, she may exhibit three all-round RED lights in a vertical line, where they can best be seen, or a cylinder shape by day.",
-    "tags": ["Rule 28", "CBD"]
+    "tags": [
+      "Rule 28",
+      "CBD"
+    ],
+    "quiz": {
+      "options": [
+        "White",
+        "Green",
+        "Yellow",
+        "Red"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-035",
     "category": "oow3000",
     "question": "Rule 29 — What lights identify a vessel engaged on pilotage duty?",
     "answer": "At or near the masthead, two all-round lights in a vertical line, white over red; when underway, also sidelights and a sternlight; when at anchor, also the normal anchor light/shape.",
-    "tags": ["Rule 29", "Pilot vessels"]
+    "tags": [
+      "Rule 29",
+      "Pilot vessels"
+    ],
+    "quiz": {
+      "options": [
+        "Red over white",
+        "Red over green",
+        "Green over white",
+        "White over red"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-036",
     "category": "oow3000",
     "question": "Rule 30 — What does a vessel AT ANCHOR exhibit, and what does a vessel AGROUND exhibit in addition?",
     "answer": "At anchor: forward, an all-round white light or one ball; aft and lower, a second all-round white light (vessels under 50m may show just one all-round white light instead). Aground: the normal anchor light(s)/shape PLUS two all-round RED lights in a vertical line and three balls in a vertical line.",
-    "tags": ["Rule 30", "At anchor", "Aground"]
+    "tags": [
+      "Rule 30",
+      "At anchor",
+      "Aground"
+    ],
+    "quiz": {
+      "options": [
+        "Two",
+        "One",
+        "Four",
+        "Three"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-037",
     "category": "oow3000",
     "question": "What sound signal(s) does Rule 34 require for altering course to starboard, to port, and for astern propulsion, when vessels are in sight of one another?",
     "answer": "One short blast = 'I am altering my course to starboard'. Two short blasts = 'I am altering my course to port'. Three short blasts = 'I am operating astern propulsion'. A short blast is about 1 second; a prolonged blast is 4–6 seconds. These may be supplemented by light signals of corresponding flashes.",
-    "tags": ["Rule 34", "Sound signals"],
+    "tags": [
+      "Rule 34",
+      "Sound signals"
+    ],
     "media": {
       "audio": "audio/one-short-blast.wav",
       "audioLabel": "One short blast — altering course to starboard"
+    },
+    "quiz": {
+      "options": [
+        "I am altering my course to starboard",
+        "I am altering my course to port",
+        "I am operating astern propulsion",
+        "I am overtaking on your port side"
+      ],
+      "correctIndex": 1
     }
   },
   {
@@ -291,24 +737,62 @@
     "category": "oow3000",
     "question": "Rule 34(c) — In a narrow channel, what sound signals are used to propose and agree an overtake?",
     "answer": "Two prolonged blasts followed by one short blast = 'I intend to overtake you on your starboard side'. Two prolonged blasts followed by two short blasts = 'I intend to overtake you on your port side'. The vessel about to be overtaken agrees by sounding: one prolonged, one short, one prolonged, one short blast, in that order.",
-    "tags": ["Rule 34", "Overtaking signals", "Narrow channels"]
+    "tags": [
+      "Rule 34",
+      "Overtaking signals",
+      "Narrow channels"
+    ],
+    "quiz": {
+      "options": [
+        "I intend to overtake you on your port side",
+        "I am altering course to starboard",
+        "Danger — keep clear",
+        "I intend to overtake you on your starboard side"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-039",
     "category": "oow3000",
     "question": "Rule 34(d) — What signal indicates doubt about another vessel's intentions or actions, and what signal is used near a blind bend (Rule 34(e))?",
     "answer": "Doubt signal: at least five short and rapid blasts on the whistle (may be supplemented by at least five short and rapid light flashes). Blind bend signal: one prolonged blast, sounded by a vessel nearing a bend where other vessels may be obscured; it must be answered with a prolonged blast by any approaching vessel within hearing.",
-    "tags": ["Rule 34", "Doubt signal", "Bend signal"]
+    "tags": [
+      "Rule 34",
+      "Doubt signal",
+      "Bend signal"
+    ],
+    "quiz": {
+      "options": [
+        "One prolonged blast",
+        "Three short blasts",
+        "Two prolonged blasts",
+        "At least five short and rapid blasts"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-040",
     "category": "oow3000",
     "question": "What is the fog signal for a power-driven vessel underway and MAKING WAY, versus one underway but STOPPED, in restricted visibility (Rule 35)?",
     "answer": "Making way: one prolonged blast at intervals of not more than 2 minutes. Stopped, making no way: two prolonged blasts in succession (about 2 seconds apart) at intervals of not more than 2 minutes.",
-    "tags": ["Rule 35", "Fog signals"],
+    "tags": [
+      "Rule 35",
+      "Fog signals"
+    ],
     "media": {
       "audio": "audio/one-prolonged-blast.wav",
       "audioLabel": "One prolonged blast — underway, making way"
+    },
+    "quiz": {
+      "options": [
+        "Two prolonged blasts every 2 minutes",
+        "One short blast every minute",
+        "Continuous ringing of the bell",
+        "One prolonged blast every 2 minutes"
+      ],
+      "correctIndex": 3
     }
   },
   {
@@ -316,10 +800,23 @@
     "category": "oow3000",
     "question": "What fog signal does a vessel not under command, restricted in ability to manoeuvre, constrained by draught, a sailing vessel, fishing, or towing/pushing sound in restricted visibility (Rule 35(c))?",
     "answer": "One prolonged followed by two short blasts, at intervals of not more than 2 minutes.",
-    "tags": ["Rule 35", "Fog signals", "NUC"],
+    "tags": [
+      "Rule 35",
+      "Fog signals",
+      "NUC"
+    ],
     "media": {
       "audio": "audio/vessel-not-under-command.wav",
       "audioLabel": "One prolonged + two short — NUC/RAM/CBD/sailing/fishing/towing"
+    },
+    "quiz": {
+      "options": [
+        "One prolonged blast only",
+        "Two prolonged blasts",
+        "Five short blasts",
+        "One prolonged plus two short blasts"
+      ],
+      "correctIndex": 3
     }
   },
   {
@@ -327,10 +824,23 @@
     "category": "oow3000",
     "question": "How does a vessel at anchor signal her position in restricted visibility (Rule 35(g)), and what does a vessel aground add?",
     "answer": "At anchor: rapid ringing of the bell for about 5 seconds in the fore part at intervals of not more than 1 minute (vessels ≥100m also sound the gong aft immediately after); she may additionally sound one short, one prolonged, one short blast as a warning. Aground: the bell (and gong) signal, PLUS three separate, distinct strokes on the bell immediately before and after the rapid ringing; she may also sound an appropriate whistle signal.",
-    "tags": ["Rule 35", "At anchor", "Aground"],
+    "tags": [
+      "Rule 35",
+      "At anchor",
+      "Aground"
+    ],
     "media": {
       "audio": "audio/vessel-at-anchor-bell.wav",
       "audioLabel": "Rapid bell ringing — vessel at anchor"
+    },
+    "quiz": {
+      "options": [
+        "One prolonged blast every 2 minutes",
+        "Continuous sounding of the whistle",
+        "Three strokes on the bell only",
+        "Rapid ringing of the bell for about 5 seconds"
+      ],
+      "correctIndex": 3
     }
   },
   {
@@ -338,34 +848,95 @@
     "category": "oow3000",
     "question": "Rule 36 & 37 — How may a vessel attract another's attention, and what must a vessel in distress do?",
     "answer": "Rule 36: if necessary to attract attention, any vessel may make light or sound signals that cannot be mistaken for any signal authorised elsewhere in the Rules, or direct her searchlight toward the danger without embarrassing another vessel; high-intensity intermittent/revolving lights (e.g. strobes) must be avoided for this purpose. Rule 37: a vessel in distress requiring assistance shall use or exhibit the signals described in Annex IV.",
-    "tags": ["Rule 36", "Rule 37", "Attention signals"]
+    "tags": [
+      "Rule 36",
+      "Rule 37",
+      "Attention signals"
+    ],
+    "quiz": {
+      "options": [
+        "A routine radio call",
+        "A navigation light",
+        "A fog signal",
+        "Any signal authorised elsewhere in the Rules"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-044",
     "category": "oow3000",
     "question": "Annex IV — List at least eight recognised distress signals.",
     "answer": "Includes: a gun/explosive signal at ~1-minute intervals; continuous sounding of fog-signalling apparatus; rockets/shells throwing red stars, fired one at a time at short intervals; SOS in Morse code (by radiotelegraphy or other signalling); the spoken word 'MAYDAY' by radiotelephony; the International Code flags N over C; a square flag with a ball (or anything resembling a ball) above or below it; flames on the vessel (e.g. a burning tar barrel); a rocket parachute flare or hand flare showing a red light; an orange smoke signal; slowly and repeatedly raising and lowering outstretched arms; the radiotelegraph or radiotelephone alarm signal; EPIRB signals; and approved signals transmitted by radiocommunication systems including survival craft radar transponders (SART).",
-    "tags": ["Annex IV", "Distress signals"]
+    "tags": [
+      "Annex IV",
+      "Distress signals"
+    ],
+    "quiz": {
+      "options": [
+        "Three short blasts repeated",
+        "A steady green flare",
+        "Sounding the ship's whistle once",
+        "The spoken word MAYDAY by radiotelephony"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-045",
     "category": "oow3000",
     "question": "Annex II — What lights do trawlers of 20m or more exhibit while shooting, hauling, or with nets fast on an obstruction?",
     "answer": "Shooting nets: two white lights in a vertical line. Hauling nets: one white light over one red light in a vertical line. Nets fast on an obstruction: two red lights in a vertical line. (These supplement, at a lower level, the normal Rule 26 fishing lights and are for trawlers fishing in close proximity to one another.)",
-    "tags": ["Annex II", "Fishing signals"]
+    "tags": [
+      "Annex II",
+      "Fishing signals"
+    ],
+    "quiz": {
+      "options": [
+        "Two white lights vertically",
+        "Two red lights vertically",
+        "One green over one white light",
+        "One white light over one red light"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-046",
     "category": "oow3000",
     "question": "Annex III — What is the fundamental whistle frequency range required for a vessel 200m or more in length, versus one under 75m?",
     "answer": "200m or more: 70–200 Hz (a deep tone). Less than 75m: 250–700 Hz (a higher tone). (75m–200m vessels: 130–350 Hz.) Larger vessels use a lower-pitched, more powerful whistle; smaller vessels a higher-pitched one.",
-    "tags": ["Annex III", "Sound signal appliances"]
+    "tags": [
+      "Annex III",
+      "Sound signal appliances"
+    ],
+    "quiz": {
+      "options": [
+        "250–700 Hz",
+        "130–350 Hz",
+        "800–1200 Hz",
+        "70–200 Hz"
+      ],
+      "correctIndex": 3
+    }
   },
   {
     "id": "oow-047",
     "category": "oow3000",
     "question": "Rule 33 — What sound signalling appliances must vessels of different lengths carry?",
     "answer": "12m or more: a whistle. 20m or more: a bell in addition to the whistle. 100m or more: also a gong, with a tone that cannot be confused with the bell. A vessel under 12m need not carry these but must have some other means of making an efficient sound signal.",
-    "tags": ["Rule 33", "Equipment"]
+    "tags": [
+      "Rule 33",
+      "Equipment"
+    ],
+    "quiz": {
+      "options": [
+        "A second whistle",
+        "A drum",
+        "A megaphone",
+        "A gong"
+      ],
+      "correctIndex": 3
+    }
   }
 ]
