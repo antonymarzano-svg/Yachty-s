@@ -6,7 +6,7 @@ import { AudioPlayer } from "./AudioPlayer";
 import { VideoPlayer } from "./VideoPlayer";
 import { MasteredButton } from "./MasteredButton";
 import { DoubleTapBurst } from "./DoubleTapBurst";
-import { CategoryWatermark } from "./CategoryWatermark";
+import { CategoryScene } from "./CategoryScene";
 import { useHaptics } from "../hooks/useHaptics";
 
 interface FlashcardProps {
@@ -83,103 +83,66 @@ export function Flashcard({
 
   const category = CATEGORY_MAP[card.category];
   const [from, to] = category.gradient;
+  const badge = showCategoryBadge
+    ? { label: category.shortName, color: from }
+    : undefined;
 
   return (
-    <div className="relative h-full w-full snap-start shrink-0">
-      {/* Ambient gradient backdrop per-category — kept vivid & warm, not murky */}
+    <div className="relative h-full w-full snap-start shrink-0 overflow-hidden bg-[#0a1830]">
       <div
-        className="absolute inset-0"
-        style={{
-          background: `radial-gradient(130% 100% at 15% 0%, ${from}, transparent 55%), radial-gradient(130% 100% at 85% 100%, ${to}, transparent 55%)`,
-          opacity: 0.5,
-        }}
-      />
-      <div className="absolute inset-0 bg-[#071224]/35" />
-
-      <div
-        className="relative flex h-full w-full flex-col px-4 pb-28 pt-[calc(env(safe-area-inset-top)+72px)]"
+        className="relative h-full w-full"
         onClick={handleTap}
         style={{ perspective: 1600 }}
       >
         <motion.div
-          className="preserve-3d relative mx-auto w-full max-w-md flex-1"
+          className="preserve-3d relative h-full w-full"
           animate={{ rotateY: flipped ? 180 : 0 }}
           transition={{ type: "spring", stiffness: 260, damping: 28 }}
         >
-          {/* FRONT — question */}
-          <div className="backface-hidden absolute inset-0 flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/40 backdrop-blur-sm">
-            <CardChrome
-              index={index}
-              total={total}
-              tag={card.tags?.[0]}
-              hint="Tap to flip"
-              categoryBadge={
-                showCategoryBadge
-                  ? { label: category.shortName, color: from }
-                  : undefined
-              }
+          {/* FRONT — question, full-bleed cover art with an IG-caption overlay */}
+          <div className="backface-hidden absolute inset-0 overflow-hidden">
+            <CoverArt
+              category={card.category}
+              from={from}
+              to={to}
+              image={card.media?.frontImage}
+              imageAlt={card.media?.frontImageAlt}
             />
-            {card.media?.frontImage ? (
-              <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-hidden">
-                <div
-                  className="max-h-[46vh] w-full shrink-0 overflow-hidden rounded-2xl border"
-                  style={{ borderColor: `${from}55` }}
-                >
-                  <img
-                    src={card.media.frontImage}
-                    alt={card.media.frontImageAlt ?? ""}
-                    className="w-full object-contain"
-                    draggable={false}
-                  />
-                </div>
-                <div className="flex flex-1 items-center justify-center">
-                  <p className="text-center text-2xl font-semibold leading-snug text-white sm:text-[28px]">
-                    {card.question}
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <div className="relative flex flex-1 items-center justify-center">
-                <CategoryWatermark
-                  category={card.category}
-                  className="pointer-events-none absolute h-64 w-64 -rotate-6 opacity-[0.08] sm:h-80 sm:w-80"
-                  style={{ color: from }}
-                />
-                <p className="relative text-center text-[26px] font-semibold leading-snug text-white sm:text-3xl">
-                  {card.question}
-                </p>
-              </div>
-            )}
+            <TopScrim />
+            <TopOverlay index={index} total={total} badge={badge} />
+            <BottomScrim tall={false} />
+            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2.5 px-5 pb-28 pt-24">
+              <Eyebrow category={category.shortName} tag={card.tags?.[0]} />
+              <p className="text-[25px] font-bold leading-[1.2] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:text-[29px]">
+                {card.question}
+              </p>
+              <p className="text-[13px] font-medium text-white/60">
+                Tap to flip · double-tap to master
+              </p>
+            </div>
           </div>
 
-          {/* BACK — answer */}
+          {/* BACK — answer, same cover art dimmed further for a long-text read */}
           <div
-            className="backface-hidden absolute inset-0 flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.06] p-6 shadow-2xl shadow-black/40 backdrop-blur-sm"
+            className="backface-hidden absolute inset-0 overflow-hidden"
             style={{ transform: "rotateY(180deg)" }}
           >
-            <CardChrome
-              index={index}
-              total={total}
-              tag={card.tags?.[0]}
-              hint="Tap to flip back"
-              categoryBadge={
-                showCategoryBadge
-                  ? { label: category.shortName, color: from }
-                  : undefined
-              }
+            <CoverArt
+              category={card.category}
+              from={from}
+              to={to}
+              image={card.media?.image}
+              imageAlt={card.media?.imageAlt}
+              dim
             />
-            <div className="flex min-h-0 flex-1 flex-col justify-center gap-4 overflow-y-auto no-scrollbar">
-              <p className="text-[17px] leading-relaxed text-white/90">
+            <TopScrim />
+            <TopOverlay index={index} total={total} badge={badge} />
+            <BottomScrim tall />
+            <div className="absolute inset-x-0 bottom-0 flex max-h-[72%] flex-col gap-4 overflow-y-auto no-scrollbar px-5 pb-28 pt-24">
+              <Eyebrow category={category.shortName} tag={card.tags?.[0]} answer />
+              <p className="text-[17px] leading-relaxed text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
                 {card.answer}
               </p>
-              {card.media?.image && (
-                <img
-                  src={card.media.image}
-                  alt={card.media.imageAlt ?? ""}
-                  className="max-h-[34vh] w-full shrink-0 rounded-xl border border-white/10 object-contain"
-                  draggable={false}
-                />
-              )}
               {card.media?.video && (
                 <VideoPlayer
                   src={card.media.video}
@@ -203,51 +166,130 @@ export function Flashcard({
       </div>
 
       {/* Right-side action rail, IG-Reels style */}
-      <div className="absolute bottom-32 right-4 flex flex-col items-center gap-5">
+      <div className="absolute bottom-32 right-4 z-10 flex flex-col items-center gap-5">
         <MasteredButton mastered={mastered} onToggle={doHeartToggle} />
       </div>
     </div>
   );
 }
 
-function CardChrome({
+/** The full-bleed cover behind everything: a real photo/diagram if the card has one, else a bold illustrated scene for that category — never plain text-on-gradient. */
+function CoverArt({
+  category,
+  from,
+  to,
+  image,
+  imageAlt,
+  dim,
+}: {
+  category: FlashcardData["category"];
+  from: string;
+  to: string;
+  image?: string;
+  imageAlt?: string;
+  dim?: boolean;
+}) {
+  return (
+    <div className="absolute inset-0">
+      {/* Always render the illustrated scene as the ambient backdrop, even
+          when a custom diagram exists — it's drawn as a landscape "contained"
+          graphic with its own baked-in labels, so it's overlaid centered
+          rather than cropped edge-to-edge over it. */}
+      <CategoryScene category={category} from={from} to={to} className="h-full w-full" />
+      {image && (
+        <div
+          className="absolute inset-x-0 top-0 flex items-center justify-center px-6"
+          style={{ height: "58%", paddingTop: "calc(env(safe-area-inset-top) + 100px)" }}
+        >
+          <img
+            src={image}
+            alt={imageAlt ?? ""}
+            className="h-full w-full object-contain drop-shadow-2xl"
+            draggable={false}
+          />
+        </div>
+      )}
+      {dim && <div className="absolute inset-0 bg-[#050c19]/45" />}
+    </div>
+  );
+}
+
+function TopScrim() {
+  return (
+    <div
+      className="pointer-events-none absolute inset-x-0 top-0 h-40"
+      style={{
+        background:
+          "linear-gradient(to bottom, rgba(5,10,20,0.55), rgba(5,10,20,0))",
+      }}
+    />
+  );
+}
+
+function BottomScrim({ tall }: { tall: boolean }) {
+  return (
+    <div
+      className="pointer-events-none absolute inset-x-0 bottom-0"
+      style={{
+        height: tall ? "78%" : "62%",
+        background: tall
+          ? "linear-gradient(to top, rgba(4,9,18,0.97) 0%, rgba(4,9,18,0.86) 38%, rgba(4,9,18,0.35) 75%, rgba(4,9,18,0) 100%)"
+          : "linear-gradient(to top, rgba(4,9,18,0.92) 0%, rgba(4,9,18,0.55) 55%, rgba(4,9,18,0) 100%)",
+      }}
+    />
+  );
+}
+
+function Eyebrow({
+  category,
+  tag,
+  answer,
+}: {
+  category: string;
+  tag?: string;
+  answer?: boolean;
+}) {
+  return (
+    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide">
+      <span className="text-white/70">{answer ? "Answer" : category}</span>
+      {tag && (
+        <span className="rounded-full bg-white/15 px-2.5 py-0.5 normal-case tracking-normal text-white/80">
+          {tag}
+        </span>
+      )}
+    </div>
+  );
+}
+
+function TopOverlay({
   index,
   total,
-  tag,
-  hint,
-  categoryBadge,
+  badge,
 }: {
   index: number;
   total: number;
-  tag?: string;
-  hint: string;
-  categoryBadge?: { label: string; color: string };
+  badge?: { label: string; color: string };
 }) {
   return (
-    <div className="mb-4 flex items-center justify-between text-xs font-medium text-white/50">
-      <span>
+    <div
+      className="pointer-events-none absolute inset-x-4 z-10 flex items-center justify-between text-xs font-medium text-white/70"
+      style={{ top: "calc(env(safe-area-inset-top) + 76px)" }}
+    >
+      <span className="rounded-full bg-black/30 px-2.5 py-1 backdrop-blur-sm">
         {index + 1} / {total}
       </span>
-      <div className="flex items-center gap-2">
-        {categoryBadge && (
-          <span
-            className="rounded-full px-2.5 py-1 font-semibold"
-            style={{
-              color: categoryBadge.color,
-              backgroundColor: `${categoryBadge.color}22`,
-              border: `1px solid ${categoryBadge.color}55`,
-            }}
-          >
-            {categoryBadge.label}
-          </span>
-        )}
-        {tag && (
-          <span className="rounded-full bg-white/10 px-2.5 py-1 text-white/70">
-            {tag}
-          </span>
-        )}
-        <span className="hidden sm:inline">{hint}</span>
-      </div>
+      {badge && (
+        <span
+          className="rounded-full px-2.5 py-1 font-semibold backdrop-blur-sm"
+          style={{
+            color: badge.color,
+            backgroundColor: `${badge.color}22`,
+            border: `1px solid ${badge.color}55`,
+          }}
+        >
+          {badge.label}
+        </span>
+      )}
     </div>
   );
 }

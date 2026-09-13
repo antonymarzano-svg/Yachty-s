@@ -12,12 +12,14 @@ Instagram Reels / TikTok rather than a traditional quiz app.
   heart pop
 - Haptic feedback on flip / swipe / mastering (via Capacitor Haptics, with
   an automatic web fallback so it also works in a plain browser)
-- Dark mode with a warm, per-category nautical color palette (port-red →
-  starboard-green for COLREGS, teal/blue for GSK, ocean blue/indigo for
-  Nav & Radar, lighthouse amber/orange for AEC, violet/cyan for GMDSS) plus
-  a large low-opacity nautical icon watermarked behind every plain-text
-  card, so the feed feels illustrated even before any custom artwork is
-  added
+- True full-bleed cards (edge-to-edge, no boxed/rounded card chrome) with a
+  bold, colorful illustrated cover scene behind every single card — a real
+  photo/diagram where one exists, otherwise a bespoke per-category poster
+  illustration (COLREGS boats crossing at dusk, a GSK hull cutaway under
+  weather, a Nav & Radar sweep with contacts, AEC engine-room gears &
+  gauges, a GMDSS radio mast broadcasting to a satellite) — with the
+  question/answer shown as an Instagram-caption-style overlay at the
+  bottom, so no card is ever just plain text on a flat background
 - Category pills for **OOW 3000**, **GSK**, **Nav & Radar**, **AEC**,
   **GMDSS**, plus a **Mixed** feed that shuffles every category into one,
   each showing live "mastered" progress
@@ -52,7 +54,8 @@ across those four categories, written to track the source text closely.
 
 **AEC** is **Auxiliary Equipment & Construction** — an engineering module
 (auxiliary machinery, equipment, ship construction) — and the tab name/
-description/watermark icon (a gear) have been corrected to match. It still
+description/cover art (engine-room gears & gauges) have been corrected to
+match. It still
 has no source document, though, so it's showing 17 of the original
 placeholder cards from the very first build (anchoring, emergency
 procedures, mooring, etc. — the 3 GMDSS-tagged placeholders were removed
@@ -108,9 +111,10 @@ To add a card, append an object to the relevant JSON file:
   answer away (e.g. two boats on crossing courses for a Rule 15 question).
   `image` shows on the answer side — use it for a diagram/photo that
   illustrates or reveals the answer (e.g. the same two boats, now labelled
-  give-way/stand-on). Cards without media fall back to a large, low-opacity
-  nautical icon behind the question text so the card still feels part of an
-  illustrated feed.
+  give-way/stand-on). Both render full-bleed behind the caption text.
+  Cards without media fall back to that category's bespoke illustrated
+  cover scene (see `CategoryScene.tsx`) so no card is ever plain text on a
+  flat background.
 - `video` shows on the answer side via a custom player (tap to play, ±10s
   skip, seek bar, mute, fullscreen) — nothing downloads until the learner
   taps play. **Use a full external URL for anything longer than a few
@@ -144,7 +148,7 @@ src/
     DoubleTapBurst.tsx       # big center heart pop on double-tap
     Heart.tsx                 # shared heart svg
     CategoryTabs.tsx           # top pill selector incl. "Mixed", + unmastered-only toggle
-    CategoryWatermark.tsx       # per-category background icon
+    CategoryScene.tsx           # per-category full-bleed illustrated cover art
   hooks/
     useMasteredStore.ts   # localStorage-backed "mastered" progress
     useHaptics.ts          # Capacitor Haptics wrapper
