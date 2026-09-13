@@ -140,6 +140,11 @@ function TopDownShip({
       />
       {/* bow deck line */}
       <path d="M0 -100 C 24 -100 28 -68 28 -38 L28 10 L-28 10 L-28 -38 C -28 -68 -24 -100 0 -100 Z" fill="#000000" opacity="0.08" />
+      {/* COLREGS sidelights at the bow — port (red, left of the ship's own heading) and starboard (green, right) */}
+      <circle cx="-17" cy="-78" r="6" fill="#ef4444" opacity="0.35" />
+      <circle cx="-17" cy="-78" r="3.2" fill="#ef4444" />
+      <circle cx="17" cy="-78" r="6" fill="#34d399" opacity="0.35" />
+      <circle cx="17" cy="-78" r="3.2" fill="#34d399" />
       {/* accommodation block, near the stern */}
       <rect x="-15" y="55" width="30" height="30" rx="4" fill="#0a1830" opacity="0.7" />
       <rect x="-9" y="61" width="6" height="6" fill="#fde68a" opacity="0.8" />
