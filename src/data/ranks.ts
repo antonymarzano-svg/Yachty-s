@@ -7,14 +7,17 @@ export interface Rank {
   threshold: number;
 }
 
-/** A real yacht-crew career ladder — climbing it mirrors the app's own goal of getting you to OOW. */
+/** A real yacht-crew career ladder — climbing it mirrors the app's own goal of getting you up through the ranks. */
 export const RANKS: Rank[] = [
   { name: "Deckhand", shortName: "Deckhand", threshold: 0 },
-  { name: "Able Seaman", shortName: "AB", threshold: 100 },
-  { name: "Bosun", shortName: "Bosun", threshold: 250 },
-  { name: "Junior Officer", shortName: "Jr. Officer", threshold: 500 },
-  { name: "Third Officer", shortName: "3rd Officer", threshold: 900 },
-  { name: "Officer of the Watch", shortName: "OOW", threshold: 1500 },
+  { name: "Lead Deckhand", shortName: "Lead Deckhand", threshold: 80 },
+  { name: "Bosun", shortName: "Bosun", threshold: 200 },
+  { name: "Third Officer", shortName: "3rd Officer", threshold: 400 },
+  { name: "Second Officer", shortName: "2nd Officer", threshold: 650 },
+  { name: "Chief Officer", shortName: "Chief Officer", threshold: 950 },
+  { name: "Chief Mate", shortName: "Chief Mate", threshold: 1300 },
+  { name: "First Officer", shortName: "1st Officer", threshold: 1700 },
+  { name: "Captain", shortName: "Captain", threshold: 2200 },
 ];
 
 export interface RankStatus {
