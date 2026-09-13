@@ -39,7 +39,7 @@ export function CategoryScene({ category, from, to, className }: CategoryScenePr
       <rect width="400" height="700" fill={`url(#${uid}-bg)`} />
       <rect width="400" height="700" fill={`url(#${uid}-glow)`} />
 
-      {renderScene(category, from, to)}
+      {renderScene(category, from, to, uid)}
 
       {/* fine grain of stars for depth on every scene */}
       {STAR_DOTS.map(([x, y, r], i) => (
@@ -55,10 +55,10 @@ const STAR_DOTS: Array<[number, number, number]> = [
   [200, 30, 1], [270, 90, 1.4], [130, 55, 1], [380, 300, 1],
 ];
 
-function renderScene(category: CategoryId, from: string, to: string) {
+function renderScene(category: CategoryId, from: string, to: string, uid: string) {
   switch (category) {
     case "oow3000":
-      return <OowScene from={from} to={to} />;
+      return <OowScene from={from} to={to} uid={uid} />;
     case "gsk":
       return <GskScene from={from} to={to} />;
     case "nav-radar":
@@ -72,44 +72,85 @@ function renderScene(category: CategoryId, from: string, to: string) {
   }
 }
 
-/** COLREGS — two vessels on crossing courses at dusk, port/starboard lights. */
-function OowScene({ to }: { from: string; to: string }) {
+/** COLREGS — an aerial view of two cargo vessels on crossing courses, styled after real drone/satellite ship photography. */
+function OowScene({ to, uid }: { from: string; to: string; uid: string }) {
   return (
     <g>
-      {/* horizon + moon */}
-      <circle cx="320" cy="150" r="46" fill="#fef3c7" opacity="0.85" />
-      <circle cx="320" cy="150" r="46" fill="#0a1830" opacity="0.12" />
-      <rect x="0" y="430" width="400" height="270" fill="#06101f" opacity="0.35" />
-      {/* wave bands */}
-      {[470, 520, 570, 620, 670].map((y, i) => (
-        <path
-          key={y}
-          d={`M0 ${y} Q 50 ${y - 14} 100 ${y} T 200 ${y} T 300 ${y} T 400 ${y}`}
-          fill="none"
-          stroke="#ffffff"
-          strokeOpacity={0.12 - i * 0.015}
-          strokeWidth="3"
-        />
-      ))}
-      {/* give-way vessel (port side, red light) coming from left */}
-      <g transform="translate(70 380) rotate(-8)">
-        <path d="M-55 20 L55 20 L38 40 L-38 40 Z" fill="#1e293b" />
-        <rect x="-15" y="-10" width="34" height="30" rx="3" fill="#1e293b" />
-        <circle cx="-46" cy="18" r="5" fill="#ef4444" />
-      </g>
-      {/* stand-on vessel (starboard side, green light) crossing */}
-      <g transform="translate(260 300) rotate(18)">
-        <path d="M-55 20 L55 20 L38 40 L-38 40 Z" fill="#334155" />
-        <rect x="-15" y="-10" width="34" height="30" rx="3" fill="#334155" />
-        <circle cx="46" cy="18" r="5" fill="#34d399" />
-      </g>
+      {/* soft sun glow, upper right — aerial-photo lighting, not a flat disc */}
+      <defs>
+        <radialGradient id={`${uid}-sun`} cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#fef3c7" stopOpacity="0.9" />
+          <stop offset="100%" stopColor="#fef3c7" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <circle cx="320" cy="140" r="110" fill={`url(#${uid}-sun)`} />
+
+      {/* ocean ripple texture across the whole frame */}
+      {Array.from({ length: 10 }).map((_, i) => {
+        const y = 40 + i * 68;
+        return (
+          <path
+            key={y}
+            d={`M-20 ${y} Q 80 ${y - 16} 180 ${y} T 420 ${y}`}
+            fill="none"
+            stroke="#ffffff"
+            strokeOpacity={0.06}
+            strokeWidth="2"
+          />
+        );
+      })}
+
+      <TopDownShip x={272} y={230} rotate={100} hull="#16233b" deck={to} scale={1} />
+      <TopDownShip x={118} y={470} rotate={10} hull="#1e293b" deck={to} scale={0.92} />
+
+      {/* dashed heading indicators, like a chart-plotter course line */}
+      <path d="M272 300 L272 380" stroke="#e2e8f0" strokeOpacity="0.4" strokeWidth="2" strokeDasharray="5 6" />
+      <path d="M118 400 L118 340" stroke="#e2e8f0" strokeOpacity="0.4" strokeWidth="2" strokeDasharray="5 6" />
+    </g>
+  );
+}
+
+/** A stylised aerial cargo-ship silhouette: pointed bow, container stacks, stern accommodation block, trailing wake. */
+function TopDownShip({
+  x,
+  y,
+  rotate,
+  hull,
+  deck,
+  scale = 1,
+}: {
+  x: number;
+  y: number;
+  rotate: number;
+  hull: string;
+  deck: string;
+  scale?: number;
+}) {
+  return (
+    <g transform={`translate(${x} ${y}) rotate(${rotate}) scale(${scale})`}>
+      {/* wake, trailing from the stern */}
+      <path d="M-16 92 L16 92 L40 175 L-40 175 Z" fill="#ffffff" opacity="0.1" />
+      {/* hull — pointed bow at top, flat stern at bottom */}
       <path
-        d="M70 380 L260 300"
-        stroke={to}
+        d="M0 -100 C 24 -100 28 -68 28 -38 L28 82 C28 93 19 100 0 100 C -19 100 -28 93 -28 82 L-28 -38 C -28 -68 -24 -100 0 -100 Z"
+        fill={hull}
+        stroke="#000000"
         strokeOpacity="0.25"
-        strokeWidth="2"
-        strokeDasharray="6 8"
+        strokeWidth="1.5"
       />
+      {/* bow deck line */}
+      <path d="M0 -100 C 24 -100 28 -68 28 -38 L28 10 L-28 10 L-28 -38 C -28 -68 -24 -100 0 -100 Z" fill="#000000" opacity="0.08" />
+      {/* accommodation block, near the stern */}
+      <rect x="-15" y="55" width="30" height="30" rx="4" fill="#0a1830" opacity="0.7" />
+      <rect x="-9" y="61" width="6" height="6" fill="#fde68a" opacity="0.8" />
+      <rect x="3" y="61" width="6" height="6" fill="#fde68a" opacity="0.8" />
+      {/* container stacks, two columns down the deck */}
+      {[-75, -50, -25, 0, 25].map((cy) => (
+        <g key={cy}>
+          <rect x="-22" y={cy} width="17" height="20" rx="2" fill={deck} opacity="0.85" />
+          <rect x="5" y={cy} width="17" height="20" rx="2" fill={deck} opacity="0.65" />
+        </g>
+      ))}
     </g>
   );
 }
