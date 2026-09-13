@@ -30,9 +30,12 @@ Instagram Reels / TikTok rather than a traditional quiz app.
   feedback, then it auto-flips to the full explanation
 - A points & rank system, always visible top-right: answering a quiz
   correctly, or tapping "Master" on a flip card, earns points once per
-  card (an honest "Not yet" tap costs nothing and un-masters a card, but
-  never claws points back) — climb a real yacht career ladder from
-  **Deckhand** all the way to **Officer of the Watch**
+  card (an honest "I don't know" tap costs nothing, un-masters the card,
+  and always reveals the answer — never claws points back). Rank
+  thresholds are calculated from the *size of the whole question bank*
+  (not fixed numbers), so climbing the real yacht career ladder from
+  **Deckhand** to **Captain** always tracks "how much of the app you've
+  actually gotten right," however many cards get added later
 - Cards can carry a scene-setting illustration on the front (e.g. two boats
   shown crossing for a Rule 15 question), a diagram/photo revealed with the
   answer on the back, an inline audio clip (e.g. COLREGS sound signals) with
@@ -154,7 +157,7 @@ src/
     AudioPlayer.tsx        # custom inline audio player (not <audio controls>)
     VideoPlayer.tsx         # custom video player (play/pause, ±10s, seek, mute, fullscreen)
     MasteredButton.tsx      # heart icon toggle
-    NotYetButton.tsx          # "I don't know this yet" counterpart — no points, un-masters
+    IDontKnowButton.tsx       # "I don't know" counterpart — no points, un-masters, reveals the answer
     DoubleTapBurst.tsx         # big center heart pop on double-tap
     Heart.tsx                   # shared heart svg
     QuizOptions.tsx               # tap-an-answer multiple choice, instant feedback

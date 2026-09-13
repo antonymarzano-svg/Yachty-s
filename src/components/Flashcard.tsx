@@ -5,7 +5,7 @@ import { CATEGORY_MAP } from "../data/categories";
 import { AudioPlayer } from "./AudioPlayer";
 import { VideoPlayer } from "./VideoPlayer";
 import { MasteredButton } from "./MasteredButton";
-import { NotYetButton } from "./NotYetButton";
+import { IDontKnowButton } from "./IDontKnowButton";
 import { DoubleTapBurst } from "./DoubleTapBurst";
 import { CategoryScene } from "./CategoryScene";
 import { QuizOptions } from "./QuizOptions";
@@ -104,11 +104,13 @@ export function Flashcard({
     onToggleMastered();
   };
 
-  // The "Not yet" button: an honest self-assessment that earns no points
-  // and un-masters the card if it had been marked otherwise.
-  const doNotYet = () => {
-    haptics.light();
+  // "I don't know" — an honest self-assessment that earns no points,
+  // un-masters the card if it had been marked otherwise, and always does
+  // something visible: it reveals the answer, same as giving up on a quiz.
+  const doIDontKnow = () => {
+    haptics.error();
     if (mastered) onToggleMastered();
+    setFlipped(true);
   };
 
   const handleTap = () => {
@@ -249,7 +251,7 @@ export function Flashcard({
       {!card.quiz && (
         <div className="absolute bottom-32 right-4 z-10 flex flex-col items-center gap-5">
           <MasteredButton mastered={mastered} onToggle={doHeartToggle} />
-          <NotYetButton onPress={doNotYet} />
+          <IDontKnowButton onPress={doIDontKnow} />
         </div>
       )}
     </div>

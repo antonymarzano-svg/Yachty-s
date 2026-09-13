@@ -1,5 +1,10 @@
+import { ALL_CARDS } from "./cards";
+
 /** Points awarded once per card, the first time it's answered correctly (quiz) or marked "Master" (flip cards). */
 export const POINTS_PER_CORRECT = 10;
+
+/** Total points available if every card in the whole app were answered correctly once. */
+export const TOTAL_POSSIBLE_POINTS = ALL_CARDS.length * POINTS_PER_CORRECT;
 
 export interface Rank {
   name: string;
@@ -7,18 +12,36 @@ export interface Rank {
   threshold: number;
 }
 
-/** A real yacht-crew career ladder — climbing it mirrors the app's own goal of getting you up through the ranks. */
-export const RANKS: Rank[] = [
-  { name: "Deckhand", shortName: "Deckhand", threshold: 0 },
-  { name: "Lead Deckhand", shortName: "Lead Deckhand", threshold: 80 },
-  { name: "Bosun", shortName: "Bosun", threshold: 200 },
-  { name: "Third Officer", shortName: "3rd Officer", threshold: 400 },
-  { name: "Second Officer", shortName: "2nd Officer", threshold: 650 },
-  { name: "Chief Officer", shortName: "Chief Officer", threshold: 950 },
-  { name: "Chief Mate", shortName: "Chief Mate", threshold: 1300 },
-  { name: "First Officer", shortName: "1st Officer", threshold: 1700 },
-  { name: "Captain", shortName: "Captain", threshold: 2200 },
+interface RankTier {
+  name: string;
+  shortName: string;
+  /** Fraction of the whole question bank (0-1) needed to reach this rank. */
+  fraction: number;
+}
+
+/**
+ * A real yacht-crew career ladder, spaced out as milestones across the
+ * *whole* question bank — not fixed numbers — so reaching the top rank
+ * (Captain) always means "answered every card correctly," however many
+ * cards the app ends up with.
+ */
+const RANK_TIERS: RankTier[] = [
+  { name: "Deckhand", shortName: "Deckhand", fraction: 0 },
+  { name: "Lead Deckhand", shortName: "Lead Deckhand", fraction: 0.08 },
+  { name: "Bosun", shortName: "Bosun", fraction: 0.18 },
+  { name: "Third Officer", shortName: "3rd Officer", fraction: 0.32 },
+  { name: "Second Officer", shortName: "2nd Officer", fraction: 0.48 },
+  { name: "Chief Officer", shortName: "Chief Officer", fraction: 0.65 },
+  { name: "Chief Mate", shortName: "Chief Mate", fraction: 0.8 },
+  { name: "First Officer", shortName: "1st Officer", fraction: 0.92 },
+  { name: "Captain", shortName: "Captain", fraction: 1 },
 ];
+
+export const RANKS: Rank[] = RANK_TIERS.map((t) => ({
+  name: t.name,
+  shortName: t.shortName,
+  threshold: Math.round(t.fraction * TOTAL_POSSIBLE_POINTS),
+}));
 
 export interface RankStatus {
   current: Rank;
