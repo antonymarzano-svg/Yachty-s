@@ -36,6 +36,12 @@ Instagram Reels / TikTok rather than a traditional quiz app.
   (not fixed numbers), so climbing the real yacht career ladder from
   **Deckhand** to **Captain** always tracks "how much of the app you've
   actually gotten right," however many cards get added later
+- A real, on-device daily streak (🔥, Duolingo/Snapchat-style) shown right
+  in the rank badge, plus a full-screen "Rank up!" celebration the moment
+  you cross into a new rank — not just a quietly-updating number
+- Every answer shows its key point as a bold headline first, with the full
+  regulation detail underneath as smaller supporting text — an
+  infographic-slide read instead of one dense paragraph
 - Cards can carry a scene-setting illustration on the front (e.g. two boats
   shown crossing for a Rule 15 question), a diagram/photo revealed with the
   answer on the back, an inline audio clip (e.g. COLREGS sound signals) with
@@ -161,14 +167,16 @@ src/
     DoubleTapBurst.tsx         # big center heart pop on double-tap
     Heart.tsx                   # shared heart svg
     QuizOptions.tsx               # tap-an-answer multiple choice, instant feedback
-    RankBadge.tsx                   # top-right points/rank pill
+    RankBadge.tsx                   # top-right points/rank/streak pill
+    RankUpToast.tsx                   # full-screen "Rank up!" celebration
     CategoryTabs.tsx                 # top pill selector incl. "Mixed"/"News", + unmastered-only toggle
     CategoryScene.tsx                 # per-category full-bleed illustrated cover art
     NewsCard.tsx / NewsFeed.tsx / NewsScene.tsx  # the "News" tab
   hooks/
     useMasteredStore.ts   # localStorage-backed "mastered" progress
     usePointsStore.ts       # localStorage-backed points (awarded once per card)
-    useHaptics.ts             # Capacitor Haptics wrapper
+    useStreakStore.ts         # localStorage-backed daily-use streak
+    useHaptics.ts               # Capacitor Haptics wrapper
   data/                     # see "Adding / editing content" above
   App.tsx
 ```

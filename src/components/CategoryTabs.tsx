@@ -12,6 +12,8 @@ interface CategoryTabsProps {
   onToggleUnmasteredOnly: () => void;
   /** Current points total, shown as a rank badge pinned top-right (outside the scrollable tab row). */
   points: number;
+  /** Current daily-use streak, shown inline in the same badge. */
+  streak: number;
 }
 
 /** Horizontal pill selector fixed to the top, IG-story-tab style. "Mixed" shuffles every category into one feed. */
@@ -22,6 +24,7 @@ export function CategoryTabs({
   unmasteredOnly,
   onToggleUnmasteredOnly,
   points,
+  streak,
 }: CategoryTabsProps) {
   const haptics = useHaptics();
 
@@ -70,7 +73,7 @@ export function CategoryTabs({
             );
           })}
         </div>
-        <RankBadge points={points} />
+        <RankBadge points={points} streak={streak} />
       </div>
 
       {active !== "news" && (

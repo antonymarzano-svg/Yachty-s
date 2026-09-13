@@ -220,9 +220,7 @@ export function Flashcard({
               {card.quiz && quizSelected !== null && (
                 <QuizResult correct={quizSelected === card.quiz.correctIndex} />
               )}
-              <p className="text-[17px] leading-relaxed text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
-                {card.answer}
-              </p>
+              <AnswerText answer={card.answer} />
               {card.media?.video && (
                 <VideoPlayer
                   src={card.media.video}
@@ -322,6 +320,33 @@ function BottomScrim({ tall }: { tall: boolean }) {
           : "linear-gradient(to top, rgba(4,9,18,0.92) 0%, rgba(4,9,18,0.55) 55%, rgba(4,9,18,0) 100%)",
       }}
     />
+  );
+}
+
+/**
+ * Splits an answer into a bold "headline" (its first sentence, if that
+ * sentence is a reasonable length) and the rest as smaller supporting
+ * detail — so a full regulation paragraph reads like an IG infographic
+ * slide's key point + caption, instead of one dense wall of text. Falls
+ * back to showing the whole thing as the headline when there's no clean,
+ * short first sentence to pull out.
+ */
+function AnswerText({ answer }: { answer: string }) {
+  const match = answer.match(/^(.{15,140}?[.!?])\s+(.*)$/s);
+  const headline = match ? match[1] : answer;
+  const rest = match ? match[2] : "";
+
+  return (
+    <div className="flex flex-col gap-2.5">
+      <p className="text-[19px] font-bold leading-snug text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+        {headline}
+      </p>
+      {rest && (
+        <p className="text-[15px] leading-relaxed text-white/75 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+          {rest}
+        </p>
+      )}
+    </div>
   );
 }
 

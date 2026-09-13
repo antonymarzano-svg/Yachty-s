@@ -1,18 +1,38 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { CATEGORIES, TABS } from "./data/categories";
 import type { TabId } from "./data/types";
 import { cardsByTab, shuffle } from "./data/cards";
+import { getRankStatus } from "./data/ranks";
 import { CategoryTabs } from "./components/CategoryTabs";
 import { SwipeFeed } from "./components/SwipeFeed";
 import { NewsFeed } from "./components/NewsFeed";
+import { RankUpToast } from "./components/RankUpToast";
 import { useMasteredStore } from "./hooks/useMasteredStore";
 import { usePointsStore } from "./hooks/usePointsStore";
+import { useStreakStore } from "./hooks/useStreakStore";
 
 export default function App() {
   const [tab, setTab] = useState<TabId>(CATEGORIES[0].id);
   const [unmasteredOnly, setUnmasteredOnly] = useState(false);
   const { isMastered, toggleMastered, countInCategory } = useMasteredStore();
   const { points, awardOnce } = usePointsStore();
+  const { streak } = useStreakStore();
+
+  // Celebrate crossing into a new rank — a real event, not a quiet badge
+  // update. The first render just records the baseline (no celebration for
+  // simply loading the app already at "Deckhand").
+  const prevRankName = useRef<string | null>(null);
+  const [rankUpName, setRankUpName] = useState<string | null>(null);
+  useEffect(() => {
+    const { current } = getRankStatus(points);
+    if (prevRankName.current !== null && prevRankName.current !== current.name) {
+      setRankUpName(current.name);
+      const t = window.setTimeout(() => setRankUpName(null), 2600);
+      prevRankName.current = current.name;
+      return () => window.clearTimeout(t);
+    }
+    prevRankName.current = current.name;
+  }, [points]);
 
   // Shuffled once per session so the "Mixed" feed interleaves every
   // category instead of showing them back-to-back in file order.
@@ -53,7 +73,10 @@ export default function App() {
         unmasteredOnly={unmasteredOnly}
         onToggleUnmasteredOnly={() => setUnmasteredOnly((v) => !v)}
         points={points}
+        streak={streak}
       />
+
+      <RankUpToast rankName={rankUpName} />
 
       {/* subtle progress bar for whichever tab is active */}
       {tabProgress && tabProgress.total > 0 && (
